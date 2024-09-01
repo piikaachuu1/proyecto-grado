@@ -1,0 +1,337 @@
+
+:root{
+    --primaryColorDark: #BE8920;
+    --lighColor:#C5CAE9;
+    --primaryColor:#001f3f;
+    --secondaryColor:#dfd5cd; 
+/*  //001f3f*/
+    --acentColor:#141310;
+  /* acent colore se utiliza para lo iconos */
+    --primaryText:white;
+    --secondaryText:black;
+    --enableText:#696356;
+    --linkText:#004B97;
+
+}
+.btn-primario {
+    background: var(--acentColor) !important;
+    color:var(--primaryColorDark) !important
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins",sans-serif;
+}
+body{
+    
+    background: var(--lighColor);
+}
+
+
+.header{
+
+    background: var(--primaryColorDark);
+   
+ 
+}
+.navbar .logo{
+    position: relative;
+    font-size: 16px;
+    color: var(--primaryText);
+    margin-right: 30px;
+    margin-left: 10px;
+    text-decoration: none;
+    background: transparent;
+}
+.navbar a{
+    position: relative;
+    font-size: 16px;
+    color: var(--primaryText);
+    margin-right: 30px;
+    text-decoration: none;
+    background: transparent;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:#D28C58;
+
+    bottom: -3px;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s ease;
+    color: red;
+}
+.navbar a:hover:after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+.fondoCompleta{
+    
+    width:100% !important;
+    height: 100vh !important;
+  
+}
+
+.container1{
+    
+    padding-bottom: 4px;
+    border-radius:  10px;
+    margin: 4px;
+    overflow: hidden;
+    border: 2px solid var(--primaryColorDark);
+    width: 380px;
+    height: 600px;
+    background: transparent;
+    
+}
+.container1 .login-logo{
+    
+    color: #000;
+    margin-top: 10px;
+    background: transparent;
+    
+}
+
+.container1 .login-section{
+    
+    color: #000;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    
+}
+.login-section .form-box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    width: 380px;
+    height: 680px;
+    background: transparent;
+}
+
+.login-section .form-box.forget{
+    transform: translateX(-830px);
+    transition: transform .2s ease;
+    transition-delay: 0s;
+}
+.login-section.activeRestablecer .form-box.forget{
+    transform: translateX(0px);
+    transition-delay: .0s;
+    
+}
+
+.login-section .form-box.register{
+    transform: translateX(-830px);
+    transition: transform .3s ease;
+    transition-delay: 0s;
+}
+.login-section.activeRegister .form-box.register{
+    transform: translateX(0px);
+    transition-delay: 0s;
+}
+
+.login-section .form-box.login{
+    transform: translateX(0px);
+    transition: transform .3s ease;
+    transition-delay: 0s;
+}
+.login-section.activeRestablecer .form-box.login{
+    transform: translateX(830px);
+    transition-delay: 0s;
+}
+
+
+.login-section.activeRegister .form-box.login{
+    transform: translateX(830px);
+    transition-delay: 0s;
+}
+
+ .login-section .form-box img{
+    text-align: center;
+    
+}
+
+.login-section .form-box h2{
+    text-align: center;
+    font-size: 25px;
+    color: var(--primaryColorDark);
+}
+
+
+
+
+
+.form-box .input-box{
+    width: 340px;
+    height: 50px;
+    margin: 25px 0;
+    position: relative;
+    
+
+}
+
+.form-box :focus, .input-box input:valid {
+  border: 2px solid green;
+ border-radius: 10px;
+
+background: transparent;
+}
+.form-box :focus, .input-box input:invalid {
+ border: 2px solid white;
+ border-radius: 10px;
+
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+    padding-left: 5px;
+
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    pointer-events: none;
+    transition: .5s ease;
+    color: var(--enableText);
+
+}
+.input-box .icon{
+    position: absolute;
+    top: 13px;
+    right: 5px;
+    font-size: 19px;
+    color: var(--acentColor);
+}
+.input-box input:focus~ label,
+.input-box input:valid~ label{
+    top: -5px;
+    padding-bottom: 10px;
+    color: var(--primaryColorDark);
+    /* font-weight: bold; */
+    font-size: 15px;
+
+}
+.remember-password{
+    font-size: 14px;
+    font-weight: 500;
+    margin: -15px 0 15px ;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-password label input{
+    color: #000;
+    margin-right: 3px;
+
+}
+.remember-password a{
+    color: var(--secondaryText);
+    text-decoration: none;
+}
+.remember-password a:hover{
+     color: var(--linkText);
+    text-decoration: none;
+}
+.btn{
+  
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--acentColor);
+    font-size: 16px;
+    color: var( --primaryText);
+    box-shadow: rgba(0,0,0,0.4);
+
+}
+.btn:hover{
+
+    background: var(--acentColor);
+    font-size: 16px;
+    color: #D28C58;
+    box-shadow: rgba(0,0,0,0.4);
+}
+.btnM{
+  
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #D28C58;
+    font-size: 16px;
+    color: var( --primaryText);
+    box-shadow: rgba(0,0,0,0.4);
+    padding-left:10px;
+    padding-right:10px;
+
+
+}
+.btnM:hover{
+
+    background: var(--primaryColorDark);
+    font-size: 16px;
+    box-shadow: rgba(0,0,0,0.4);
+    opacity: 0.99999;
+    color: var(--secondaryColor);
+    border: var(--secondaryColor) 2px solid;
+
+
+}
+
+.create-account{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+.create-account p a{
+    color: var(--linkText);
+    text-decoration: none;
+}
+.create-account p a:hover{
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-size: 14.5px;
+    font-weight: bold;
+}
+
+
+
+.forget-passs{
+    font-size: 13.5px;
+    text-align: left;
+    margin: 5px ;
+    margin-top: 30px;
+}
+.forget-passs p a{
+    color: var(--linkText);
+    text-decoration: none;
+}
+.forget-passs p a:hover{
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: bold;
+}

@@ -1,0 +1,296 @@
+:root {
+
+/*Mi colore de primarios */
+--bs-primary: #292928;
+/*  #001f3f*/
+--bs-secondary:  #af9fda; 
+/*seconday y primari son los mismo colores*/
+--bs-acent:#BE8920 ;
+
+/*  # D28C58*/
+--text-primary:#BE8920;
+--text-secondary:#161615;
+--text-enable:#2d3133;
+
+
+--bs-fondo:#CDE5FF;
+--bs-enable:  grey;
+--bs-white: #ffffff;
+--bs-black: #000000;
+--bs-info: 13, 202, 240;
+}
+
+/*los iniciakes que se utilizara para l personalizacion*/
+
+.anime a:hover{
+ opacity: 0.8;
+}
+.bgt-primary {
+  background-color: var(--bs-primary)  !important;
+  color: var(--text-primary)!important;
+
+}
+.bgt-secondary {
+  background-color: var(--bs-secondary)  !important;
+  color: var(--bs-primary) !important;
+}
+.bgt-acent {
+  background-color: var(--bs-acent)  !important;
+  color: var(--text-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary)!important;
+}
+
+
+
+.bg-secondary {
+  background-color: var(--bs-secondary)!important ;
+}
+.bg-acent-op-80 {
+  background-color: var(--bs-acent)!important;
+}
+.bg-acent-op-80 {
+  background-color: rgba(255, 171, 107, 0.8)!important;
+}
+.bg-acent-op-60{
+ background-color: rgba(255, 171, 107, 0.6)!important;
+}
+.bg-acent-op-40 {
+  background-color: rgba(255, 171, 107, 0.4)!important;
+}
+.bg-acent-op-20 {
+  background-color: rgba(255, 171, 107, 0.2)!important;
+}
+
+.t-primary {
+ color: var(--text-primary) !important;
+
+}
+
+
+.t-secondary {
+  color: var(--text-secondary) !important;
+  font-weight:bold !important;
+
+}
+.t-secondary-n {
+   color: var(--text-secondary) !important;
+  
+}
+.t-acent {
+  color: var(--bs-acent) !important;
+}
+.tt-primary{
+  color: var(--bs-primary) !important;
+
+}
+
+.btnt-primary {
+  color: var(--text-primary) !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+.btnt-primary:hover {
+
+  background-color: grey !important;
+ color: var(--text-secondary) !important;
+/*  background-color: var(--bs-primary) !important;*/
+  border-color: var(--bs-primary) !important;
+
+}
+
+
+.btnt-secondary {
+
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: var(--text-secondary) !important;
+}
+.btnt-secondary:hover {
+  color: var(--bs-secondary) !important;
+  background-color:grey !important;
+  border: grey !important;
+}
+
+.btnt-acent {
+  color: var(--text-primary) !important;
+  background-color: var(--bs-acent) !important;
+  border-color: var(--bs-acent) !important;
+}
+.btnt-acent:hover {
+
+  background-color: grey !important;
+  border: grey !important;
+  color: var(--bs-acent) !important;
+}
+
+
+
+
+.btnt-outline-primary {
+  color:var(--bs-primary) !important;
+  border-color:var(--bs-primary) !important;
+  background: transparent !important;
+}
+.btnt-outline-primary:hover {
+  color: var(--bs-secondary) !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+
+.btnt-outline-secondary {
+  color:var(--bs-primary) !important;
+  border-color:var(--bs-secondary) !important;
+  background: transparent !important;
+}
+.btnt-outline-secondary:hover {
+  color: var(--bs-primary) !important;
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+}
+
+
+.btnt-outline-acent {
+  color:var(--bs-acent) !important;
+  border-color:var(--bs-acent) !important;
+  background: transparent !important;
+}
+
+.btnt-outline-acent:hover {
+  color: var(--text-primary) !important;
+  background-color: var(--bs-acent) !important;
+  border-color: var(--bs-acent) !important;
+
+  }
+
+
+
+
+.myBox{
+    position: relative !important;
+    margin-top: 15px !important;
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+    margin-bottom: 15px !important;
+    
+}
+
+
+
+.myBox .mylabel{
+    position: absolute !important;
+    top: 50% !important;
+    left: 5px !important;
+    transform: translateY(-50%) !important;
+    color: var(--text-enable) !important;
+    font-size: 1em !important;
+    pointer-events: none !important;
+    transition: .5s !important;
+}
+.myBox .mylabel-icon{
+    position: absolute !important;
+    top: 50% !important;
+    right: 5px !important;
+    transform: translateY(-50%) !important;
+    color: var(--bs-primary) !important;
+    font-size: 1.2em !important;
+    pointer-events: none !important;
+    transition: .5s !important;
+    font-weight: bold;
+}
+
+.myBox .myImputField {
+    background: transparent!important;
+    
+    border-color: transparent!important;
+    border-bottom: 1px solid var(--text-primary)!important;
+    outline: none!important;
+    font-size: 1em!important;
+    color: var(--text-secondary) !important;
+    width: 100% !important;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none !important; 
+  -moz-appearance: none !important; 
+
+  margin: 0 !important; 
+}
+
+
+
+
+.myBox .myImputField:focus ~ .mylabel,.myBox .myImputField:valid ~ .mylabel{
+top: -5px !important;
+color: var(--bs-primary) !important;
+font-size: 14px !important;
+font-weight: bold;
+}
+
+.myBox .myImputField:disabled~ .mylabel{
+top: -5px !important;
+color: var(--bs-primary) !important;
+font-size: 14px !important;
+font-weight: bold;
+}
+.myBox .myImputField[readonly] + .mylabel {
+    top: -5px !important;
+    color: var(--bs-primary) !important;
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+
+
+.myBox .myImputField:disabled{
+
+  border-bottom: 2px solid green !important;
+
+}
+
+.myBox .myImputField[readonly] {
+
+  border-bottom: 2px solid green !important;
+
+}
+.myBox :focus,.myBox .myImputField:valid {
+  border-bottom: 2px solid green !important;
+}
+ .myBox .myImputField:focus{
+/*  border-bottom: 4px solid orange;*/
+ border-bottom: 2px solid var(--bs-primary) !important;
+
+}
+.myBox .myImputField:hover{
+/*  border-bottom: 4px solid orange;*/
+ border-bottom: 1px solid var(--bs-primary) !important;
+
+}
+
+
+
+/*Personalizacion para navegacion en colores*/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color:var(--bs-primary) !important;
+  background-color: var(--bs-secondary) !important;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--bs-primary)!important;
+}
+
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
