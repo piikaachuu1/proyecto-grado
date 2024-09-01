@@ -46,7 +46,8 @@
                     </a>
                 </li>
                 <li class="nav-item" id="clientes">
-                    <a href="#" class="nav-link">
+                <a href="<?php echo base_url();?>index.php/cliente/index" class="nav-link">
+
                         <i class="nav-icon fas fa-user-tie t-acent"></i>
                         <p class="t-primary">Clientes</p>
                     </a>
@@ -54,7 +55,7 @@
 
                
                 <li class="nav-item" id="usuarios">
-                    <a href="<?php echo base_url();?>index.php/usuario/agregarView" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users t-acent"></i>
                         <p class="t-primary">Reservas</p>
                     </a>

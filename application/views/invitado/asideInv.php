@@ -47,11 +47,12 @@
                 </li>
 
                 <li class="nav-item" id="servicios">
-                    <a href="#" class="nav-link">
+                <a href="<?php echo base_url();?>index.php/servicios/index" class="nav-link">
+
                         <i class="nav-icon fas fa-clipboard-list t-acent"></i>
                         <p class="t-primary">Servicios</p>
                     </a>
-                </li>
+                </li> 
 
                
 

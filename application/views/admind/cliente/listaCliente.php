@@ -85,7 +85,7 @@
 </section>
 <div class="modal modal-primary" id="agregarClienteModal" aria-hidden="true"  data-backdrop="static"  >
   <div class="modal-dialog " >
-    <div class="modal-content bgt-secondary" >
+    <div class="modal-content " >
       <div class="modal-header bgt-primary" >
         <div class="container">
           <div class="row">
