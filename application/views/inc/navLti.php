@@ -10,21 +10,19 @@
   <ul class="navbar-nav ml-auto">
    <!-- User  -->
    <li class="nav-item dropdown">
-     <a class="nav-link t-acent" data-toggle="dropdown" href="#">
+     <a class="nav-link t-acent  d-flex align-items-center justify-content-center" data-toggle="dropdown" href="#" style="text-decoration: none;">
+    <div class="image t-acent d-flex justify-content-center align-items-center m-0 p-0" style="padding: 0 5px;">
+        <div class="d-flex flex-column align-items-center pr-3 mb-2">
+            <span class="row" id="userDataRol"><?php echo $this->session->userdata('rolUsuario').''; ?></span>
+            <span class="row" id="userDataRol"><?php echo $this->session->userdata('nombreUsuario').''; ?></span>
+        </div>
+        <img src="<?php echo base_url();?>/adminlti/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" style="height: 30px;">
+        <div class="d-flex align-items-center justify-content-center ml-2">
+            <i class="fas fa-ellipsis-v m-2"></i>
+        </div>
+    </div>
+</a>
 
-       <div class="image t-acent d-flex justify-content-center align-items-center " > 
-       <div class="row" > 
-        <div  id="" style="padding-right: 5px"><span id="userDataRol"><?php echo $this->session->userdata('rolUsuario').''; ?></span>
-
-      </div>
-    
-</div>
-
-      <img src="<?php echo base_url();?>/adminlti/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" style="height:30px ;">
-       <div> <i class="fas fa-ellipsis-v m-2"></i>
-      </div>
-       </div>
-      </a>
 
   <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right bgt-primary">
    <div class="" style="height: 100px;">
