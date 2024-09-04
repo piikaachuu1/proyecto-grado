@@ -6,8 +6,8 @@
 
   /* Colores de texto */
   --text-primary: #212121; /* Gris muy oscuro, casi negro, para un buen contraste */
-  --text-secondary: #757575; /* Gris medio para textos secundarios */
-  --text-enable: #9E9E9E; /* Gris claro para textos deshabilitados */
+  --text-secondary: #0b89ff; /* Gris medio para textos secundarios */
+  --text-enable: #ee0f0f; /* Gris claro para textos deshabilitados */
 
   /* Otros colores */
   --bs-fondo: #F0F4F1; /* Fondo gris muy claro con un toque de verde pálido */
