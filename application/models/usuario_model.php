@@ -156,7 +156,6 @@ public function usuarioConCiModificar($ci,$id)
 {
     $this->db->select('*');
     $this->db->from('usuario U');
-    $this->db->join('tipoUsuario T', 'T.id=U.idTipoUsuario');
     $this->db->where('estado', 1);
     $this->db->where('U.id<>', $id);
 

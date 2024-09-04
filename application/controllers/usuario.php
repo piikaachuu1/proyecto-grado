@@ -347,8 +347,8 @@ public function modificarUsuario()//metod donde agreaga usuario admini o usuario
 		$data1['sexo']=$_POST['genero'];
 		$data1['idUsuario']=$this->session->userdata('idUsuario');
 		$data1['email']=$_POST['email'];
-		$data1['idTipoUsuario']=$_POST['rol'];	
-		$data1['idUsuario']=$this->session->userdata('idUsuario');
+		$data1['rol']=$_POST['rol'];	
+		// $data1['idUsuario']=$this->session->userdata('idUsuario');
 
 	$existe=$this->usuario_model->usuarioConCiModificar($_POST['ci'],$id);
 

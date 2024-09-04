@@ -2,12 +2,12 @@
   /* Colores principales */
   --bs-primary: #0aaae4; /* Verde lechuga suave y moderno */
   --bs-secondary: #616161; /* Plomo (gris oscuro) para un contraste elegante */
-  --bs-accent: #B9FBC0; /* Verde claro pastel para acentos sutiles */
+  --bs-accent: #e9d205; /* Verde claro pastel para acentos sutiles */
 
   /* Colores de texto */
   --text-primary: #212121; /* Gris muy oscuro, casi negro, para un buen contraste */
-  --text-secondary: #0b89ff; /* Gris medio para textos secundarios */
-  --text-enable: #ee0f0f; /* Gris claro para textos deshabilitados */
+  --text-secondary: #212424; /* Gris medio para textos secundarios */
+  --text-enable: #312d2d; /* Gris claro para textos deshabilitados */
 
   /* Otros colores */
   --bs-fondo: #F0F4F1; /* Fondo gris muy claro con un toque de verde pálido */
