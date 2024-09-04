@@ -1,23 +1,20 @@
 :root {
+  /* Colores principales */
+  --bs-primary: #0aaae4; /* Verde lechuga suave y moderno */
+  --bs-secondary: #616161; /* Plomo (gris oscuro) para un contraste elegante */
+  --bs-accent: #B9FBC0; /* Verde claro pastel para acentos sutiles */
 
-/*Mi colore de primarios */
---bs-primary: #292928;
-/*  #001f3f*/
---bs-secondary:  #af9fda; 
-/*seconday y primari son los mismo colores*/
---bs-acent:#BE8920 ;
+  /* Colores de texto */
+  --text-primary: #212121; /* Gris muy oscuro, casi negro, para un buen contraste */
+  --text-secondary: #757575; /* Gris medio para textos secundarios */
+  --text-enable: #9E9E9E; /* Gris claro para textos deshabilitados */
 
-/*  # D28C58*/
---text-primary:#BE8920;
---text-secondary:#161615;
---text-enable:#2d3133;
-
-
---bs-fondo:#CDE5FF;
---bs-enable:  grey;
---bs-white: #ffffff;
---bs-black: #000000;
---bs-info: 13, 202, 240;
+  /* Otros colores */
+  --bs-fondo: #F0F4F1; /* Fondo gris muy claro con un toque de verde pálido */
+  --bs-enable: #D6D6D6; /* Gris suave para elementos deshabilitados */
+  --bs-white: #ffffff; /* Blanco puro */
+  --bs-black: #000000; /* Negro puro */
+  --bs-info: #81C784; /* Verde medio para mensajes de información */
 }
 
 /*los iniciakes que se utilizara para l personalizacion*/
@@ -186,7 +183,7 @@
     left: 5px !important;
     transform: translateY(-50%) !important;
     color: var(--text-enable) !important;
-    font-size: 1em !important;
+    font-size: 12px !important;
     pointer-events: none !important;
     transition: .5s !important;
 }
@@ -203,14 +200,15 @@
 }
 
 .myBox .myImputField {
-    background: transparent!important;
+    background: white !important;
     
-    border-color: transparent!important;
-    border-bottom: 1px solid var(--text-primary)!important;
+    /* border-color: transparent!important; */
+    border: 1px solid black !important;
     outline: none!important;
     font-size: 1em!important;
-    color: var(--text-secondary) !important;
+    color: black !important;
     width: 100% !important;
+    border-radius: 4px;
 }
 
 
@@ -226,10 +224,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .myBox .myImputField:focus ~ .mylabel,.myBox .myImputField:valid ~ .mylabel{
-top: -5px !important;
+top: -7px !important;
 color: var(--bs-primary) !important;
 font-size: 14px !important;
 font-weight: bold;
+padding-bottom: 2px;
 }
 
 .myBox .myImputField:disabled~ .mylabel{
@@ -239,36 +238,37 @@ font-size: 14px !important;
 font-weight: bold;
 }
 .myBox .myImputField[readonly] + .mylabel {
-    top: -5px !important;
+    top: -15px !important;
     color: var(--bs-primary) !important;
     font-size: 14px !important;
     font-weight: bold;
+    /* border-radius: 22px !important ; */
 }
 
 
 
 .myBox .myImputField:disabled{
 
-  border-bottom: 2px solid green !important;
+  border: 2px solid green !important;
 
 }
 
 .myBox .myImputField[readonly] {
 
-  border-bottom: 2px solid green !important;
+  border: 2px solid green !important;
 
 }
 .myBox :focus,.myBox .myImputField:valid {
-  border-bottom: 2px solid green !important;
+  /* border: 2px solid green !important; */
 }
  .myBox .myImputField:focus{
 /*  border-bottom: 4px solid orange;*/
- border-bottom: 2px solid var(--bs-primary) !important;
+ /* border: 2px solid var(--bs-primary) !important; */
 
 }
 .myBox .myImputField:hover{
 /*  border-bottom: 4px solid orange;*/
- border-bottom: 1px solid var(--bs-primary) !important;
+ /* border: 1px solid var(--bs-primary) !important; */
 
 }
 

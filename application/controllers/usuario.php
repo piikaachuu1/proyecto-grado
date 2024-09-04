@@ -68,7 +68,7 @@ class Usuario extends CI_Controller {
 			
 			$consulta=$this->usuario_model->validarLogin($login,$password);
 			$col=$consulta->num_rows();
-			
+		 	
 			if($consulta->num_rows()==0)
 			{ 
 				$this->output->set_status_header(401);
@@ -202,8 +202,8 @@ public function agregarView()//metod donde agreaga usuario admini o usuario invi
 
 	if($this->session->userdata('rolUsuario') =='admin')
 	{
-		$lista=$this->usuario_model->tipoRol();
-		$data['rol']=$lista;
+		// $lista=$this->usuario_model->tipoRol();
+		// $data['rol']=$lista;
 
 		$lista=$this->usuario_model->datosUsuariodb(1,$this->session->userdata('idUsuario'));
 		$data['usuarios']=$lista;
@@ -242,7 +242,7 @@ public function agregarUsuario() {
 
 		if ($this->verificarConexion()) {
 
-			
+			 
 
 			
 			$nombre=letraCapital($_POST['nombre']);
@@ -257,7 +257,7 @@ public function agregarUsuario() {
 
 			$data1['password']=md5($pwd);
 			$data1['email']=$_POST['email'];
-			$data1['idTipoUsuario']=$_POST['rol'];	
+			$data1['rol']=$_POST['rol'];	
 			$correo =$_POST['email'];
 			
 			

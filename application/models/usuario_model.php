@@ -8,9 +8,8 @@ class Usuario_model extends CI_Model
     {
 
 		
-		$this->db->select('U.id AS idUsuario, U.nombreUsuario,U.email,T.rol');
+		$this->db->select('U.id AS idUsuario, U.nombreUsuario,U.email,U.rol');
 		$this->db->from('usuario U');
-		$this->db->join('tipoUsuario T','T.id=U.idTipoUsuario');
 		$this->db->where('nombreUsuario',$username);
 		$this->db->where('password',$pwd);
 		$this->db->where('estado',1);
@@ -22,8 +21,6 @@ class Usuario_model extends CI_Model
 	{
 		$this->db->select('*');
 		$this->db->from('usuario U');
-		$this->db->join('tipoUsuario T','T.id=U.idTipoUsuario');
-
 		$this->db->where('estado',1);
 		return $this->db->get();
       
@@ -31,18 +28,17 @@ class Usuario_model extends CI_Model
 
 	public function tipoRol()//importnte 
 	{
-		$this->db->select('*');
-		$this->db->from('tipoUsuario');
-		return $this->db->get();
+		// $this->db->select('*');
+		// $this->db->from('tipoUsuario');
+		// return $this->db->get();
+        return false;
 	}
  public function datosUsuariodb($estado,$idSession)// ListarUsuarios usuarios
   {
-  	$this->db->select('U.id, U.nombre,U.primerApellido,IFNULL(U.segundoApellido,"") AS segundoApellido,U.ci,U.fechaNacimiento,U.sexo ,U.nombreUsuario,U.email,T.id AS idRol, T.rol ');
+  	$this->db->select('U.id, U.nombre,U.primerApellido,IFNULL(U.segundoApellido,"") AS segundoApellido,U.ci,U.fechaNacimiento,U.sexo ,U.nombreUsuario,U.email,U.rol ');
 		$this->db->from('usuario U');
-		$this->db->join('tipoUsuario T','T.id=U.idTipoUsuario');
 		$this->db->where('U.estado',$estado);
 		$this->db->where('U.id !=',$idSession);
-
 		return $this->db->get();
   }
 
@@ -81,16 +77,14 @@ class Usuario_model extends CI_Model
 
 public function usuarioDatosBuscardb($estado, $idSession, $valor)
 {
-    $this->db->select('U.id, U.nombre, U.primerApellido, IFNULL(U.segundoApellido,"") AS segundoApellido, U.ci, U.fechaNacimiento, U.sexo, U.nombreUsuario, U.email, T.id AS idRol, T.rol');
+    $this->db->select('U.id, U.nombre, U.primerApellido, IFNULL(U.segundoApellido,"") AS segundoApellido, U.ci, U.fechaNacimiento, U.sexo, U.nombreUsuario, U.email,  U.rol');
     $this->db->from('usuario U');
-    $this->db->join('tipoUsuario T', 'T.id=U.idTipoUsuario');
     $this->db->where('U.estado', $estado);
     $this->db->where('U.id !=', $idSession);
     $this->db->group_start();
     $this->db->like('U.nombreUsuario', $valor);
     $this->db->or_like('U.nombre', $valor);
     $this->db->or_like('U.ci', $valor);
-    $this->db->or_like('T.rol', $valor);
     $this->db->group_end();
     
     return $this->db->get();
@@ -101,9 +95,9 @@ public function usuarioDatosBuscardb($estado, $idSession, $valor)
   public function datosUsuarioID($id,$estado)// gestion usuairo
   {
   	
-		$this->db->select('U.id, U.nombre,U.primerApellido,IFNULL(U.segundoApellido,"") AS segundoApellido,U.ci,U.fechaNacimiento,U.sexo ,U.nombreUsuario,U.email,T.id AS idRol, T.rol ');
+		$this->db->select('U.id, U.nombre,U.primerApellido,IFNULL(U.segundoApellido,"") AS segundoApellido,U.ci,U.fechaNacimiento,U.sexo ,U.nombreUsuario,U.email, U.rol ');
 		$this->db->from('usuario U');
-		$this->db->join('tipoUsuario T','T.id=U.idTipoUsuario');
+		
 		$this->db->where('U.estado',$estado);
 		$this->db->where('U.id',$id);
 		return $this->db->get();
@@ -150,7 +144,6 @@ public function usuarioConCi($ci)
 {
     $this->db->select('*');
     $this->db->from('usuario U');
-    $this->db->join('tipoUsuario T', 'T.id=U.idTipoUsuario');
     $this->db->where('estado', 1);
     $this->db->where('ci', $ci);
 

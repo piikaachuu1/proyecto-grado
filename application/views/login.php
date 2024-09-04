@@ -1,8 +1,8 @@
 
 <div class="content "  >
-    <div class="d-flex justify-content-center align-items-center fondoCompleta " style="background-image: url('<?php echo base_url();?>/img/fondo.jpgf'); background-repeat: no-repeat;" >  
-        <div class="d-flex justify-content-center align-items-center  " style="width:1000px;height: 100vh; background-image: url('<?php echo base_url();?>/img/fondo.jpgs'); background-repeat: no-repeat;" >
-            <div class="container1 " >
+    <div class="d-flex justify-content-center align-items-center fondoCompleta " style="background-image: url('<?php echo base_url();?>/img/morfa.jpg'); background-repeat: ; opacity:1" >  
+        <div class="d-flex justify-content-center align-items-center  " style="width:1000px;height: 100vh; background-image: url('<?php echo base_url();?>/img/morh      a.jpg'); background-repeat: no-repeat;" >
+            <div class="container1 "  style = "background:rgba(0,0,0,0.3)">
                 <div class="login-logo d-flex justify-content-center mt-10px rounded">  <img  src="<?php echo base_url();  ?>img/logo.png" width="100px" alt="aqui imagen">
                 </div>       
                 <div class="login-section">
@@ -39,13 +39,13 @@
 
                          <div class="input-box" id="idDivUsuario">
                             <span class="icon"><i class="fas fa-user"></i></span>
-                            <input type="text" id="usuario" name="usuario" onkeypress="return LetrasNumero(event)" minlength="1" maxlength="15"   autofocus autocomplete="nope" required>
+                            <input type="text" id="usuario" name="usuario" onkeypress="return LetrasNumero(event)" minlength="1" maxlength="15"   autofocus autocomplete="off" required>
                             <label >Usuario</label>
                             <div class="invalid-feedback"></div>
                         </div>
                         <div class="input-box" id="idDivPassword">
                               <span class="icon"><i class="fas fa-key"></i></span>
-                            <input type="password" name="password" id="password" minlength="1" maxlength="25"  autocomplete="nope" required>
+                            <input type="password" name="password" id="password" minlength="1" maxlength="25"  autocomplete="new-password" required>
                             <label>Password</label>
                             <div class="invalid-feedback"></div>
 

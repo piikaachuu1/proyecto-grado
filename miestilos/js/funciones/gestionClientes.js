@@ -20,10 +20,10 @@ $(document).ready(function() {
           <td>${cliente.ci}</td>
           <td >${cliente.celular+' '+cliente.telefono}</td>
           <td > 
-          <div class="d-flex ">
+          <div class="d-flex justify-content-center ">
  <button type="submit" class="editarCliente btn btn-sm btnt-primary p-1" data-target="#ModificarProveedor"   title="Editar"><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
-          <button class="eliminarcliente btn btn-sm btnt-primary ml-1"><i class="fa-solid fa-trash  fa-lg text-danger"  title="Eliminar"></i></button> 
-          
+ ${isAdmin() ?    `<button class="eliminarcliente btn btn-sm btnt-primary ml-1"><i class="fa-solid fa-trash  fa-lg text-danger"  title="Eliminar"></i></button>  : ''}
+         ` : "" }
           <div/>
          </td>
           </tr>
@@ -35,6 +35,9 @@ $(document).ready(function() {
             }
         });
     }
+  
+      
+
 
     function desstroyInicializaCliente() {
     var table = $('#miTablaCliente').DataTable();

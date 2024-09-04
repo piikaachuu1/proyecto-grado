@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
   listarUsuario();
- console.log("ls");
+
   function listarUsuario()
   {
    $.ajax({
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
            <button type="submit" class="editaUsuario btn btn-sm btnt-primary" title="Editar" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
          <button class="eliminarUsuario btn btn-sm btnt-primary" title="Eliminar"><i class="fa-solid fa-trash  fa-lg text-danger"></i></button> 
-         <button class="eliminarUsuarioFisico btn btn-sm btnt-primary" title="Eliminacion Fisica"><i class="text-danger">X</i></button> 
+         <button class="eliminarUsuarioFisico btn btn-sm btnt-primary" title="Eliminacion Fisica">X</button> 
 
         
           
@@ -276,6 +276,7 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
 
  $("#formRegistro2").submit(function(ev){
     ev.preventDefault();
+ 
     $.ajax({
       url: "../usuario/agregarUsuario",
       type: "POST",

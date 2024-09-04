@@ -1,6 +1,6 @@
    <!--  -->
 
-<script>"use strict";</script>
+   <script>"use strict";</script>
 <script src="<?php echo base_url();?>/calendario/res/jquery.js"></script>
 <script src="<?php echo base_url();?>/calendario/res/momentjs.lang.js"></script>
 <script src="<?php echo base_url();?>/calendario/res/bootstrap.min.js"></script>
@@ -17,9 +17,9 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="t-primary">Calendario de reservas</h1>
+              <h1 class="t-primary">reservas la fecha</h1>
             </div>
-            <div class="col-sm-6">
+            <div hidden class="col-sm-6">
                <ul class="d-flex justify-content-end t-primary" style=" list-style: none; padding: 0; margin: 0;">
                  <li title="Cuando un cliente no reazlizo un monto para recervar"><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#E08402"></i>confirmar</li>
                  <li title="Cuando el cliente delanto un monto de reserva"><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#008800"></i>reservado</li>
@@ -54,7 +54,7 @@
        
 
           </div>
-          <div id="contenedorEventosPagar">
+          <div hidden id="contenedorEventosPagar">
             <!-- /muy importante -->
           </div>
 
@@ -68,7 +68,7 @@
 
     <div class="modal modal-primary" id="modalAddEvent" aria-hidden="true"  >
       <div class="modal-dialog modal-xl" >
-        <div class="modal-content" style="background:rgba(251, 214, 169, .9);">
+        <div class="modal-content" >
           <div class="modal-header  p-2 m-0  bgt-primary" >
             <div class="container">
              <div class="row">
@@ -76,7 +76,7 @@
               <div class="col-11  d-flex justify-content-start align-items-center">
                 <h5 class="modal-title ">Agregar un evento para el dia <span id="titleModalDay">2023-08-12</span> </h5>
               </div>
-              <div class="col-1 d-flex justify-content-end align-items-center m-0 p-0">
+              <div hidden class="col-1 d-flex justify-content-end align-items-center m-0 p-0">
                <button type="button" class="btn " data-dismiss="modal" aria-label="Close" onclick="reserFormularioAgregarEvent()"><span  aria-hidden="true"><i class="fa-solid fa-x fa-lg t-light" style="color:red"></i></span></button>
              </div>
 
@@ -86,10 +86,10 @@
        </div>
   
 
-       <div class="modal-body mx-1 px-2 fgt-secondary">
+       <div class="modal-body mx-1 px-2">
         <section class="row p-0" >
           <div class="col-sm-12 col-lg-4" >
-           <section class="row" style="background:rgba(251, 214, 169, .4);">
+           <section class="row" >
             <!-- Sección para el nombre del evento -->
             <div class="col-12" >
               <div class="myBox">
@@ -103,10 +103,10 @@
             </datalist>
 
             <!-- Secciódn para la capacidad y detalles del evento -->
-            <div class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
-              <div class=" col-8">    <label >Capacidad del salon:</label>
+            <div hidden class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
+              <div hidden class=" col-8">    <label >Capacidad del salon:</label>
               </div>
-              <div class="col-4">
+              <div hidden class="col-4">
                <input type="text" name="" value="400" disabled style="width: 40px; height: 25px;">
                <input type="hidden" name="" id="maxCapacidad" value="400" >
 
@@ -120,18 +120,18 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
-            <div class="col-8">
+          <div hidden class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
+            <div hidden class="col-8">
               <label>  Dias del Evento:</label>
             </div>
-            <div class="col-4">
+            <div hidden class="col-4">
               <input type="text" name="" maxlength="1" id="txtDia" onkeypress="return soloNumero(event)"  value="1" required placeholder="dias" onchange="agregarBloques() "style="width: 40px; height:25px"> 
 
               <i class="fa-solid fa-calendar-day"></i>
             </div> 
           </div>
 
-          <div class="col-12 px-1 m-0 " id="contenedorBloques" style="background: rgba(255, 255, 255, .4);">
+          <div hidden class="col-12 px-1 m-0 " id="contenedorBloques" style="background: rgba(255, 255, 255, .4);">
             <!-- muy impirta aqui se esta cargado lo ide de campos -->
 
 
@@ -143,10 +143,10 @@
         </section>
 
       </div>
-      <div class="col-sm-12 col-lg-8 p-1">
+      <div class="col-sm-12 col-lg-12 p-1">
         <div class="col-12 d-flex ">
 
-          <div class="col-11">
+          <div class="col-12">
             <div class="myBox">
 
               <input type="hidden" id="txtId" name="idCliente" >
@@ -160,13 +160,13 @@
 
           </div>
           <div class="col-1 d-flex justify-content-center align-items-center" >
-            <button class="btnt-primary btn-sm" title="Nuevo Cliente" data-toggle="modal" data-target="#agregarCliente"><i class="fa-solid fa-square-plus d-flex justify-content-center"></i></button>
+            <button hidden class="btnt-primary btn-sm" title="Nuevo Cliente" data-toggle="modal" data-target="#agregarCliente"><i class="fa-solid fa-square-plus d-flex justify-content-center"></i></button>
 
           </div>
         </div>
         <div class="col-12 d-flex">
-          <div class="col-4">
-            <div class="myBox">
+          <div hidden class="col-4">
+            <div hidden class="myBox">
 
               <input class="myImputField" type="date" name="" id="fechaFin" readonly>
               <label class="mylabel">Fin del  Evento</label>
@@ -174,7 +174,7 @@
 
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-12">
             <div class="myBox">
 
 
@@ -395,7 +395,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-body bgt-secondary m-0 p-0 px-2">
+      <div class="modal-body  m-0 p-0 px-2">
 
         <!-- Post -->        
 
@@ -403,7 +403,7 @@
 
           <div class=" col-md-12 ">
             <label class="row"><div class="col-lg-6 col-md-8 col-sm-12"> Servicios reservados para el  dia <span id="dtdiaL"></span> <span id="dtdia"></span> </div>
-             <div  class="col-lg-6 col-md-4 col-sm-12">Horas<span id="horaInicio">10:00</span> - <span id="horaFin">14:00</span></div></label>
+             <div hidden  class="col-lg-6 col-md-4 col-sm-12">Horas<span id="horaInicio">10:00</span> - <span id="horaFin">14:00</span></div></label>
             <table rules="all" width="100%"> 
               <thead class="bgt-acent">
                 <tr class="t-secondary-n" style="text-align: center;">
@@ -442,12 +442,12 @@
 <div class="col-6">
   Cliente: <label id="eventoCliente"></label>
 
-</div><div class="d-flex justify-content-end col-5">
+</div><div hidden class="d-flex justify-content-end col-5">
   <span id="txtestado" hidden></span>
-  <button type="button" class="btn btn-warning" id="btnRemoverEvento">Remover</button>
+  <button hidden type="button" class="btn btn-warning" id="btnRemoverEvento">Remover</button>
   <span hidden id="idReserva" ></span>
 
-  <button type="button" class="btn btn-success" id="btnPagarCalendario">Pagar</button>
+  <button hidden type="button" class="btn btn-success" id="btnPagarCalendario">Pagar</button>
 </div>
 </div>
 </div>
@@ -478,8 +478,8 @@
       </div>
 
       <div class="days-container " >
-        <div class="days" style="background:rgba(255,171,107,0.4);">
-          <div class="headers" style="background:rgba(0,31,63,1);">
+        <div class="days" >
+          <div class="headers" style="background:rgba(0,0,0,1);">
             <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
           </div>
           <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
@@ -488,9 +488,9 @@
 
     </div>
 
-    <div class="col-md-4" id="listevents" style="background:rgba(255,171,107,0.3); height: 70vh;overflow-y: auto;">
+    <div class="col-md-4" id="listevents" style="background:rgba(255,255,255,0.3); height: 70vh;overflow-y: auto;">
       <div class="event-listing hidden-xs">
-        <div class="event-listing-title text-center" style="background:rgba(255,171,107,0.5);">Eventos programados-<span id="mesL"></span> </div>
+        <div class="event-listing-title text-center" style="background:rgba(0,0,0,0.51);">Eventos programados-<span id="mesL"></span> </div>
         <div>
            <table  class="table table-sm" rules="rows" width="100%">
             <tbody class="eventosMensuales">
@@ -620,12 +620,12 @@ function resetearEstilosDeFechas() {
         }
           else if(estado[i]==2){
             currentCell.css({
-        'background-color': '#008800',
+        'background-color': '#E08402',
         'color': '#C7FFCB', 
       });
         }  else if(estado[i]==3){
             currentCell.css({
-        'background-color': '#0D77B6',
+        'background-color': '#E08402',
         'color': '#F8FCFF', 
       });
         }

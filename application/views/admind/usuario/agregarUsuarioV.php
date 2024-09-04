@@ -66,7 +66,7 @@
 
                         <h5 class="modal-title ">Modificar Datos <span id="titleModalDay"></span></h5>
                         <button type="button" class="close red" data-dismiss="modal" aria-label="Close">
-                          <span class="text-red"  aria-hidden="true">X</span></button>
+                          <span class="text-red" >X</span></button>
                         </div>
                       </div>
                     </div>
@@ -74,7 +74,7 @@
 
                       <div class="post myborder"  style="border-bottom: 2px solid;">
 
-                        <div class="row ">
+                         <div class="row ">
                           <div  class=" col-sm-6 col-md-4  col-12  ">
                             <input type="hidden" id="idD" name="id">
                             <div class="myBox">
@@ -153,12 +153,8 @@
                         <select class="myImputField" name="rol" id="rolId">
 
                           <option selected disabled class="bgt-acent">Seleccione ... </option>
-                          <?php foreach ($rol ->result() as $row) { ?>
-
-                            <option  class="" value="<?php echo $row->id; ?> " <?php if ($row->rol == 'invitado') echo 'selected'; ?>><?php echo $row->rol; ?></option>
-
-                          <?php  }  ?>
-
+                            <option  class="" value="admin" >administrador</option>
+                            <option  class="" value="invitado" >invitado</option>
                         </select>
                         <label class="mylabel" for="email" >Rol Usuario</label>
                       </div>
@@ -302,17 +298,13 @@
                   </div>
                   <div  class=" col-sm-6 col-md-6  col-12 ">
                     <div class="myBox">
-                      <select class="myImputField" name="rol">
-
+                      <select class="myImputField" name="rol" id ="rol" required>
+<!-- hacer llegar desde base de datos -->
                         <option selected disabled class="bgt-acent">Seleccione ... </option>
-                        <?php foreach ($rol ->result() as $row) { ?>
-
-                          <option  class="bgt-secondary" value="<?php echo $row->id; ?> " <?php if ($row->rol == 'invitado') echo 'selected'; ?>><?php echo $row->rol; ?></option>
-
-                        <?php  }  ?>
-
+                        <option   class="" value="admin" >administrador</option>
+                            <option  class="" value="invitado" >invitado</option>
                       </select>
-                      <label class="mylabel" for="email" >Rol Usuario</label>
+                      <label class="mylabel" for="rol" >Rol Usuario</label>
                     </div>
                   </div>
 

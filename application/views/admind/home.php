@@ -2,7 +2,7 @@
 
   <!-- Content Wrapper. Contains page content -->
 <div class="wrapper" >
-<!-- <div class="content-wrapper " style="  background-image: url('<?php echo base_url();?>/img/fondod.png'); background-repeat: no-repeat" > -->
+<div class="content-wrapper " style="  background-image: url('<?php echo base_url();?>/img/fondo.jpg'); " >
         <div class="content-wrapper " style="background:rgba(255, 255, 255, .2);">
 
     <!-- Content cabeera (pagima cabera) -->
@@ -34,7 +34,7 @@
         <div class="" style="background:rgba(255, 255, 255, .2);">
           
        
-        <div class="row p-2" id="contenedorInicio">  
+        <div hidden class="row p-2" id="contenedorInicio">  
          
 
           <!-- ./col -->

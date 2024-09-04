@@ -24,27 +24,13 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item" id="inicio">
-                    <!-- <a href="<?php echo base_url();?>index.php/usuario/panel" class="nav-link "> -->
+                    <a href="<?php echo base_url();?>index.php/usuario/panel" class="nav-link ">
                         <i class="fa-solid nav-icon fa-house  t-acent"></i>
                         <p class="t-primary" ><b>Inicio</b></p>
-                    <!-- </a> -->
+                    </a>
                 </li>
 
                
-
-                
-                <li class="nav-item" id="clientes">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie t-acent"></i>
-                        <p class="t-primary">Reserva Eventos</p>
-                    </a>
-                </li>
-                <li class="nav-item" id="clientes">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie t-acent"></i>
-                        <p class="t-primary">Clientes</p>
-                    </a>
-                </li>
 
                 <li class="nav-item" id="servicios">
                 <a href="<?php echo base_url();?>index.php/servicios/index" class="nav-link">
@@ -54,6 +40,15 @@
                     </a>
                 </li> 
 
+                <li class="nav-item" id="clientes">
+                <a href="<?php echo base_url();?>index.php/cliente/index" class="nav-link">
+
+                        <i class="nav-icon fas fa-user-tie t-acent"></i>
+                        <p class="t-primary">Clientes</p>
+                    </a>
+                </li>
+
+            
                
 
                 <li class="nav-item" id="salir">

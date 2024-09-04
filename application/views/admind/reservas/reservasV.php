@@ -25,9 +25,9 @@
     <section class="px-2 py-1" style="background:rgba(255, 255, 255, .2); height: 75vh;"  >
 
       <div>
-        <a href="<?php echo base_url();?>index.php/usuario/calendario" title="Se redicccionara al calderario"><button class="btn btn-sm m-0 btnt-primary p-1"><b><i class="fa-solid fa-plus fa-xl"></i></b></button></a>
+        <a href="<?php echo base_url();?>index.php/usuario/calendario" title="Se redicccionara al calderario"><button class="btn btn-sm m-0 btn-primary p-1"><b>Agregar</b></button></a>
 
-        <button class="btn btn-sm m-0  p-1 btnt-primary" title="Eventos Realizados"><b><i class="fa-solid fa-calendar-check fa-xl text-success"  ></i></b></button>
+        <button hidden class="btn btn-sm m-0  p-1 btnt-primary" title="Eventos Realizados"><b><i class="fa-solid fa-calendar-check fa-xl text-success"  ></i></b></button>
 
       </div>
 

@@ -40,7 +40,7 @@
        </tr>
         `
         i++;
-      });
+      }); 
       $('#servicioT').html(template); 
       // alert('des');
       inicializarDataTableServicio();
@@ -57,7 +57,7 @@ function isAdmin() {
      
    }
   return esAdmin;
-  alert("holas");
+  
 }
 
 $(document).on('keyup', '#buscarServicio', function() {

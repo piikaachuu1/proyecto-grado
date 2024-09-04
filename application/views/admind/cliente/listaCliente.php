@@ -175,7 +175,7 @@
 
 <div class="modal modal-primary" id="ModificarCliente" aria-hidden="true"  data-backdrop="static"  >
   <div class="modal-dialog modal-dialog-centered" >
-    <div class="modal-content bgt-secondary" >
+    <div class="modal-content" >
       <div class="modal-header bgt-primary" >
         <div class="container">
           <div class="row">

@@ -13,8 +13,13 @@
      <a class="nav-link t-acent" data-toggle="dropdown" href="#">
 
        <div class="image t-acent d-flex justify-content-center align-items-center " > 
-        <div id="" style="padding-right: 5px"><span id="userDataRol"><?php echo $this->session->userdata('rolUsuario').''; ?></span>
+       <div class="row" > 
+        <div  id="" style="padding-right: 5px"><span id="userDataRol"><?php echo $this->session->userdata('rolUsuario').''; ?></span>
+
       </div>
+    
+</div>
+
       <img src="<?php echo base_url();?>/adminlti/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" style="height:30px ;">
        <div> <i class="fas fa-ellipsis-v m-2"></i>
       </div>
