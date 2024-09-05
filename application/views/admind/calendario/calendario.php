@@ -9,7 +9,7 @@
 
    <div class="wrapper" style="background-image: url('<?php echo base_url();?>/img/fondo.jpg');">
 
-    <div class="content-wrapper"   style=" background:rgba(0, 0, 0, .5);">
+    <div class="content-wrapper"   style=" background:rgba(255, 255, 255, 1);">
 
       <!-- Content Header (Pa  ge header) -->
       <section class="content-header " >
@@ -471,7 +471,7 @@
   <div class="row" >
     <div class="col-md-8 "  >
 
-      <div class="controls d-flex " style="background:rgba(0,31,63,0.5);">
+      <div class="controls d-flex " style="background:rgba(138,149,151,1 );">
         <div class="clndr-previous-button">&lsaquo;</div>
         <div class="month"><%= month %>&nbsp;<%= year %></div>
         <div class="clndr-next-button">&rsaquo;</div>
@@ -479,7 +479,7 @@
 
       <div class="days-container " >
         <div class="days" >
-          <div class="headers" style="background:rgba(0,0,0,1);">
+          <div class="headers" style="background:rgba(10,170,228,1);">
             <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
           </div>
           <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
@@ -490,7 +490,7 @@
 
     <div class="col-md-4" id="listevents" style="background:rgba(255,255,255,0.3); height: 70vh;overflow-y: auto;">
       <div class="event-listing hidden-xs">
-        <div class="event-listing-title text-center" style="background:rgba(0,0,0,0.51);">Eventos programados-<span id="mesL"></span> </div>
+        <div class="event-listing-title text-center" style="background:rgba(0,0,0,0.51);color:white">Eventos programados-<span id="mesL"></span> </div>
         <div>
            <table  class="table table-sm" rules="rows" width="100%">
             <tbody class="eventosMensuales">

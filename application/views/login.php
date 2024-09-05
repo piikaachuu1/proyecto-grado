@@ -1,9 +1,9 @@
 
 <div class="content "  >
-    <div class="d-flex justify-content-center align-items-center fondoCompleta " style="background-image: url('<?php echo base_url();?>/img/morfa.jpg'); background-repeat: ; opacity:1" >  
-        <div class="d-flex justify-content-center align-items-center  " style="width:1000px;height: 100vh; background-image: url('<?php echo base_url();?>/img/morh      a.jpg'); background-repeat: no-repeat;" >
-            <div class="container1 "  style = "background:rgba(0,0,0,0.3)">
-                <div class="login-logo d-flex justify-content-center mt-10px rounded">  <img  src="<?php echo base_url();  ?>img/logo.png" width="100px" alt="aqui imagen">
+    <div class="d-flex justify-content-center align-items-center fondoCompleta " style="background-image: url('<?php echo base_url();?>/img/fondologuin.png'); background-repeat: ; opacity:1" >  
+        <div class="d-flex justify-content-center align-items-center  " style="width:1000px;height: 100vh; background-image: url('<?php echo base_url();?>/img/fondologuin2.png'); background-repeat: no-repeat;" >
+            <div class="container1 "  style = "background:rgba(255,255,255,0.5)">
+                <div class="login-logo d-flex justify-content-center mt-10px rounded">  <img  src="<?php echo base_url();  ?>img/logo.png" width="120px" alt="aqui imagen">
                 </div>       
                 <div class="login-section">
                     <div class="form-box login">

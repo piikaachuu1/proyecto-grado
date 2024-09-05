@@ -1,6 +1,6 @@
 
 :root{
-    --primaryColorDark: #BE8920;
+    --primaryColorDark: #0aaae4;
     --lighColor:#C5CAE9;
     --primaryColor:#001f3f;
     --secondaryColor:#dfd5cd; 
@@ -227,7 +227,7 @@ background: transparent;
     top: -5px;
     padding-bottom: 10px;
     color: var(--primaryColorDark);
-    /* font-weight: bold; */
+    font-weight: bold;
     font-size: 15px;
 
 }
