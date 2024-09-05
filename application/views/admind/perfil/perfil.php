@@ -97,14 +97,14 @@
             <div class="modal fade" id="editarDatosPersonales" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <form id="formDatosPersonales">
               <div class="modal-dialog  modal-dialog-centered" role="document" style="opacity:.9">
-                <div class="modal-content bgt-acent opacity-50">
+                <div class="modal-content  opacity-50">
                   <div class="modal-header bgt-primary" >
                     <h5 class="modal-title" id="staticBackdropLabel">Datos Personales</h5>
-                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body" style="background:#FFC888">
+                  <div class="modal-body" style="background:white">
 
 
                     <div>
@@ -241,7 +241,7 @@
 
     <div class="modal fade" id="forCambirPassword" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog  modal-dialog-centered" role="document" style="opacity:.9">
-        <div class="modal-content bgt-acent opacity-50">
+        <div class="modal-content ">
           <div class="modal-header bgt-primary " >
             <h5 class="modal-title" id="staticBackdropLabel">Cambiar contraseña</h5>
             <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">

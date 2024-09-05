@@ -1,5 +1,5 @@
 
-<div class="wrapper" style="background: #C69F74;">
+<div class="wrapper" style="background: #white;">
 
   <div class="content-wrapper"   style=" background-image: url('<?php echo base_url();?>/img/fondo.jpg');">
     <!--  (cabecera header) -->
@@ -101,7 +101,7 @@
                                   <div class="myBox">
                                     <input class=" myImputField" type="text" id="precioM" name="precioM" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="50" required autofocus>
 
-                                    <label class="mylabel" for="precio" >Precio</label>
+                                    <label class="mylabel" for="precio" >Precio Unidad</label>
                                     <label class="mylabel-icon" for="precio" >Bs.</label>
 
                                   </div>
@@ -115,7 +115,7 @@
                               </div>
                                   <div  class="col-12 ">
                                     <div class="myBox">
-                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"  onkeypress="return soloLetrasEspacio(event)" minlength="1" maxlength="200" required autofocus>
+                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"   minlength="1" maxlength="200" required autofocus>
                                       <label class="mylabel" for="descripcion" >Descriccion</label>
                                     </div>
                                   </div>
@@ -185,7 +185,7 @@
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" required autofocus>
 
-                                  <label class="mylabel" for="precio" >Precio</label>
+                                  <label class="mylabel" for="precio" >Precio Unidad</label>
                                   <label class="mylabel-icon" for="precio" >Bs.</label>
 
                                 </div>
