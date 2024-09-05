@@ -167,31 +167,6 @@ class Usuario extends CI_Controller {
 	}
 
 
-public function registrarUsuario()///registro de se lado cliente
-{
-	$usuario=$_POST['usuario'];
-	$email=$_POST['email'];
-
-	$password=md5($_POST['password']);
-	$password=md5($_POST['passwordRepeat']);
-
-		$consulta=$this->usuario_model->validarLogin($usuario,$email);//crearu un FUNCTION EN MODELOuSURIO
-
-		if($consulta->num_rows()>0)
-		{
-			foreach ($consulta->result() as $row) {
-				$this->session->set_userdata('idUsuario',$row->id);
-				$this->session->set_userdata('nombreUsuario',$row->nombreUsuario);
-				$this->session->set_userdata('rolUsuario',$row->rol);
-				redirect('usuario/panel','refresh');
-			}
-		}
-		else
-		{
-			redirect('usuario/login/1','refresh');
-		}	
-	}
-
 
 
 
@@ -741,6 +716,35 @@ public function subir()
 		// }
 	redirect('usuario/panel/','refresh');
 }
+
+
+
+public function registrarUsuario()///registro de se lado cliente
+{
+	
+
+	$usuario=$_POST['usuario'];
+	$email=$_POST['email'];
+
+	$password=md5($_POST['password']);
+	$password=md5($_POST['passwordRepeat']);
+
+		$consulta=$this->usuario_model->validarLogin($usuario,$email);//crearu un FUNCTION EN MODELOuSURIO
+
+		if($consulta->num_rows()>0)
+		{
+			foreach ($consulta->result() as $row) {
+				$this->session->set_userdata('idUsuario',$row->id);
+				$this->session->set_userdata('nombreUsuario',$row->nombreUsuario);
+				$this->session->set_userdata('rolUsuario',$row->rol);
+				redirect('usuario/panel','refresh');
+			}
+		}
+		else
+		{
+			redirect('usuario/login/1','refresh');
+		}	
+	}
 
 
 
