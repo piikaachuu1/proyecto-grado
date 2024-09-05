@@ -150,12 +150,12 @@
                       </div>
                     </div>
 
-                    <div  class=" col-sm-3 col-md-4  col-12 d-flex justify-content-center  ">
+                    <div  class=" col-sm-6 col-md-8  col-12 d-flex justify-content-center ">
 
 
                       <div class="myBox">
                         <input class="myImputField" type="date" id="fechaNacimientoP" name="fechaNacimiento" value="<?php echo $row->fechaNacimiento; ?>"   max="2023-08-01" value="2020-01-01"   required>
-                        <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
+                        <label class="mylabel nowrap-label" for="fechaNacimiento"  >Fecha Nacimiento</label>
 
                       </div>
                     </div>
@@ -315,7 +315,7 @@
 
     var msg = document.getElementById("msg");
     nueva.addEventListener('keyup',function(){
-          msg.textContent=nueva.value;
+          // msg.textContent=nueva.value;
 
         
             if(!/[A-Z]/.test(nueva.value))
@@ -341,11 +341,12 @@
            else if(nueva.value.length<=8)
             {
                  msg.textContent='la contraseña debe ser mayor a 8 ';
+             msg.style.color="green";
 
             }
+
             else
             {
-             msg.style.color="green";
 
             }
 

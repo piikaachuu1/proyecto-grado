@@ -47,6 +47,12 @@
                         <p class="t-primary">Clientes</p>
                     </a>
                 </li>
+                <li class="nav-item" id="clientes">
+                <a href="<?php echo base_url();?>index.php/usuario/calendario" class="nav-link">
+                        <i class="nav-icon fas fa-user-tie t-acent"></i>
+                        <p class="t-primary">Reservar Evento</p>
+                    </a>
+                </li>
 
             
                

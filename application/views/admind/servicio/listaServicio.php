@@ -165,7 +165,7 @@
                             <div class="row  d-flex" >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25"  required autofocus>
+                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="250"  required autofocus>
                                   <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
                                 </div>
                               </div>

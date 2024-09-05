@@ -22,8 +22,8 @@ $(document).ready(function() {
           <td > 
           <div class="d-flex justify-content-center ">
  <button type="submit" class="editarCliente btn btn-sm btnt-primary p-1" data-target="#ModificarProveedor"   title="Editar"><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
- ${isAdmin() ?    `<button class="eliminarcliente btn btn-sm btnt-primary ml-1"><i class="fa-solid fa-trash  fa-lg text-danger"  title="Eliminar"></i></button>  : ''}
-         ` : "" }
+ ${isAdmin() ?    `<button class="eliminarcliente btn btn-sm btnt-primary ml-1"><i class="fa-solid fa-trash  fa-lg text-danger"  title="Eliminar"></i></button> 
+         ` : `` }
           <div/>
          </td>
           </tr>
