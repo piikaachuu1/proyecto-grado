@@ -1,7 +1,7 @@
 :root {
   /* Colores principales */
   --bs-primary: #0aaae4; /* Verde lechuga suave y moderno */
-  --bs-secondary: #616161; /* Plomo (gris oscuro) para un contraste elegante */
+  --bs-secondary: #8a9597; /* Plomo (gris oscuro) para un contraste elegante */
   --bs-accent: #e9d205; /* Verde claro pastel para acentos sutiles */
 
   /* Colores de texto */
@@ -122,7 +122,7 @@
   border: grey !important;
   color: var(--bs-acent) !important;
 }
-
+ 
 
 
 
@@ -282,7 +282,8 @@ font-weight: bold;
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: var(--bs-primary)!important;
+  /* background: var(--bs-secondary) !important; */
+  color: black !important;
 }
 
 

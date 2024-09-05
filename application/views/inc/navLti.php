@@ -1,5 +1,5 @@
  <!-- Navbar -->
- <nav class="main-header navbar navbar-expand t-primary " style="background: #4D4D4A ;color: #red;"  >
+ <nav class="main-header navbar navbar-expand t-primary " style="background:  #8a9597 ;"  >
   <!-- Left navbar links -->
   <a class="" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars t-acent "> </i></a>
 
@@ -45,9 +45,9 @@
         </div>
       </div> 
       <div class="row d-flex justify-content-around p-2" >
-       <a href="<?php echo base_url();?>index.php/usuario/datosUsuario"> <p class="nav-link-none t-acent"><i class="fas fa-edit t-acent"></i> Perfil</p>
+       <a href="<?php echo base_url();?>index.php/usuario/datosUsuario"> <p class="nav-link-none bgt-primary"><i class="fas fa-edit t-acent"></i> Perfil</p>
        </a>
-       <a href="<?php echo base_url();?>index.php/usuario/logout"> <p class="nav-link-none t-acent"><i class="fa-solid fa-right-from-bracket fa-beat-fade t-acent"></i>  Salir</p>
+       <a href="<?php echo base_url();?>index.php/usuario/logout"> <p class="nav-link-none bgt-primary text-danger"><i class="fa-solid fa-right-from-bracket fa-beat-fade t-acent"></i>  Salir</p>
        </a>
      </div>
    </div>

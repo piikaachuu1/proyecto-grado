@@ -8,11 +8,11 @@
                 <div class="row ">
                     <div class="col-12 d-flex justify-content-center ">
                         <a href="<?php echo base_url();?>index.php/usuario/homeAdmind">   
-                            <img src="<?php echo base_url();  ?>img/logo.png" alt="AdminLTE Logo" class=" img-circle elevation-3 " style="opacity: .8 ;height: auto ; width: 80px;">
+                            <img src="<?php echo base_url();  ?>img/logo.png" alt="AdminLTE Logo" class=" img-circle elevation-3 " style="opacity: 1 ;height: auto ; width: 100px;">
                         </a>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <span class="brand-text" style="color:#BE8920; font-size:25px;"><b>Reserva Eventos</b></span>
+                        <span class="brand-text" style="color:#fff; font-size:25px;"><b>Reserva Eventos</b></span>
                     </div>
                 </div>
             </div>
