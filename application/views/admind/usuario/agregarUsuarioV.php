@@ -114,7 +114,7 @@
 
 
                           <div class="myBox">
-                            <input class="myImputField" type="date" id="fechaNacimientoD" name="fechaNacimiento"   max="2023-08-01" value="2020-01-01"   required>
+                            <input class="myImputField" type="date" id="fechaNacimientoD" name="fechaNacimiento"   max="2024-08-01" value="2000-01-01"   required>
                             <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
 
                           </div>
