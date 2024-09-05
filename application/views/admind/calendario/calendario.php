@@ -88,7 +88,7 @@
 
        <div class="modal-body mx-1 px-2">
         <section class="row p-0" >
-          <div class="col-sm-12 col-lg-4" >
+          <div class="col-sm-12 col-lg-12" >
            <section class="row" >
             <!-- Sección para el nombre del evento -->
             <div class="col-12" >
@@ -471,7 +471,7 @@
   <div class="row" >
     <div class="col-md-8 "  >
 
-      <div class="controls d-flex " style="background:rgba(138,149,151,1 );">
+      <div class="controls d-flex " style="background:rgba(138,149,151,1  );">
         <div class="clndr-previous-button">&lsaquo;</div>
         <div class="month"><%= month %>&nbsp;<%= year %></div>
         <div class="clndr-next-button">&rsaquo;</div>
