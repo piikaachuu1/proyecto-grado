@@ -4,7 +4,7 @@
   <a class="" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars t-acent "> </i></a>
 
   <div class="ml-2">
-    <b>My Sistema </b>
+    <b>Sistema de reservas y equipamiento </b>
   </div>
   <!-- Right navbar links -->
   <ul class="navbar-nav ml-auto">

@@ -12,7 +12,7 @@
                         </a>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
-                        <span class="brand-text" style="color:#fff; font-size:25px;"><b>Reserva Eventos</b></span>
+                        <span class="brand-text" style="color:#fff; font-size:25px;"><b>Salon de Eventos</b></span>
                     </div>
                 </div>
             </div>

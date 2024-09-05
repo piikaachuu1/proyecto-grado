@@ -83,7 +83,9 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'english';
+$config['language'] = 'english';  // o el idioma predeterminado que estás usando
+$config['language_auto_detect'] = FALSE;  // Esto evita la detección automática del idioma
+
 
 /*
 |--------------------------------------------------------------------------

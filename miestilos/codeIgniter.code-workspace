@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../../codeIgniter"
+		},
+		{
+			"path": "../../../../Users/house/Documents/angular/proyectoAngular"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"editor.linkedEditing": true,
+		"editor.acceptSuggestionOnEnter": "smart",
+		"editor.matchBrackets": "always",
+		"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+		"editor.language.colorizedBracketPairs": [
+
+
+		],
+		"editor.bracketPairColorization.enabled": true
+	}
+}

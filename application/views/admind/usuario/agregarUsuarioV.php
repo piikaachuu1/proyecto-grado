@@ -152,9 +152,9 @@
                       <div class="myBox">
                         <select class="myImputField" name="rol" id="rolId">
 
-                          <option selected disabled class="bgt-acent">Seleccione ... </option>
+                          <!-- <option selected disabled class="bgt-acent">Seleccione ... </option> -->
                             <option  class="" value="admin" >administrador</option>
-                            <option  class="" value="invitado" >invitado</option>
+                            <option  class="" value="invitado" selected >invitado</option>
                         </select>
                         <label class="mylabel" for="email" >Rol Usuario</label>
                       </div>
@@ -300,9 +300,9 @@
                     <div class="myBox">
                       <select class="myImputField" name="rol" id ="rol" required>
 <!-- hacer llegar desde base de datos -->
-                        <option selected disabled class="bgt-acent">Seleccione ... </option>
+                        <!-- <option selected disabled class="bgt-acent">Seleccione ... </option> -->
                         <option   class="" value="admin" >administrador</option>
-                            <option  class="" value="invitado" >invitado</option>
+                            <option  class="" value="invitado" selected>invitado</option>
                       </select>
                       <label class="mylabel" for="rol" >Rol Usuario</label>
                     </div>
