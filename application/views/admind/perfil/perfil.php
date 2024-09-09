@@ -150,10 +150,10 @@
                       </div>
                     </div>
 
-                    <div  class=" col-sm-6 col-md-8  col-12 d-flex justify-content-center ">
+                    <div  class=" col-sm-12 col-md-8  col-12 d-flex justify-content-center ">
 
 
-                      <div class="myBox">
+                      <div class="myBox bg-danger">
                         <input class="myImputField" type="date" id="fechaNacimientoP" name="fechaNacimiento" value="<?php echo $row->fechaNacimiento; ?>"   max="2023-08-01" value="2020-01-01"   required>
                         <label class="mylabel nowrap-label" for="fechaNacimiento"  >Fecha Nacimiento</label>
 
