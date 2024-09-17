@@ -146,7 +146,7 @@
       <div class="col-sm-12 col-lg-12 p-1">
         <div class="col-12 d-flex ">
 
-          <div class="col-12">
+          <div class="col-11">
             <div class="myBox">
 
               <input type="hidden" id="txtId" name="idCliente" >
@@ -160,7 +160,7 @@
 
           </div>
           <div class="col-1 d-flex justify-content-center align-items-center" >
-            <button hidden class="btnt-primary btn-sm" title="Nuevo Cliente" data-toggle="modal" data-target="#agregarCliente"><i class="fa-solid fa-square-plus d-flex justify-content-center"></i></button>
+            <button  class="btnt-primary btn-sm" title="Nuevo Cliente" data-toggle="modal" data-target="#agregarCliente"><i class="fa-solid fa-square-plus d-flex justify-content-center"></i></button>
 
           </div>
         </div>
@@ -275,7 +275,7 @@
   <div class="modal fade" id="agregarCliente" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header p-1 bgt-acent">
+        <div class="modal-header p-1">
 
 
          <div class="container">
@@ -288,7 +288,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-body bgt-secondary">
+      <div class="modal-body">
 
         <!-- Post -->        
 

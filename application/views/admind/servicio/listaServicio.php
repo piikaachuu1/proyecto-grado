@@ -165,7 +165,7 @@
                             <div class="row  d-flex" >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="250"  required autofocus>
+                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="250"  required autofocus>
                                   <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
                                 </div>
                               </div>
@@ -199,10 +199,18 @@
                               </div>
 
                             </div> 
+                            <div class="row " >
+                              <div  class="col-12 ">
+                                <div class="myBox">
+                                  <input class=" myImputField" type="file" id="imagen" name="imagen">
+                                  <label class="mylabel" for="imagen" >Imagen</label>
+                                </div>
+                              </div>
+                            </div>
                              <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="descripcion" name="descripcion"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="225" required autofocus>
+                                  <input class=" myImputField" type="text" id="descripcion" name="descripcion"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="225" required autofocus>
                                   <label class="mylabel" for="descripcion" >Descriccion</label>
                                 </div>
                               </div>

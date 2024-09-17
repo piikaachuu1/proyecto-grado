@@ -132,7 +132,7 @@ function LetrasNumero(e)
 {
 	var codigoCar=e.keyCode;	
 	var letra=String.fromCharCode(codigoCar);
-	var caracteresPermitidos=/[0-9A-Za-zñ]/;
+	var caracteresPermitidos=/[0-9A-Za-zñ\s]/;
 	var caracteresEspeciales=[8,9,13,14,15,32];
 	
   if (!caracteresPermitidos.test(letra)) {

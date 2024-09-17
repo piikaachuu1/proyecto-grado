@@ -59,6 +59,8 @@ class Servicios extends CI_Controller {
  			$data['unidadMedida']=$_POST['medida'];
  			$data['precio']=$_POST['precio'];
  			$data['maximo']=$_POST['maximo'];
+ 			$data['imagen']=$_POST['imagen'];
+
 
  			$data['idUsuario']=$this->session->userdata('idUsuario');
 
