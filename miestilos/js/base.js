@@ -10,7 +10,7 @@
                 
                 var msg = document.getElementById('msg');
                 var json = JSON.parse(data);
-                msg.textContent = "ok";
+                msg.textContent = "";
                 console.log(json.url);
                
               window.location.replace(json.url);
@@ -41,9 +41,9 @@
                 	var inputUsuario= document.getElementById('usuario');
                 	var inputPwd= document.getElementById('password');
 
-                	inputUsuario.style.borderBottom="2px solid red";
+                	inputUsuario.style.border="2px solid red";
                 	inputUsuario.focus();
-                	inputPwd.style.borderBottom="2px solid red";
+                	inputPwd.style.border="2px solid red";
                 	
                 	msg.textContent=json.msg;
                 	msg.style.color="red";

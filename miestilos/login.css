@@ -222,6 +222,15 @@ background: transparent;
     font-size: 19px;
     color: var(--acentColor);
 }
+.input-box .icon2{
+    position: absolute;
+    top: 13px;
+    right: 30px;
+    font-size: 19px;
+    color: var(--acentColor);
+}
+
+
 .input-box input:focus~ label,
 .input-box input:valid~ label{
     top: -5px;

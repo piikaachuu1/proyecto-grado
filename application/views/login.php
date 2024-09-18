@@ -45,8 +45,10 @@
                         </div>
                         <div class="input-box" id="idDivPassword">
                               <span class="icon"><i class="fas fa-key"></i></span>
+                              <span class="icon2" id ="toggle"><i id="ico" class="fas fa-eye-slash"></i></span>
+
                             <input type="password" name="password" id="password" minlength="1" maxlength="25"  autocomplete="new-password" required>
-                            <label>Password</label>
+                            <label>Contraseña</label>
                             <div class="invalid-feedback"></div>
 
                         </div>
@@ -128,6 +130,7 @@
 </div>
 
 <script type="text/javascript">
+
  document.addEventListener("DOMContentLoaded",function(){
 
 
@@ -142,15 +145,15 @@
       alert.style.display = "none";
         var car = inputs.value.length;
         // msg.textContent=car;
-        if(car<5)
+        if(car<4)
         {
-            inputs.style.borderBottom="2px solid red";
+            inputs.style.border="2px solid red";
             // msg.textContent="Nombre de Usuario mayor a 5 caracres";
            
         }
         else
         {
-            inputs.style.borderBottom="2px solid green";
+            inputs.style.border="2px solid green";
             // msg.textContent="Correcto";
             msg.style.color="green";
 
@@ -164,13 +167,13 @@
       alert.style.display = "none";
       if(car<8)
         {
-            inputPwd.style.borderBottom="2px solid red";
+            inputPwd.style.border="2px solid red";
             // msg.textContent="Nombre de Usuario mayor a 5 caracres";
            
         }
         else
         {
-            inputPwd.style.borderBottom="2px solid green";
+            inputPwd.style.border="2px solid green";
           
 
         }
@@ -178,6 +181,26 @@
 
     });
 });
+const pwd = document.getElementById('password');
+const toggleButton = document.getElementById('toggle');
+const ico =document.getElementById("ico");
+    toggleButton.addEventListener('mousedown', function() {
+            pwd.type = 'text';
+            ico.className="fas fa-eye";
+        });
+
+        toggleButton.addEventListener('mouseup', function() {
+            pwd.type = 'password';
+            ico.className="fas fa-eye-slash";
+
+        });
+
+        toggleButton.addEventListener('mouseleave', function() {
+            pwd.type = 'password';
+            ico.className="fas fa-eye-slash";
+
+        });
+   
 </script>
 </div>
 </div>
