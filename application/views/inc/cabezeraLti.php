@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?php echo base_url();?>/adminlti/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/adminlti/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/adminlti/plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <link rel="stylesheet" href="<?php echo base_url();?>/miestilos/coloresBasico.css">
   <link rel="stylesheet" href="<?php echo base_url();?>/adminlti/dist/css/adminlte.css">
@@ -28,7 +29,6 @@
      <link rel="stylesheet" href="<?php echo base_url();?>/adminlti/plugins/toastr/toastr.css">
 
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/calendario/res/clndr.css">  
-
   <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
 
 </head>

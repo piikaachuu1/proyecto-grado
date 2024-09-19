@@ -56,7 +56,7 @@
             <!-- /.card-body -->
 
             <!-- Inicion modefica modal -->
-            <form id="formModificar">
+            <form id="formModificar eeds-validation" novalidate>
              <div class="modal modal-primary" id="ModificarUsuario" aria-hidden="true"  data-backdrop="static"  >
               <div class="modal-dialog modal-dialog-centered modal-lg" >
                 <div class="modal-content " >
@@ -81,6 +81,8 @@
                               <input class=" myImputField" type="text" id="nombreUsuarioD" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required autofocus>
                               <label class="mylabel" for="nombreUsuario" >Nombre</label>
                             </div>
+                           
+
                           </div>
 
                           <div  class=" col-sm-6 col-md-4  col-12  ">
@@ -93,7 +95,7 @@
                           <div  class=" col-sm-6 col-md-4  col-12  ">
 
                             <div class="myBox">
-                              <input class=" myImputField" type="text" id="segundoApellidoD" name="segundoApellido"  onkeypress="return soloLetras(event)" minlength="0" maxlength="25">
+                              <input class=" myImputField" type="text" id="segundoApellidoD" name="segundoApellido"  onkeypress="return soloLetras(event)" minlength="0" maxlength="25" placeholder="">
                               <label class="mylabel" for="segundoApellido" >Segundo Apellido</label>
                             </div>
                           </div>
@@ -212,22 +214,23 @@
                       <div  class=" col-sm-6 col-md-4  col-12  ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="nombre" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required>
+                          <input class=" myImputField" type="text" id="nombre" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required placeholder>
                           <label class="mylabel" for="nombre" >Nombre</label>
+
                         </div>
                       </div>
                       <input type="hidden" name="nombreUsuario" id="nombreUsuario">
                       <div  class=" col-sm-6 col-md-4  col-12 ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="primerApellido" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required>
+                          <input class=" myImputField" type="text" id="primerApellido" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required placeholder>
                           <label class="mylabel" for="primerApellido" >Primer Apellido</label>
                         </div>
                       </div>
                       <div  class=" col-sm-6 col-md-4  col-12  ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="segundoApellido" name="segundoApellido"  onkeypress="return soloLetras(event)" minlength="0" maxlength="25">
+                          <input class=" myImputField" type="text" id="segundoApellido" name="segundoApellido"  onkeypress="return soloLetras(event)" minlength="0" maxlength="25" placeholder>
                           <label class="mylabel" for="segundoApellido" >Segundo Apellido</label>
                         </div>
                       </div>
@@ -266,12 +269,12 @@
                         <div class="row d-flex">
 
                          <div  class=" col-sm-6 col-md-6  col-12  ">
-                          <input type="hidden" id="aux" name="aux" value="0" required>
+                          <input type="text" id="aux" name="aux" value="0" required>
 
-                          <input type="hidden" id="idE" name="idE" value="0"> <div
+                          <input type="text" id="idE" name="idE" value="0"> <div
                           class="myBox">
 
-                          <input class="myImputField" type="text" id="ci" name="ci" onkeypress="return LetrasNumero(event)" list="informacion"   minlength="7" maxlength="10"  required autofocus>
+                          <input class="myImputField" type="text" id="ci" name="ci" onkeypress="return LetrasNumero(event)" list="informacion"   minlength="7" maxlength="10"  required autofocus placeholder>
                           <datalist id="informacion">
 
                           </datalist>
@@ -290,7 +293,7 @@
                     <div  class=" col-sm-6 col-md-6  col-12 ">
 
                      <div class="myBox">
-                      <input class="myImputField" type="email" id="emailA" name="email"  minlength="7" maxlength="50"  required>
+                      <input class="myImputField" type="email" id="emailA" name="email"  minlength="7" maxlength="50"  required placeholder >
                       <label class="mylabel" for="email" >Email</label>
                       <label class="mylabel-icon" for="email"><i class="fa-solid fa-envelope"></i></label>
 
@@ -331,6 +334,7 @@
     </div>
 
   </form>
+
 
   <!-- find agregar -->
 

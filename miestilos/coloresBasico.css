@@ -210,7 +210,17 @@
     width: 100% !important;
     border-radius: 4px;
 }
-
+.myBox span{
+  position: absolute !important;
+  top: 80% !important;
+  bottom: 30px !important;
+  transform: translateY(-50%) !important;
+  color: red !important;
+  font-size: 12px !important;
+  pointer-events: none !important;
+  transition: .5s !important;
+ 
+}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -223,12 +233,13 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 
-.myBox .myImputField:focus ~ .mylabel,.myBox .myImputField:valid ~ .mylabel{
-top: -7px !important;
-color: var(--bs-primary) !important;
-font-size: 14px !important;
-font-weight: bold;
-padding-bottom: 2px;
+
+.myBox .myImputField:focus ~ .mylabel,
+.myBox .myImputField:not(:placeholder-shown) ~ .mylabel {
+    top: -7px !important;
+    color: var(--bs-primary);
+    font-size: 14px !important;
+    font-weight: bold !important; 
 }
 
 .myBox .myImputField:disabled~ .mylabel{

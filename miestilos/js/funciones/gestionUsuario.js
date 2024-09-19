@@ -1,7 +1,10 @@
 
+
+// fin de validacion de agreagar
+
 $(document).ready(function(){
 
-
+ 
   listarUsuario();
 
   function listarUsuario()

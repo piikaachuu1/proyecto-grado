@@ -17,6 +17,9 @@
 
 <!-- <script src="<?php echo base_url();?>/miestilos/md/js/mdb.min.js"></script> -->
 <!-- DataTables  & Plugins -->
+<script src="<?php echo base_url();?>/adminlti/plugins/jquery-validation/jquery.validate.js"></script>
+<script src="<?php echo base_url();?>/adminlti/plugins/jquery-validation/additional-methods.js"></script>
+
 <script src="<?php echo base_url();?>/adminlti/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>/adminlti/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="<?php echo base_url();?>/adminlti/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -42,7 +45,7 @@
 <script src="<?php echo base_url();?>/adminlti/plugins/toastr/toastr.min.js"></script>
 <!-- para validaciones de texbox propio -->
 <!-- mapas -->
-
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 <!-- mapas -->
 <script type="text/javascript" src="<?php echo base_url();?>miestilos/js/validaciones.js"></script> 
 <script type="text/javascript" src="<?php echo base_url();?>miestilos/js/funciones/gestionUsuario.js"></script> 
@@ -71,6 +74,51 @@
 
 
 <!-- Page specific script -->
+
+<script>$(function () {
+  $.validator.setDefaults({
+    submitHandler: function () {
+      alert( "Form successful submitted!" );
+    }
+  });
+  $('#formRegistro2').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 5
+      },
+      terms: {
+        required: true
+      },
+    },
+    messages: {
+      email: {
+        required: "Ingrese un correo",
+        email: "Please enter a vaild email address"
+      },
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long"
+      },
+      terms: "Please accept our terms"
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.myBox').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});</script>
 <script>
  
 

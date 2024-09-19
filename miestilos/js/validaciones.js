@@ -34,17 +34,17 @@ function soloLetras(e)
 	var caracteresEspeciales=[8,9,13,14,15,];
 	
   if (!caracteresPermitidos.test(letra)) {
-   toastr.info('Solo Letras','', {
-    "closeButton": true, // Muestra el botón de cierre
-    "positionClass": "toast-top-right", // Posición del mensaje
-    "preventDuplicates": true, // Evita mensajes duplicados
-    "showDuration": "500", // Duración de la animación de mostrar
-    "hideDuration": "1000", // Duración de la animación de ocultar
-    "timeOut": "3000", // Tiempo de visualización del mensaje
-    "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
+//    toastr.info('Solo Letras','', {
+//     "closeButton": true, // Muestra el botón de cierre
+//     "positionClass": "toast-top-right", // Posición del mensaje
+//     "preventDuplicates": true, // Evita mensajes duplicados
+//     "showDuration": "500", // Duración de la animación de mostrar
+//     "hideDuration": "1000", // Duración de la animación de ocultar
+//     "timeOut": "3000", // Tiempo de visualización del mensaje
+//     "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
    
   
-});
+// });
     return false;
   }
 
@@ -58,17 +58,17 @@ function soloLetras(e)
   var caracteresPermitidos = /[0-9]/;
 
   if (!caracteresPermitidos.test(letra)) {
-   toastr.info('Solo Numeros','', {
-    "closeButton": true, // Muestra el botón de cierre
-    "positionClass": "toast-top-right", // Posición del mensaje
-    "preventDuplicates": true, // Evita mensajes duplicados
-    "showDuration": "500", // Duración de la animación de mostrar
-    "hideDuration": "1000", // Duración de la animación de ocultar
-    "timeOut": "3000", // Tiempo de visualización del mensaje
-    "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
+  //  toastr.info('Solo Numeros','', {
+  //   "closeButton": true, // Muestra el botón de cierre
+  //   "positionClass": "toast-top-right", // Posición del mensaje
+  //   "preventDuplicates": true, // Evita mensajes duplicados
+  //   "showDuration": "500", // Duración de la animación de mostrar
+  //   "hideDuration": "1000", // Duración de la animación de ocultar
+  //   "timeOut": "3000", // Tiempo de visualización del mensaje
+  //   "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
    
   
-});
+// });
     return false;
   }
 
@@ -85,17 +85,17 @@ function soloLetrasEspacio(e)
 	var caracteresEspeciales=[8,9,13,14,15,];
 	
   if (!caracteresPermitidos.test(letra)) {
-   toastr.info('Solo Letras y espacio','', {
-    "closeButton": true, // Muestra el botón de cierre
-    "positionClass": "toast-top-right", // Posición del mensaje
-    "preventDuplicates": true, // Evita mensajes duplicados
-    "showDuration": "500", // Duración de la animación de mostrar
-    "hideDuration": "1000", // Duración de la animación de ocultar
-    "timeOut": "3000", // Tiempo de visualización del mensaje
-    "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
+//    toastr.info('Solo Letras y espacio','', {
+//     "closeButton": true, // Muestra el botón de cierre
+//     "positionClass": "toast-top-right", // Posición del mensaje
+//     "preventDuplicates": true, // Evita mensajes duplicados
+//     "showDuration": "500", // Duración de la animación de mostrar
+//     "hideDuration": "1000", // Duración de la animación de ocultar
+//     "timeOut": "3000", // Tiempo de visualización del mensaje
+//     "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
    
   
-});
+// });
     return false;
   }
 
@@ -109,17 +109,17 @@ function soloNumeroPunto(e) {
   var caracteresPermitidos = /[0-9.]/;
 
   if (!caracteresPermitidos.test(letra)) {
-   toastr.info('Solo Numeros y punto','', {
-    "closeButton": true, // Muestra el botón de cierre
-    "positionClass": "toast-top-right", // Posición del mensaje
-    "preventDuplicates": true, // Evita mensajes duplicados
-    "showDuration": "500", // Duración de la animación de mostrar
-    "hideDuration": "1000", // Duración de la animación de ocultar
-    "timeOut": "3000", // Tiempo de visualización del mensaje
-    "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
+//    toastr.info('Solo Numeros y punto','', {
+//     "closeButton": true, // Muestra el botón de cierre
+//     "positionClass": "toast-top-right", // Posición del mensaje
+//     "preventDuplicates": true, // Evita mensajes duplicados
+//     "showDuration": "500", // Duración de la animación de mostrar
+//     "hideDuration": "1000", // Duración de la animación de ocultar
+//     "timeOut": "3000", // Tiempo de visualización del mensaje
+//     "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
    
   
-});
+// });
     return false;
   }
 
@@ -136,17 +136,17 @@ function LetrasNumero(e)
 	var caracteresEspeciales=[8,9,13,14,15,32];
 	
   if (!caracteresPermitidos.test(letra)) {
-   toastr.info('Solo Letras y Numeros','', {
-    "closeButton": true, // Muestra el botón de cierre
-    "positionClass": "toast-top-right", // Posición del mensaje
-    "preventDuplicates": true, // Evita mensajes duplicados
-    "showDuration": "500", // Duración de la animación de mostrar
-    "hideDuration": "1000", // Duración de la animación de ocultar
-    "timeOut": "3000", // Tiempo de visualización del mensaje
-    "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
+//    toastr.info('Solo Letras y Numeros','', {
+//     "closeButton": true, // Muestra el botón de cierre
+//     "positionClass": "toast-top-right", // Posición del mensaje
+//     "preventDuplicates": true, // Evita mensajes duplicados
+//     "showDuration": "500", // Duración de la animación de mostrar
+//     "hideDuration": "1000", // Duración de la animación de ocultar
+//     "timeOut": "3000", // Tiempo de visualización del mensaje
+//     "extendedTimeOut": "1000" // Tiempo adicional si el usuario pasa el ratón sobre el mensaje
    
   
-});
+// });
     return false;
   }
 
