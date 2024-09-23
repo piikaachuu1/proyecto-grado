@@ -56,7 +56,7 @@
             <!-- /.card-body -->
 
             <!-- Inicion modefica modal -->
-            <form id="formModificar eeds-validation" novalidate>
+            <form id="formModificar">
              <div class="modal modal-primary" id="ModificarUsuario" aria-hidden="true"  data-backdrop="static"  >
               <div class="modal-dialog modal-dialog-centered modal-lg" >
                 <div class="modal-content " >
@@ -78,7 +78,7 @@
                           <div  class=" col-sm-6 col-md-4  col-12  ">
                             <input type="hidden" id="idD" name="id">
                             <div class="myBox">
-                              <input class=" myImputField" type="text" id="nombreUsuarioD" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required autofocus>
+                              <input class=" myImputField" type="text" id="nombreUsuarioD" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required autofocus placeholder>
                               <label class="mylabel" for="nombreUsuario" >Nombre</label>
                             </div>
                            
@@ -88,7 +88,7 @@
                           <div  class=" col-sm-6 col-md-4  col-12  ">
 
                             <div class="myBox">
-                              <input class=" myImputField" type="text" id="primerApellidoD" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required value="mamani">
+                              <input class=" myImputField" type="text" id="primerApellidoD" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required value="">
                               <label class="mylabel" for="primerApellido" >Primer Apellido</label>
                             </div>
                           </div>
@@ -107,7 +107,7 @@
                          <div  class=" col-sm-3 col-md-4  col-12  ">
 
                           <div class="myBox">
-                            <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required>
+                            <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
                             <label class="mylabel" for="ci" >C.I.</label>
                           </div>
                         </div>
@@ -116,7 +116,7 @@
 
 
                           <div class="myBox">
-                            <input class="myImputField" type="date" id="fechaNacimientoD" name="fechaNacimiento"   max="2024-08-01" value="2000-01-01"   required>
+                            <input class="myImputField" type="date" id="fechaNacimientoD" name="fechaNacimiento"   max="2024-08-01" value="2000-01-01"   required placeholder>
                             <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
 
                           </div>
@@ -144,7 +144,7 @@
                       <div  class=" col-sm-6 col-md-6  col-12 ">
 
                        <div class="myBox">
-                        <input class="myImputField" type="email" id="email" name="email"  minlength="7" maxlength="50"  required>
+                        <input class="myImputField" type="email" id="email" name="email"  minlength="7" maxlength="50"  required placeholder>
                         <label class="mylabel" for="email" >Email</label>
                         <label class="mylabel-icon" for=""><i class="fa-solid fa-envelope"></i></label>
 

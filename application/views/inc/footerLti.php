@@ -78,7 +78,7 @@
 <script>$(function () {
   $.validator.setDefaults({
     submitHandler: function () {
-      alert( "Form successful submitted!" );
+      // alert( "Form successful submitted!" );
     }
   });
   $('#formRegistro2').validate({
@@ -98,7 +98,7 @@
     messages: {
       email: {
         required: "Ingrese un correo",
-        email: "Please enter a vaild email address"
+        email: "Ingrese un correo valido"
       },
       password: {
         required: "Please provide a password",
@@ -118,7 +118,55 @@
       $(element).removeClass('is-invalid');
     }
   });
-});</script>
+});
+$.validator.setDefaults({
+    submitHandler: function () {
+      // alert( "Form successful submitted!" );
+    }
+  });
+  $('#formModificar').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      password: {
+        required: true,
+        minlength: 5
+      },
+      terms: {
+        required: true
+      },
+    },
+    messages: {
+      email: {
+        required: "Ingrese un correo",
+        email: "Ingrese un correo valido"
+      },
+      password: {
+        required: "Please provide a password",
+        minlength: "Your password must be at least 5 characters long"
+      },
+      terms: "Please accept our terms"
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.myBox').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+
+
+
+
+
+</script>
 <script>
  
 

@@ -286,10 +286,15 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
       data: $(this).serialize(),
       success: function(data){
         var json= JSON.parse(data);
+        console.log(json);
         if(json.uri==1)
         {
           toastr.warning("Por favor verifique la conexion a internet");
          
+        }
+        else if(json.uri==3){
+          toastr.warning("Por favor verifique los campos");
+
         }
         else
         {
@@ -302,6 +307,7 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
           $("#agregarUsuario").modal("hide");
          
           toastr.success("Usuario Registrado con exit", json.msg1+ ' ' +json.msg2);
+        console.log(json);
 
            limpiarFormularioAgregar();
 
