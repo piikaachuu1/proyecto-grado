@@ -101,7 +101,26 @@
             <datalist id="listaEventos">
              
             </datalist>
+            <div class ="myBox"> 
+            <!-- <label class="mylabel" >Tipo del Evento</label> -->
 
+            <select hidden class=" myImputField" type="hidden" id="nombreEvento" placeholder required>
+                <option>Bautizo</option>
+
+                <option>Baby Show</option>
+                <option>Fiesta Privada</option>
+                <option>Graduacion</option>
+                <option >Promocion</option>
+                <option>Matrimonio</option>
+                <option>15 años</option>
+                <option>18 años</option>
+                <option>otros</option>
+
+
+
+
+            </select>
+            </div>
             <!-- Secciódn para la capacidad y detalles del evento -->
             <div hidden class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
               <div hidden class=" col-8">    <label >Capacidad del salon:</label>

@@ -48,9 +48,19 @@ public function listacliente()
 	public function agregarCliente() //agreagr ciente desde gestion de clientes
 
 	{
-			
-			
+		$this->load->library('form_validation');
 
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha|min_length[2]');
+        $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required|alpha|min_length[2]');
+        $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido');
+        $this->form_validation->set_rules('ci', 'CI', 'required');
+        $this->form_validation->set_rules('celular', 'Celular', 'required');
+        $this->form_validation->set_rules('telefono', 'Teléfono');
+        
+        if ($this->form_validation->run() === FALSE) {
+			echo json_encode(array('uri'=>5));
+
+        } else{
 			$data['nombre']=letraCapital(trim($_POST['nombre']));
 			$data['primerApellido']=letraCapital(trim($_POST['primerApellido']));
 			$data['segundoApellido']=letraCapital(trim($_POST['segundoApellido']));
@@ -80,6 +90,10 @@ public function listacliente()
 			echo json_encode(array('uri'=>2));
 
 		}
+		}
+			
+ 
+			
 
 		}
 		public function nuevoCliente()//agregar cliente desde reservas

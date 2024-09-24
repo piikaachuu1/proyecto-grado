@@ -271,12 +271,16 @@ function desstroyInicializaServicio() {
           desstroyInicializaServicio();
 
           }
+          else if(json.uri==2){
+          toastr.success('Servicio Agregado '+json.msg);
+
+          }
           else
           {
             
           desstroyInicializaServicio();
           
-          toastr.warning('fallo de registro servicio'+json.msg);
+          toastr.warning('fallo de registro servicio '+json.msg);
 
           }
       },

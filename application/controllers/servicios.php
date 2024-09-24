@@ -54,57 +54,66 @@ class Servicios extends CI_Controller {
  }
  public function agregarServicio()
  {
-	 // Validación básica de entrada
-	//  if (empty($_POST['nombreServicio']) || empty($_POST['descripcion']) || empty($_POST['medida']) || empty($_POST['precio']) || empty($_POST['maximo'])) {
-	// 	 echo json_encode(array('msg' => 'Datos incompletos', 'uri' => 0));
-	// 	 return;
-	//  }
- 
-	 // Preparar datos para insertar en la base de datos
-	 $data['nombre'] = $_POST['nombreServicio'];
-	 $data['descriccion'] = $_POST['descripcion'];
-	 $data['unidadMedida'] = $_POST['medida'];
-	 $data['precio'] = $_POST['precio'];
-	 $data['maximo'] = $_POST['maximo'];
-	 $data['imagen'] = "default.jpg"; // Imagen por defecto en caso de que no se suba una imagen
-	 $data['idUsuario'] = $this->session->userdata('idUsuario');
- 
-	 // Intentar agregar el servicio a la base de datos
-	 if ($this->servicios_model->agregarServiciosdb($data) > 0) {
-		 $idServicio = $this->db->insert_id(); // Obtener el ID del servicio recién agregado
- 
-		 // Comprobar si se ha subido una imagen
-		 if (!empty($_FILES['imagen']['name'])) {
-			 // Configuración para la subida de la imagen
-			 $config['upload_path'] = './uploads/servicios/';
-			 $config['allowed_types'] = 'jpg|jpeg|png'; // Tipos permitidos
-			 $config['max_size'] = 2048; // Tamaño máximo en KB (2MB)
-			 $config['file_name'] = 'servicio_' . $idServicio . '_' . time(); // Nombre único del archivo
- 
-			 // Cargar la biblioteca de subida con la configuración
-			 $this->load->library('upload', $config);
- 
-			 // Intentar subir el archivo
-			 if ($this->upload->do_upload('imagen')) {
-				 // Subida exitosa, obtener datos del archivo
-				 $fileData = $this->upload->data();
- 
-				 // Actualizar el nombre de la imagen en la base de datos
-				 $this->servicios_model->actualizarImagenServicio($fileData['file_name'], $idServicio);
-			 } else {
-				 // Mostrar error si la subida falla
-				 $error = $this->upload->display_errors();
-				 echo json_encode(array('msg' => 'Error al subir la imagen: ' . $error, 'uri' => 0));
-				 return;
-			 }
-		 }
- 
-		 // Subida y proceso exitoso
-		 echo json_encode(array('msg' => 'Ok', 'uri' => 1));
- 
-	 } else {
-		 echo json_encode(array('msg' => 'Fallo al agregar servicio', 'uri' => 0));
-	 }
+	$this->load->library('form_validation');
+
+	// $idServicio = $this->db->insert_id(); // Obtener el ID del servicio recién agregado
+	$idServicio=2;
+	
+	$nombre=$idServicio.'.jpg';
+	// Configuración para la subida de la imagen
+	$config['upload_path'] = './uploads/servicios/';
+	$config['allowed_types'] = 'jpg|jpeg|png'; 
+	$config['file_name'] =$nombre;// Tipos permitidos
+	$direcccion='.uploads/servicios/'.$nombre;
+	
+
+	if(file_exists($direcccion))
+	{
+		unlink($direcccion);
+	}
+	$this->load->library('upload', $config);
+
+	if (!$this->upload->do_upload()) {
+		$data['error']=$this->upload->display_errors();
+	} else {
+		$this->upload->data();
+// echo json_encode(array('msg' => 'Ok', 'uri' => 1));
+
+	}
+	
+
+	// Definir reglas de validación para los campos
+	$this->form_validation->set_rules('nombreServicio', 'Nombre del Servicio', 'required|min_length[2]');
+	$this->form_validation->set_rules('descripcion', 'Descripción', 'required');
+	$this->form_validation->set_rules('medida', 'Unidad de Medida');
+	$this->form_validation->set_rules('precio', 'Precio', 'required');
+	$this->form_validation->set_rules('maximo', 'Máximo', 'required');
+	if ($this->form_validation->run() === FALSE) {
+		
+		echo json_encode(array('msg' => 'Verifique los campos', 'uri' => 2));
+		
+	}
+	else{
+		$data['nombre'] = $_POST['nombreServicio'];
+		$data['descriccion'] = $_POST['descripcion'];
+		$data['unidadMedida'] = $_POST['medida'];
+		$data['precio'] = $_POST['precio'];
+		$data['maximo'] = $_POST['maximo'];
+		$data['imagen'] = "default.jpg"; // Imagen por defecto en caso de que no se suba una imagen
+		$data['idUsuario'] = $this->session->userdata('idUsuario');
+	
+		// Intentar agregar el servicio a la base de datos
+		if ($this->servicios_model->agregarServiciosdb($data) > 0) {
+			
+	
+			// Subida y proceso exitoso
+	
+		} else {
+			echo json_encode(array('msg' => 'Fallo al agregar servicio', 'uri' => 0));
+		}
+   
+	}
+
  }
  
  public function eliminar()

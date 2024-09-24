@@ -78,7 +78,7 @@
                                 <div  class="col-12 ">
                                   <div class="myBox">
                                     <input type="hidden" id="idServicio" name="idServicio" >
-                                    <input class=" myImputField" type="text" id="nombreServicioM" name="nombreServicioM"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25"  required autofocus>
+                                    <input class=" myImputField" type="text" id="nombreServicioM" name="nombreServicioM"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25"  required autofocus placeholder>
                                     <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
                                   </div>
                                 </div>
@@ -88,7 +88,7 @@
                               <div class="row " >
                                 <div  class="col-12 ">
                                   <div class="myBox">
-                                    <select class=" myImputField" type="text" id="medidaM" name="medidaM" value="" onkeypress="return LetrasNumero(event)" minlength="2" maxlength="50" required autofocus>
+                                    <select class=" myImputField" type="text" id="medidaM" name="medidaM" value="" onkeypress="return LetrasNumero(event)" minlength="2" maxlength="50" required autofocus placeholder>
                                        <option>dia</option>
                                       <option>persona</option>
                                     </select>
@@ -99,7 +99,7 @@
                                 </div>
                                 <div  class="col-12 ">
                                   <div class="myBox">
-                                    <input class=" myImputField" type="text" id="precioM" name="precioM" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="50" required autofocus>
+                                    <input class=" myImputField" type="text" id="precioM" name="precioM" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="50" required autofocus placeholder>
 
                                     <label class="mylabel" for="precio" >Precio Unidad</label>
                                     <label class="mylabel-icon" for="precio" >Bs.</label>
@@ -108,14 +108,14 @@
                                 </div>
                                 <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="maximoM" name="maximoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus>
+                                  <input class=" myImputField" type="text" id="maximoM" name="maximoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
 
                                   <label class="mylabel" for="maximo" >Cantidad Maxima Servicio</label>
                                 </div>
                               </div>
                                   <div  class="col-12 ">
                                     <div class="myBox">
-                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"   minlength="1" maxlength="200" required autofocus>
+                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"   minlength="20" maxlength="200" autofocus placeholder>
                                       <label class="mylabel" for="descripcion" >Descriccion</label>
                                     </div>
                                   </div>
@@ -165,7 +165,7 @@
                             <div class="row  d-flex" >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="250"  required autofocus>
+                                  <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="250"  required autofocus placeholder>
                                   <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
                                 </div>
                               </div>
@@ -175,7 +175,7 @@
                             <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <select class=" myImputField" type="text" id="medida" name="medida" value="" onkeypress="return LetrasNumero(event)" minlength="2" maxlength="50" required autofocus><option>dia</option>
+                                  <select class=" myImputField" type="text" id="medida" name="medida" value="" onkeypress="return LetrasNumero(event)" autofocus placeholder><option>dia</option>
                                       <option selected>persona</option></select>
 
                                   <label class="mylabel" for="medida" >Unidad Medida</label>
@@ -183,7 +183,7 @@
                               </div>
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" required autofocus>
+                                  <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" required autofocus placeholder>
 
                                   <label class="mylabel" for="precio" >Precio Unidad</label>
                                   <label class="mylabel-icon" for="precio" >Bs.</label>
@@ -192,7 +192,7 @@
                               </div>
                                <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="maximo" name="maximo" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus>
+                                  <input class=" myImputField" type="text" id="maximo" name="maximo" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
 
                                   <label class="mylabel" for="maximo" >Cantidad Maxima Servicio</label>
                                 </div>
@@ -202,7 +202,7 @@
                             <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="file" id="imagen" name="imagen">
+                                  <input class=" myImputField" type="file" id="imagen" name="imagen" placeholder>
                                   <label class="mylabel" for="imagen" >Imagen</label>
                                 </div>
                               </div>
@@ -210,9 +210,9 @@
                              <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="descripcion" name="descripcion"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="225" required autofocus>
+                                  <input class=" myImputField" type="text" id="descripcion" name="descripcion"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="225"  autofocus placeholder>
                                   <label class="mylabel" for="descripcion" >Descriccion</label>
-                                </div>
+                                </div> 
                               </div>
                             </div>
                           

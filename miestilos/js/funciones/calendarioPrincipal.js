@@ -958,7 +958,7 @@ function validarCampos() {
 
     if (tipoEvento.value == "" && idTipoEvento.value=="") {
         tipoEvento.focus();
-        toastr.info("Debe seleccionar un tipo de evento");
+        // toastr.info("Debe seleccionar un tipo de evento");
         tipoEvento.value="";
         bar = false;
     } else if (dia.value == "") {
@@ -972,20 +972,20 @@ function validarCampos() {
     } else if (cliente.value == "" && txtId.value=="") 
     {
         cliente.focus();
-        toastr.info("Elige un cliente");
+        // toastr.info("Elige un cliente");
 
         bar = false;
     }else if(cliente.value != "" && txtId.value=="")
     {
         cliente.focus();
-        toastr.info("El cliente no se encuetra.. Agregar ");
+        // toastr.info("El cliente no se encuetra.. Agregar ");
 
         bar = false;
         $('formNuevoCliente').modal("show");
     }
      else if (filas.length == 0) {
         servicio.focus();
-        toastr.info("Debes eligir eligir los servicios");
+        // toastr.info("Debes eligir eligir los servicios");
         bar = false;
     }
     return bar;
@@ -1084,7 +1084,8 @@ totalSinDescuento,totalDescuento,totalPagar,adelandto,saldoPagar,plazoConfirmaci
       }
       else
       {
-            toastr.warning('Verifica que los campos no estén vacíos.');
+            // toastr.warning('Verifica que los campos no estén vacíos.');
+            console.log("verifi que los campos")
 
       }
     });

@@ -96,7 +96,7 @@ $(document).ready(function() {
             showCancelButton: true,
             confirmButtonText: 'Aceptar',
             cancelButtonText: 'Cancelar',
-            background: 'rgb(251, 214, 169)',
+            background: 'rgb(255, 255, 255)',
             customContainerClass: 'width:200px',
             customClass: {
                 cancelButton: 'btnt-primary btn-sm', // Clase para el botón Cancelar
@@ -200,6 +200,10 @@ $(document).ready(function() {
                if(json.uri===2)
                {
                 toastr.warning('El cliente con ci ya esta registrado');
+                document.getElementById("txtCi").focus();
+               }
+               else if(json.uri===5){
+                toastr.danger('Verifica los campos');
                 document.getElementById("txtCi").focus();
                }
                else

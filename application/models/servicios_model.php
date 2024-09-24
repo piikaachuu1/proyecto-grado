@@ -3,9 +3,6 @@
 class Servicios_model extends CI_Model
 {
 
-
-
-
 	public function listaServiciosdb($estado)
 	{
 		$this->db->select('S.id,S.nombre ,S.descriccion,S.unidadMedida AS medida, S.precio,S.maximo');

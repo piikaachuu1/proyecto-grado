@@ -219,74 +219,92 @@ public function agregarUsuario() {
         $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha_numeric_spaces|min_length[2]');
         $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required|alpha_numeric_spaces|min_length[2]');
         $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido', 'alpha_numeric_spaces');
-        $this->form_validation->set_rules('ci', 'Cédula de Identidad', 'required|numeric|min_length[6]|is_unique[usuarios.ci]');
-        $this->form_validation->set_rules('email', 'Correo Electrónico', 'required|valid_email|is_unique[usuarios.email]');
+        $this->form_validation->set_rules('ci', 'Cédula de Identidad', 'required|numeric|min_length[6]');
+        $this->form_validation->set_rules('email', 'Correo Electrónico', 'required|valid_email');
         // $this->form_validation->set_rules('fechaNacimiento', 'Fecha de Nacimiento', 'required|valid_date[Y-m-d]');
         $this->form_validation->set_rules('genero', 'Género', 'required');
         $this->form_validation->set_rules('rol', 'Rol', 'required');
 
         // Ejecutar validación del formulario
-        if ($this->form_validation->run() === FALSE) {
+        if ($this->form_validation->run() === true) {
             // Si hay errores de validación, devolverlos en formato JSON
             $data['msg'] = 'Errores de validación';
-            // $data['errores'] = validation_errors();
+            $data['errores'] = validation_errors();
 			$data['uri']=3;
             echo json_encode($data);
+			
         } else {
             // Verificar la conexión a internet antes de continuar
-            if ($this->verificarConexion()) {
+            
+			if ($this->verificarConexion()){
 
-                // Capturar los datos del formulario
-                $nombre = letraCapital($this->input->post('nombre'));
-                $primerApellido = letraCapital($this->input->post('primerApellido'));
-                $segundoApellido = letraCapital($this->input->post('segundoApellido'));
-                $ci = $this->input->post('ci');
-                $fechaNacimiento = $this->input->post('fechaNacimiento');
-                $genero = $this->input->post('genero');
-                $email = $this->input->post('email');
-                $rol = $this->input->post('rol');
-                $idUsuario = $this->session->userdata('idUsuario');
+			
 
-                // Generar contraseña aleatoria y encriptarla
-                $pwd = generarPwd($primerApellido);
-                $passwordHash = md5($pwd);
-
-                // Preparar los datos para la base de datos
-                $data1 = [
-                    'nombre' => $nombre,
-                    'primerApellido' => $primerApellido,
-                    'segundoApellido' => $segundoApellido,
-                    'ci' => $ci,
-                    'fechaNacimiento' => $fechaNacimiento,
-                    'sexo' => $genero,
-                    'idUsuario' => $idUsuario,
-                    'password' => $passwordHash,
-                    'email' => $email,
-                    'rol' => $rol
-                ];
-
-                // Agregar el usuario a la base de datos
-                $nameUsuario = $this->usuario_model->agregarUsuariodb($data1, $nombre);
-
-                if (is_string($nameUsuario)) {
-                    // Si el registro fue exitoso, enviar correo con las credenciales
-                    if ($this->phpmailer_lib->load($email, $nombre, $nameUsuario, $pwd)) {
-                        $data['msg1'] = 'Registro y envío de credenciales exitoso';
-                        $data['estado'] = 1;
-                    } else {
-                        $data['msg2'] = 'Fallo en el envío de credenciales';
-                        $data['estado'] = 0;
-                    }
-
-                    $data['msg2'] = 'Registro en base de datos correcto';
-                    $data['db'] = 1;
-                } else {
-                    $data['msg'] = 'Fallo en el registro del usuario';
-                    $data['db'] = 0;
-                }
-
-                echo json_encode($data);
-            } else {
+			
+				$nombre=letraCapital($_POST['nombre']);
+				$data1['nombre']=$nombre;
+				$data1['primerApellido']=letraCapital($_POST['primerApellido']);
+				$data1['segundoApellido']=letraCapital($_POST['segundoApellido']);
+				$data1['ci']=$_POST['ci'];
+				$data1['fechaNacimiento']=$_POST['fechaNacimiento'];
+				$data1['sexo']=$_POST['genero'];
+				$data1['idUsuario']=$this->session->userdata('idUsuario');
+				$pwd=generarPwd($_POST['primerApellido']);
+	
+				$data1['password']=md5($pwd);
+				$data1['email']=$_POST['email'];
+				$data1['rol']=$_POST['rol'];	
+				$correo =$_POST['email'];
+				
+				
+				$existe=$this->usuario_model->usuarioConCi($_POST['ci']);
+				if(!$existe)
+				{
+	
+				
+	
+				$nameUsuario=$this->usuario_model->agregarUsuariodb($data1,$nombre);
+	
+				if(is_string($nameUsuario)){
+					//reistro de dsto con exitos
+	
+					if($this->phpmailer_lib->load($correo,$nombre,$nameUsuario,$pwd)){
+						//reistro de email exit
+	
+						$data['msg1']='Envio de datos correcto';
+						$data['estado']=1;
+	
+					}
+					else 
+					{
+						$data['msg2']='Fallo  envio de credenciales';
+						$data['estado']=0;
+					}
+					
+					$data['msg2']='Registro en base de datos correcto';
+					$data['db']=1;
+	
+				}else
+				{
+					
+					$data['msg']='Fallo envio de credenciales y registros usuario';
+					$data['db']=0;
+	
+					
+				}
+				
+				echo json_encode($data);
+			 }
+			 else
+			 {
+					 $data['msg']='Usuario Ci ya existe ';
+					$data['uri']=2;
+	
+	
+				echo json_encode($data);
+			 }
+			}
+	else {
                 // No hay conexión a internet
                 $data['msg'] = 'No hay conexión a internet';
                 $data['uri'] = 1;

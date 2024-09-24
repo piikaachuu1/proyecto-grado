@@ -30,7 +30,7 @@ $(document).ready(function(){
 
            <button type="submit" class="editaUsuario btn btn-sm btnt-primary" title="Editar" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
          <button class="eliminarUsuario btn btn-sm btnt-primary" title="Eliminar"><i class="fa-solid fa-trash  fa-lg text-danger"></i></button> 
-         <button class="eliminarUsuarioFisico btn btn-sm btnt-primary" title="Eliminacion Fisica">X</button> 
+
 
         
           
@@ -265,6 +265,9 @@ function limpiarFormularioAgregar() {
         },
         401: function(xhr){
         },
+        500: function(xhr){
+          alert();
+        },
                   // Puedes agregar más códigos de estado aquí según sea necesario
       }
     });
@@ -279,7 +282,7 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
 
  $("#formRegistro2").submit(function(ev){
     ev.preventDefault();
- 
+//  alert();
     $.ajax({
       url: "../usuario/agregarUsuario",
       type: "POST",
@@ -301,7 +304,7 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
           
         if(json.uri==2)
         {
-          toastr.warning("El ci del usuario ya existe");
+          // toastr.warning("El ci del usuario ya existe");
 
         }else {
           $("#agregarUsuario").modal("hide");

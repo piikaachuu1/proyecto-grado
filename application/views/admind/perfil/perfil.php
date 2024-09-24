@@ -63,7 +63,7 @@
 
                         </div> <div class="row " >
 
-                          <p class="col-6 d-flex justify-content-end">Coorreo</p>
+                          <p class="col-6 d-flex justify-content-end">Correo</p>
                           <p id="nombreP" class="col-6 d-flex justify-content-start"><?php echo $row->email; ?></p>
 
                         </div>
@@ -83,10 +83,6 @@
                   </div>
 
 
-                  <div class="card-header p-0 ">
-
-
-                  </div><!-- /.card-header -->
                   <!-- Button trigger modal -->
 
                 </div>

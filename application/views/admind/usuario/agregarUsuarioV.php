@@ -269,9 +269,9 @@
                         <div class="row d-flex">
 
                          <div  class=" col-sm-6 col-md-6  col-12  ">
-                          <input type="text" id="aux" name="aux" value="0" required>
+                          <input type="hidden" id="aux" name="aux" value="0" required>
 
-                          <input type="text" id="idE" name="idE" value="0"> <div
+                          <input type="hidden" id="idE" name="idE" value="0"> <div
                           class="myBox">
 
                           <input class="myImputField" type="text" id="ci" name="ci" onkeypress="return LetrasNumero(event)" list="informacion"   minlength="7" maxlength="10"  required autofocus placeholder>
