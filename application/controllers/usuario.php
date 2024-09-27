@@ -29,7 +29,7 @@ class Usuario extends CI_Controller {
 
 	
 
-	function login()
+	// function login()
 	{
 		
 		if($this->session->userdata('nombreUsuario'))
