@@ -55,14 +55,13 @@ class Servicios extends CI_Controller {
  public function agregarServicio()
  {
 	$this->load->library('form_validation');
-
+     
 	// $idServicio = $this->db->insert_id(); // Obtener el ID del servicio recién agregado
 	$idServicio=2;
 	
 	$nombre=$idServicio.'.jpg';
 	// Configuración para la subida de la imagen
 	$config['upload_path'] = './uploads/servicios/';
-	$config['allowed_types'] = 'jpg|jpeg|png'; 
 	$config['file_name'] =$nombre;// Tipos permitidos
 	$direcccion='.uploads/servicios/'.$nombre;
 	
@@ -71,6 +70,8 @@ class Servicios extends CI_Controller {
 	{
 		unlink($direcccion);
 	}
+	$config['allowed_types'] = 'jpg|jpeg|png'; 
+
 	$this->load->library('upload', $config);
 
 	if (!$this->upload->do_upload()) {
@@ -115,6 +116,39 @@ class Servicios extends CI_Controller {
 	// }
 
  }
+ public function agregarServicioImg()
+{
+	if (empty($_FILES['imagen']['name'])) {
+        echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
+        return;
+    }
+	
+
+
+        $idServicio = 222;  // Ejemplo, puedes reemplazarlo con la lógica de tu negocio
+        $nombreArchivo = $idServicio . '.jpeg';
+
+        // Configuración de subida
+        $config['upload_path'] = './uploads/servicios/';
+        $config['allowed_types'] = 'jpg|jpeg|png';
+        $config['file_name'] = $nombreArchivo;
+
+        $this->load->library('upload', $config);
+
+        if (!$this->upload->do_upload('imagen')) {
+            // Si falla la subida de la imagen, mostrar el error
+            $error = $this->upload->display_errors();
+            echo json_encode(array('msg' => $error, 'uri' => 0));
+        } else {
+            // Subida exitosa
+            $uploadData = $this->upload->data();
+            $filePath = $uploadData['full_path'];
+
+            echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
+        }
+    
+}
+
  
  public function eliminar()
  {

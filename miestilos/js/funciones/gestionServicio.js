@@ -252,11 +252,13 @@ function desstroyInicializaServicio() {
 
   $("#formularioAgregarServicio").submit(function(ev){
     ev.preventDefault();
-
+    var formData = new FormData(this);
     $.ajax({
-      url: "../servicios/agregarServicio",
+      url: "../servicios/agregarServicioImg",
       type: "POST",
-      data: $(this).serialize(),
+      data: formData,
+      contentType: false,  // Necesario para enviar archivos
+      processData: false,
       success: function(data){
 
         console.log(data);
@@ -286,6 +288,16 @@ function desstroyInicializaServicio() {
       },
     });
   }); 
+
+
+
+
+
+
+
+
+
+
 
  $(document).on('click','#btnLimpiarAgregarServicio', function(){
  

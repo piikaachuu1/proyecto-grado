@@ -144,7 +144,7 @@
                       </div>
                       <!-- fin de incio de Modal -->
                     </form>
-                 <form id="formularioAgregarServicio" autocomplete="off">
+                 <form id="formularioAgregarServicio" autocomplete="off" enctype="multipart/form-data" method="post">
                      <div class="modal modal-primary" id="agregarServicioModal" aria-hidden="true"  data-backdrop="static"  >
                       <div class="modal-dialog modal-dialog-centered modal-md" >
                         <div class="modal-content " >
