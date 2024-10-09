@@ -235,7 +235,40 @@
                       <!-- fin de incio de Modal -->
                   </form>
 
-                
+                  <form id="datosServicio" autocomplete="off">
+                     <div class="modal modal-primary" id="datosServicio" aria-hidden="true"  data-backdrop="static"  >
+                      <div class="modal-dialog modal-dialog-centered modal-md" >
+                        <div class="modal-content" >
+                          <div class="modal-header bgt-primary" >
+                            <div class="container">
+                              <div class="row">
+
+                                <h5 class="modal-title">Datos Servicio <span id="titleModalDay"></span></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span  aria-hidden="true" style="color: red;">X</span></button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-body">                    
+
+                             
+
+
+
+                            </div>
+
+                            <div class="modal-footer d-flex justify-content-around" >
+                             <button class="btn btn-sm btnt-primary" type="submit">
+                              <i class="fas fa-save m-1 text-success"></i>Guardar</button>
+                             <button class="btn btn-sm btnt-primary" type="button" data-dismiss="modal"><i class=" fas fa-times p-1 text-danger"></i>Cancelar</button>
+                            </div>
+                          </div>
+                          <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                      </div>
+                      <!-- fin de incio de Modal -->
+                    </form>
 
 
 
