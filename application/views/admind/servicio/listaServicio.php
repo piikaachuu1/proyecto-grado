@@ -190,6 +190,15 @@
 
                                 </div>
                               </div>
+                              <div  class="col-12 ">
+                                <div class="myBox">
+                                  <input class=" myImputField" type="text" id="gasto" name="gasto" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
+
+                                  <label class="mylabel" for="gasto" >Gasto de Servicios  en %</label>
+                                  <label class="mylabel-icon" for="gasto" >100%</label>
+
+                                </div>
+                              </div>
                                <div  class="col-12 ">
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="maximo" name="maximo" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
@@ -202,7 +211,7 @@
                             <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="file" id="imagen" name="imagen" placeholder>
+                                  <input class=" myImputField" type="file" id="imagen" name="imagen" placeholder riquered>
                                   <label class="mylabel" for="imagen" >Imagen</label>
                                 </div>
                               </div>
@@ -235,8 +244,8 @@
                       <!-- fin de incio de Modal -->
                   </form>
 
-                  <form id="datosServicio" autocomplete="off">
-                     <div class="modal modal-primary" id="datosServicio" aria-hidden="true"  data-backdrop="static"  >
+                  <form id="datosServicios" autocomplete="off">
+                     <div class="modal modal-primary" id="datosServicio" aria-hidden="true"  data-backdrop=""  >
                       <div class="modal-dialog modal-dialog-centered modal-md" >
                         <div class="modal-content" >
                           <div class="modal-header bgt-primary" >
@@ -252,16 +261,51 @@
                             <div class="modal-body">                    
 
                              
+                            <div class="row">
+                            <div class='col-6'>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Servicio</label>
+                                <label class ='col-7' for="" id='nombreServicioV'></label>
+                              </div>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Medida</label>
+                                <label class ='col-7' for="" id='medidaV'></label>
+                              </div>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Precio</label>
+                                <label class ='col-7' for="" id='precioV'></label>
+                              </div>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Maximo</label>
+                                <label class ='col-7' for="" id='maximoV'></label>
+                              </div>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Gastos 100%</label>
+                                <label class ='col-7' for="" id='gastoV'></label>
+                              </div>
+                              <div class ='row'>
+                                <label class ='col-5' for="">Image</label>
+                                <label class ='col-7' for="" id='imageV'></label>
+                              </div>
+                              
+                              <div class ='row'>
+                                <label class ='col-5' for="">Descriccion</label>
+                                <label class ='col-7' for="" id='descripcionV'></label>
+                              </div>
+                                <label  class='row' name="" id="descripcionV"></label>
 
+                                <label for="" id='medidaV'></label>
+                              </div>
+                              <div class="text-center col-6">
+                                    <img id=imagenServicio src="<?php echo base_url();  ?>uploads/servicios/default.jpg" class="rounded float-end" alt="..."  width="235px" height="320px">
+                                </div>
 
+                            </div>
 
                             </div>
 
                             <div class="modal-footer d-flex justify-content-around" >
-                             <button class="btn btn-sm btnt-primary" type="submit">
-                              <i class="fas fa-save m-1 text-success"></i>Guardar</button>
-                             <button class="btn btn-sm btnt-primary" type="button" data-dismiss="modal"><i class=" fas fa-times p-1 text-danger"></i>Cancelar</button>
-                            </div>
+                             </div>
                           </div>
                           <!-- /.modal-content -->
                         </div>

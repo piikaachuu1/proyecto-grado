@@ -31,7 +31,7 @@
 
         <td> 
        <div  class="d-flex justify-content-center" >
-        <button title="Editar"  type="submit" class="datosServicio btn btn-sm btnt-primary" data-target="#datosServicio" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
+        <button title="Editar"  type="submit" class="datosServicio btn btn-sm btnt-primary mx-1" data-target="#datosServicio" ><i class="fa-solid fa-eye-low-vision text-light text-lg"></i></button> 
 
         <button title="Editar"  type="submit" class="editarServicio btn btn-sm btnt-primary" data-target="#ModificarProveedor" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
        ${isAdmin() ? `<button title="Eliminar" class="eliminarServicio btn btn-sm btnt-primary mx-1">
@@ -92,7 +92,7 @@ $(document).on('keyup', '#buscarServicio', function() {
 
         <td> 
        <div  class="d-flex" >
-        <button title="Editar"  type="submit" class="datosServicio btn btn-sm btnt-primary" data-target="#datosServicio" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
+        <button title="Editar"  type="submit" class="datosServicio btn btn-sm btnt-primary" data-target="#datosServicio" ><i class="fa-solid fa-eye-low-vision text-light text-lg"></i></button> 
 
         <button title="Editar"  type="submit" class="editarServicio btn btn-sm btnt-primary" data-target="#ModificarProveedor" ><i class="fa-solid fa-pen-to-square fa-lg text-warning"></i></button> 
        ${isAdmin() ? `<button title="Eliminar" class="eliminarServicio btn btn-sm btnt-primary mx-1">
@@ -212,13 +212,46 @@ function desstroyInicializaServicio() {
 })
 
 $(document).on('click','.datosServicio',function(){// modificaionde datos a nivel general
-  $("#modificarServicio").modal("show");
+  
+  let element = $(this).closest('[servicioId]');
+    let id= $(element).attr('servicioId');
+
+  $.post('../servicios/datoServicio',{id},function(response){
+
+    var json=JSON.parse(response);
+
+    $("#idServicio").text(json.id);
+    $("#nombreServicioV").text(json.nombre);
+    $("#medidaV").text(json.medida);
+    $("#precioV").text(json.precio);
+    $("#maximoV").text(json.maximo);
+    $("#gastoV").text(json.gasto+'%');
+    $("#imageV").text(json.imagen);
+
+    $("#imagenServicio").attr("src", "../../uploads/servicios/" + json.imagen);
+
+
+
+    $("#descripcionV").text(json.descriccion);
+    $("#datosServicio").modal("show");
+                 
+  })
 
               
-
 })
 
 
+
+// limpiar3(){
+
+//   $("#idServicio").val('');
+//   $("#nombreServicioV").val('');
+//   $("#medidaV").val('');
+//   $("#precioV").val('');
+//   $("#maximoV").val('');
+//   $("#descripcionV").val('');
+
+// }
   $("#formModificarServicio").submit(function(ev){
     ev.preventDefault();
 
@@ -285,9 +318,13 @@ $(document).on('click','.datosServicio',function(){// modificaionde datos a nive
 
           }
           else if(json.uri==2){
-          toastr.success('Servicio Agregado '+json.msg);
+          toastr.warning('Verifique los campos '+json.msg);
 
           }
+          else if(json.uri==3){
+            toastr.warning(' '+json.msg);
+  
+            }
           else
           {
             
