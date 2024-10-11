@@ -183,7 +183,7 @@
                        <div  class="  d-flex justify-content-center ">
 
                       <div class="myBox">
-                        <input class="myImputField" type="email" id="emailP" name="email" value="<?php echo $row->email; ?>" minlength="7" maxlength="25"  required>
+                        <input class="myImputField" type="email" id="emailP" name="email" value="<?php echo $row->email; ?>" minlength="7" maxlength="50"  required>
                         <label class="mylabel" for="emailP" >email</label>
                       </div>
                     </div>

@@ -72,7 +72,7 @@
                     </div>
                     <div class="modal-body">                    
 
-                      <div class="post myborder"  style="border-bottom: 2px solid;">
+                      <div class="post myborder"  style="border-bottom: 0px solid;">
 
                          <div class="row ">
                           <div  class=" col-sm-6 col-md-4  col-12  ">
@@ -104,13 +104,6 @@
                         </div>
                         <div class="row ">
 
-                         <div  class=" col-sm-3 col-md-4  col-12  ">
-
-                          <div class="myBox">
-                            <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
-                            <label class="mylabel" for="ci" >C.I.</label>
-                          </div>
-                        </div>
 
                         <div  class=" col-sm-3 col-md-4  col-12 d-flex justify-content-center  ">
 
@@ -121,10 +114,7 @@
 
                           </div>
                         </div>
-
-                      </div>
-
-                      <div class="row t-secondary d-flex justify-content-center align-items-center">
+                       <div class="row t-secondary d-flex justify-content-center align-items-center">
 
                         <label class="form-label p-2 " for="inlineRadio3">Genero</label>
 
@@ -139,7 +129,17 @@
                         </div>
 
                       </div>
+                      </div>
 
+                     
+
+                      <div  class=" col-sm-3 col-md-4  col-12  ">
+
+<div class="myBox">
+  <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
+  <label class="mylabel" for="ci" >C.I.</label>
+</div>
+</div>
                     <div class="row">
                       <div  class=" col-sm-6 col-md-6  col-12 ">
 
@@ -167,7 +167,7 @@
                 </div>
 
 
-                <div class="clearfix"></div>        
+                <!-- <div class="clearfix"></div>         -->
 
               </div>
 
@@ -214,7 +214,7 @@
                       <div  class=" col-sm-6 col-md-4  col-12  ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="nombre" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required placeholder>
+                          <input class=" myImputField" type="text" id="nombre" name="nombre"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25" required placeholder>
                           <label class="mylabel" for="nombre" >Nombre</label>
 
                         </div>
@@ -223,14 +223,14 @@
                       <div  class=" col-sm-6 col-md-4  col-12 ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="primerApellido" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required placeholder>
+                          <input class=" myImputField" type="text" id="primerApellido" name="primerApellido"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25" required placeholder>
                           <label class="mylabel" for="primerApellido" >Primer Apellido</label>
                         </div>
                       </div>
                       <div  class=" col-sm-6 col-md-4  col-12  ">
 
                         <div class="myBox">
-                          <input class=" myImputField" type="text" id="segundoApellido" name="segundoApellido"  onkeypress="return soloLetras(event)" minlength="0" maxlength="25" placeholder>
+                          <input class=" myImputField" type="text" id="segundoApellido" name="segundoApellido"  onkeypress="return soloLetrasEspacio(event)" minlength="0" maxlength="25" placeholder>
                           <label class="mylabel" for="segundoApellido" >Segundo Apellido</label>
                         </div>
                       </div>
@@ -245,7 +245,7 @@
 
 
                         <div class="myBox">
-                          <input class="myImputField" type="date" id="fechaNacimiento" name="fechaNacimiento"   max="2023-08-01" value="2005-01-01"   required>
+                          <input class="myImputField" type="date" id="fechaNacimiento" name="fechaNacimiento"   max="2008-08-01" value="2005-01-01"   required>
                           <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
 
 

@@ -196,7 +196,7 @@
                               </div>
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" required autofocus placeholder>
+                                  <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" min="1" required autofocus placeholder>
 
                                   <label class="mylabel" for="precio" >Precio Unidad</label>
                                   <label class="mylabel-icon" for="precio" >Bs.</label>
@@ -245,9 +245,10 @@
                             </div>
 
                             <div class="modal-footer d-flex justify-content-around" >
-                             <button class="btn btn-sm btnt-primary" type="submit">
-                              <i class="fas fa-save m-1 text-success"></i>Guardar</button>
+                            
                              <button class="btn btn-sm btnt-primary" type="button"  id="btnLimpiarAgregarServicio" ><i class=" fas fa-times p-1 text-danger"></i>Cancelar</button>
+                             <button class="btn btn-sm btnt-primary" type="submit">
+                             <i class="fas fa-save m-1 text-success"></i>Guardar</button>
                             </div>
                           </div>
                           <!-- /.modal-content -->
