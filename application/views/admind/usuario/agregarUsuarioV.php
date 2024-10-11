@@ -274,7 +274,7 @@
                           <input type="hidden" id="idE" name="idE" value="0"> <div
                           class="myBox">
 
-                          <input class="myImputField" type="text" id="ci" name="ci" onkeypress="return LetrasNumero(event)" list="informacion"   minlength="7" maxlength="10"  required autofocus placeholder>
+                          <input class="myImputField" type="text" id="ci" name="ci" onkeypress="return LetrasNumero(event)" list="informacion"   minlength="7" maxlength="15"  required autofocus placeholder>
                           <datalist id="informacion">
 
                           </datalist>

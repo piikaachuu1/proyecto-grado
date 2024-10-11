@@ -219,7 +219,7 @@ public function agregarUsuario() {
         $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha_numeric_spaces|min_length[2]');
         $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required|alpha_numeric_spaces|min_length[2]');
         $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido',);
-        $this->form_validation->set_rules('ci', 'Cédula de Identidad', 'required|numeric|min_length[6]');
+        $this->form_validation->set_rules('ci', 'Cédula de Identidad', 'required|min_length[6]');
         $this->form_validation->set_rules('email', 'Correo Electrónico', 'required|valid_email');
         // $this->form_validation->set_rules('fechaNacimiento', 'Fecha de Nacimiento', 'required|valid_date[Y-m-d]');
         $this->form_validation->set_rules('genero', 'Género', 'required');

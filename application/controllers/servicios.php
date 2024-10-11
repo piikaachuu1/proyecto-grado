@@ -168,13 +168,14 @@ class Servicios extends CI_Controller {
  			$data['maximo']=$_POST['maximoM'];	
 			// $data['imagen']=$id.'jpg';
 
-			$nombreArchivo = $id . '.jpg';
+			$nombreArchivo = $id.'.jpg';
 			$config['upload_path'] = './uploads/servicios/';
 			$config['allowed_types'] = 'jpg|jpeg|png';
 			$config['file_name'] = $nombreArchivo;
             $direccion = './uploads/servicios/'.$nombreArchivo;
  		if($this->servicios_model->modificarServiciodb($id,$data)>0){
 		
+			echo json_encode(array('msg'=>'modificados','uri'=>2));	
 
  		}
  		else

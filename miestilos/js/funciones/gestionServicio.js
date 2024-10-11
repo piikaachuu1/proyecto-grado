@@ -278,6 +278,12 @@ $(document).on('click','.datosServicio',function(){// modificaionde datos a nive
 
 
           }
+          else if( json.uri==2){
+            toastr.success('Servicios Modificado ');
+            desstroyInicializaServicio();
+        $("#modificarServicio").modal("hide");
+      
+          }
           else
           {
             
