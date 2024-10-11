@@ -284,8 +284,35 @@ $.validator.setDefaults({
       $(element).removeClass('is-invalid');
     }
   });
+  // formModificarServicio
 
-
+  $('#formModificarServicio').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+     
+    },
+    messages: {
+      email: {
+        required: "Ingrese un correo",
+        email: "Ingrese un correo valido"
+      },
+  
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.myBox').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
 </script>
 <script>
  

@@ -202,6 +202,8 @@ function desstroyInicializaServicio() {
     $("#medidaM").val(json.medida);maximoM
     $("#precioM").val(json.precio);
     $("#maximoM").val(json.maximo);
+    $("#gastoM").val(json.gasto);
+
 
 
     $("#descripcionM").val(json.descriccion);
@@ -254,11 +256,14 @@ $(document).on('click','.datosServicio',function(){// modificaionde datos a nive
 // }
   $("#formModificarServicio").submit(function(ev){
     ev.preventDefault();
+    var formData = new FormData(this);
 
     $.ajax({
       url: "../servicios/modificarServicio",
       type: "POST",
-      data: $(this).serialize(),
+      data: formData,
+      contentType: false,  // Necesario para enviar archivos
+      processData: false,
       success: function(data){
 
         console.log(data);

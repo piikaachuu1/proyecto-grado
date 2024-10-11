@@ -113,17 +113,30 @@
                                   <label class="mylabel" for="maximo" >Cantidad Maxima Servicio</label>
                                 </div>
                               </div>
+                              <div  class="col-12 ">
+                                <div class="myBox">
+                                  <input class=" myImputField" type="text" id="gastoM" name="gastoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
+
+                                  <label class="mylabel" for="gastoM" >Gasto de Servicios  en %</label>
+                                  <label class="mylabel-icon" for="gastoM" >100%</label>
+
+                                </div>
+                              </div>
+                              <div  class="col-12 ">
+                                <div class="myBox">
+                                  <input class=" myImputField" type="file" id="imagenM" name="imagenM" value=""  autofocus placeholder>
+
+                                  <label class="mylabel" for="imagenM" >Selecciona nueva Imgen </label>
+                              
+
+                                </div>
+                              </div>
                                   <div  class="col-12 ">
                                     <div class="myBox">
-                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"   minlength="20" maxlength="200" autofocus placeholder>
+                                      <input class=" myImputField" type="text" id="descripcionM" name="descripcionM"   minlength="0" maxlength="200" autofocus placeholder>
                                       <label class="mylabel" for="descripcion" >Descriccion</label>
                                     </div>
                                   </div>
-
-
-
-
-                                
 
 
                               </div> 
@@ -283,10 +296,7 @@
                                 <label class ='col-5' for="">Gastos 100%</label>
                                 <label class ='col-7' for="" id='gastoV'></label>
                               </div>
-                              <div class ='row'>
-                                <label class ='col-5' for="">Image</label>
-                                <label class ='col-7' for="" id='imageV'></label>
-                              </div>
+                            
                               
                               <div class ='row'>
                                 <label class ='col-5' for="">Descriccion</label>

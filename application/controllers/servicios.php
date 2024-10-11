@@ -62,7 +62,9 @@ class Servicios extends CI_Controller {
 	if (empty($_FILES['imagen']['name'])) {
 		echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
 	   return;
-   }
+   }else{
+
+   
 	if ($this->form_validation->run() === FALSE) {
 		
 		echo json_encode(array('msg' => 'Verifique los campos', 'uri' => 2));
@@ -118,21 +120,9 @@ class Servicios extends CI_Controller {
 	}
    
 	}
+ }
 
  }
- public function agregarServicioImg()
-{
-
-        // $nombreArchivo = $idServicio . '.jpeg';
-
-        // Configuración de subida
-     
-
-        // $this->load->library('upload', $config);
-
-     
-    
-}
 
  
  public function eliminar()
@@ -171,23 +161,47 @@ class Servicios extends CI_Controller {
 
  			$data['nombre']=$_POST['nombreServicioM'];
  			$data['descriccion']=$_POST['descripcionM'];
+ 			$data['gasto']=$_POST['gastoM'];
+
  			$data['unidadMedida']=$_POST['medidaM'];
  			$data['precio']=$_POST['precioM'];
- 			$data['maximo']=$_POST['maximoM'];		
- 		if($this->servicios_model->modificarServiciodb($id,$data)>0){
+ 			$data['maximo']=$_POST['maximoM'];	
+			// $data['imagen']=$id.'jpg';
 
-						echo json_encode(array('msg'=>'Ok',
-																			
-																				'uri'=>1));	
+			$nombreArchivo = $id . '.jpg';
+			$config['upload_path'] = './uploads/servicios/';
+			$config['allowed_types'] = 'jpg|jpeg|png';
+			$config['file_name'] = $nombreArchivo;
+            $direccion = './uploads/servicios/'.$nombreArchivo;
+ 		if($this->servicios_model->modificarServiciodb($id,$data)>0){
+		
 
  		}
  		else
  		{
-						echo json_encode(array('msg'=>'fallo',
-																			'uri'=>0));	
+			// if (!$this->upload->do_upload('imagen')) {
+			// 	// Si falla la subida de la imagen, mostrar el error
+			// 	$error = $this->upload->display_errors();
+			// 	echo json_encode(array('msg' => $error, 'uri' => 0));
+			// }
+				echo json_encode(array('msg'=>'fallo','uri'=>0));	
 
  		}
  		
+
+		//  if(file_exists($direccion))
+		//  {
+		// 	 unlink($direccion);
+		//  }
+		//  $this->load->library('upload', $config);
+
+		//  $uploadData = $this->upload->data();
+		//  $filePath = $uploadData['full_path'];
+		//  $this->upload->data();
+
+		//  echo json_encode(array('msg'=>'Ok','uri'=>1));	
+ 
+		
 			
  
  }

@@ -218,7 +218,7 @@ public function agregarUsuario() {
         // Establecer reglas de validación de formulario
         $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha_numeric_spaces|min_length[2]');
         $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required|alpha_numeric_spaces|min_length[2]');
-        $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido', 'alpha_numeric_spaces');
+        $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido',);
         $this->form_validation->set_rules('ci', 'Cédula de Identidad', 'required|numeric|min_length[6]');
         $this->form_validation->set_rules('email', 'Correo Electrónico', 'required|valid_email');
         // $this->form_validation->set_rules('fechaNacimiento', 'Fecha de Nacimiento', 'required|valid_date[Y-m-d]');
@@ -226,7 +226,7 @@ public function agregarUsuario() {
         $this->form_validation->set_rules('rol', 'Rol', 'required');
 
         // Ejecutar validación del formulario
-        if ($this->form_validation->run() === true) {
+        if ($this->form_validation->run() === false) {
             // Si hay errores de validación, devolverlos en formato JSON
             $data['msg'] = 'Errores de validación';
             $data['errores'] = validation_errors();
