@@ -102,10 +102,10 @@
 
 
                         </div>
-                        <div class="row ">
+                        <div class="row">
 
 
-                        <div  class=" col-sm-3 col-md-4  col-12 d-flex justify-content-center  ">
+                        <div  class=" col-sm-12 col-12 col-md-6 justify-content-center  ">
 
 
                           <div class="myBox">
@@ -114,7 +114,8 @@
 
                           </div>
                         </div>
-                       <div class="row t-secondary d-flex justify-content-center align-items-center">
+
+                       <div class="col-sm-12 col-12 col-md-6 t-secondary  justify-content-center align-items-center">
 
                         <label class="form-label p-2 " for="inlineRadio3">Genero</label>
 
@@ -133,13 +134,15 @@
 
                      
 
-                      <div  class=" col-sm-3 col-md-4  col-12  ">
+                    <div class='row'>
+                    <div  class=" col-sm-12 col-md-6  col-12  ">
 
-<div class="myBox">
-  <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
-  <label class="mylabel" for="ci" >C.I.</label>
-</div>
-</div>
+                      <div class="myBox">
+                        <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
+                        <label class="mylabel" for="ci" >C.I.</label>
+                    </div>
+                  </div>
+                    </div>
                     <div class="row">
                       <div  class=" col-sm-6 col-md-6  col-12 ">
 
