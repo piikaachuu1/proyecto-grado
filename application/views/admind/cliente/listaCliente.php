@@ -7,7 +7,7 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row ">
-          <div class="col-sm-12 d-flex justify-content-start text-light">
+          <div class="col-sm-12 d-flex justify-content-start text-black">
             <h1><b>Clientes</b></h1>
           </div>
           
@@ -18,7 +18,6 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-
 
 
 
@@ -118,7 +117,7 @@
                         <input  class="myImputField form-control-md" type="text" name="primerApellido" id="txtApellido1" onkeypress="return soloLetrasEspacio(event)" minlength="3" maxlength="25" required  autocomplete="off" onpaste="return false;" placeholder/>
                         <label class="mylabel" for="">Primer Apellido</label>
 
-
+ 
                       </div>
                     </div>
                     <div class=" col-sm-12 col-md-6 ">

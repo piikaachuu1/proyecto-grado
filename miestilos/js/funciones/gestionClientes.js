@@ -79,7 +79,7 @@ $(document).ready(function() {
           <div/>
          </td>
           </tr>
-          `
+          ` 
                             i++;
                         });
                         $('#tbCliente').html(template);
@@ -197,6 +197,8 @@ $(document).ready(function() {
                 // console.log(data);
                 var json = JSON.parse(data);
                 // alert(json.uri);
+
+
                if(json.uri===2)
                {
                 toastr.warning('El cliente con ci ya esta registrado');

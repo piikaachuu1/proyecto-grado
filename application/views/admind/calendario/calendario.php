@@ -275,8 +275,10 @@
 
 </div>
 <div class="modal-footer d-flex justify-content-around p-1 bgt-acent " >
-  <button type="button" class=" btn btn-md btnt-primary" id="btnGuardar" > <i class="fa-solid fa-floppy-disk text-success"></i> Agregar</button>
   <button type="button" class=" btn btn-md btnt-primary " data-dismiss="modal" onclick="reserFormularioAgregarEvent()"> <i class="fa-solid fa-xmark text-warning"></i>Cancelar</button>
+  <button type="button" class=" btn btn-md btnt-primary" id="btnGuardar" > <i class="fa-solid fa-floppy-disk text-success"></i> Agregar</button>
+
+
 </div>
 </div>
 <!-- /.modal-content -->
@@ -381,8 +383,9 @@
 </div>
 
 <div class="modal-footer d-flex justify-content-around p-1 bgt-acent">
- <button class="btn btn-sm btnt-primary" type="submit"><i class="fas fa-save"></i>Guardar</button>
  <button type="button" class="btn btnt-primary btn-sm" data-dismiss="modal"><i class="fas fa-times"> </i>Cancelar</button>
+ <button class="btn btn-sm btnt-primary" type="submit"><i class="fas fa-save"></i>Guardar</button>
+
 </div>
 </div>
 </div>

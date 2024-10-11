@@ -54,15 +54,25 @@ class Servicios extends CI_Controller {
  }
  public function agregarServicio()
  {
+
+	$ban =false;
+
 	$this->load->library('form_validation');
 	$this->form_validation->set_rules('nombreServicio', 'Nombre del Servicio', 'required|min_length[2]');
 	$this->form_validation->set_rules('precio', 'Precio', 'required');
 	$this->form_validation->set_rules('maximo', 'Máximo', 'required');
 
-	if (empty($_FILES['imagen']['name'])) {
+
+
+	// el aggregar una imagen es opcionasl
+	if (!empty($_FILES['imagen']['name'])) {
+		$ban=true;
 		echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
 	   return;
-   }else{
+
+   }else
+   
+    {
 
    
 	if ($this->form_validation->run() === FALSE) {
@@ -82,8 +92,7 @@ class Servicios extends CI_Controller {
 		$data['precio'] = $_POST['precio'];
 		$data['maximo'] = $_POST['maximo'];
 		$data['idUsuario'] = $this->session->userdata('idUsuario');
-
-
+    
         if($this->servicios_model->existeServiciodb($nombreServicio))
 		{
 			echo json_encode(array('msg' => 'Servicicio ya existe ', 'uri' => 3));
@@ -101,20 +110,31 @@ class Servicios extends CI_Controller {
 
 		if ($idServicio> 0 ) {
 			
-			if (!$this->upload->do_upload('imagen')) {
-				// Si falla la subida de la imagen, mostrar el error
-				$error = $this->upload->display_errors();
-				echo json_encode(array('msg' => $error, 'uri' => 0));
-			} else {
-				// Subida exitosa
-				$uploadData = $this->upload->data();
-				$filePath = $uploadData['full_path'];
-	
+			if($ban){
+
+				if (!$this->upload->do_upload('imagen')) {
+					// Si falla la subida de la imagen, mostrar el error
+					$error = $this->upload->display_errors();
+					echo json_encode(array('msg' => $error, 'uri' => 0));
+				} else {
+					// Subida exitosa
+					$uploadData = $this->upload->data();
+					$filePath = $uploadData['full_path'];
+		
+					echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
+				}
+
+			}
+			else{
 				echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
+
 			}
 
 	
-		} else {
+		} 
+
+		
+		else {
 			echo json_encode(array('msg' => 'Fallo al agregar servicio', 'uri' => 0));
 		}
 	}

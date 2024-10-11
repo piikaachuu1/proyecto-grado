@@ -43,7 +43,7 @@ public function listacliente()
 }
 
 
-
+ 
 
 	public function agregarCliente() //agreagr ciente desde gestion de clientes
 
@@ -79,7 +79,8 @@ public function listacliente()
 				if($ban){
 
 					echo json_encode(array('uri'=>1));
-				}else
+				}
+				else
 				{
 					echo json_encode(array('uri'=>0));
 

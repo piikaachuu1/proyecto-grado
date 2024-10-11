@@ -246,7 +246,7 @@
 
                             <div class="modal-footer d-flex justify-content-around" >
                             
-                             <button class="btn btn-sm btnt-primary" type="button"  id="btnLimpiarAgregarServicio" ><i class=" fas fa-times p-1 text-danger"></i>Cancelar</button>
+                             <button class="btn btn-sm btnt-primary" type="button"  id="btnLimpiarAgregarServicio" ><i class=" fas fa-times p-1 text-danger"></i>Limpiar datos</button>
                              <button class="btn btn-sm btnt-primary" type="submit">
                              <i class="fas fa-save m-1 text-success"></i>Guardar</button>
                             </div>

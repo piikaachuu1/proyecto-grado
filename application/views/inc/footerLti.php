@@ -300,6 +300,7 @@ $.validator.setDefaults({
         email: "Ingrese un correo valido"
       },
   
+      
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {
