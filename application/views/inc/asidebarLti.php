@@ -27,6 +27,19 @@
                         <p class="t-primary" ><b>Inicio</b></p>
                     </a>
                 </li>
+                <li class="nav-item" id="clientes">
+                <a href="<?php echo base_url();?>index.php/usuario/calendario" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p class="t-primary">Calendario Eventos</p>
+                    </a>
+                </li>
+                <li class="nav-item" id="eventosRes">
+                <a href="<?php echo base_url();?>index.php/reservas/index" class="nav-link">
+                <i class="nav-icon far fa-calendar-check"></i>
+                        <p class="t-primary">Eventos Reservados</p>
+                    </a>
+                </li>
+               
                 <li class="nav-item" id="usuarios">
                     <a href="<?php echo base_url();?>index.php/usuario/agregarView" class="nav-link">
                         <i class="nav-icon fas fa-users t-acent"></i>
@@ -52,13 +65,7 @@
                         <p class="t-primary">Clientes</p>
                     </a>
                 </li>
-                <li class="nav-item" id="clientes">
-                <a href="<?php echo base_url();?>index.php/usuario/calendario" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie t-acent"></i>
-                        <p class="t-primary">Reservar Evento</p>
-                    </a>
-                </li>
-               
+              
         
 
                 <li class="nav-item" id="reportes">

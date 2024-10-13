@@ -92,7 +92,7 @@
         </div>
       </div>
     </div>
-    <div class="modal-body bgt-secondary m-0 p-0 px-2">
+    <div class="modal-body  m-0 p-0 px-2">
 
       <!-- Post -->        
       <div>
@@ -170,7 +170,7 @@
 <div class="modal fade" id="servciosModificar" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header p-2 bgt-acent">
+      <div class="modal-header p-2 bgt-acent bgt-primary">
 
 
        <div class="container">
@@ -188,7 +188,7 @@
         </div>
       </div>
     </div>
-    <div class="modal-body bgt-secondary p-3 ">
+    <div class="modal-body  p-3 ">
 
       <!-- Post -->      
       <div class="row p-1 d-flex justify-content-center">

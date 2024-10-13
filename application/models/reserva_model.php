@@ -234,13 +234,12 @@ public function servicioReservadosPagardb($id,$data)//tanto como para remover el
 
 // consulta 
 
-public function nombreEventodb($valor)
+public function nombreEventodb()
 	{
 		$this->db->select('*');
 		$this->db->from('tipoevento S'); 
 		return $this->db->get();
 	}
-
 
 public function detalleReservadb($id){ //ooara reazliar una consulta en reservas
 		$this->db->select('D.id AS idDetalle,S.nombre AS servicio, D.cantidad,D.precio AS PU,D.subTotal,D.descuento,DATE(fechaHoraInicio) AS fechaInicio');

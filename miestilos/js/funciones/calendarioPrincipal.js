@@ -1,5 +1,6 @@
 function prepareModalDetail(clickedDay, eventDetail,month) {
   
+
     var dia =month.date.format('dddd');
     var fecha=clickedDay;
     var estado=0;
@@ -120,8 +121,54 @@ function prepareModalToAdd(clickedDay) {
     actualizarPrecio();
     agregarBloques();
     document.getElementById('nombreEvento').focus();
+    cargarEventos();
 }
 
+
+function cargarEventos(){
+    const select = document.getElementById('tipoEvento');
+
+       
+
+
+
+         $.ajax({
+            url: '../reservas/cargarEventoControlador',
+            type: 'POST',
+            success: function(response) {
+                // console.log(response+"golas");
+         let template = "";
+
+                let evento = JSON.parse(response);
+                evento.forEach(res => {
+                console.log(res.id);
+                console.log(res.nombre);
+                template += `
+                <option 
+                idEvento="${res.id}"                
+                value=" ${res.id}"
+                
+                >${res.nombre}</option>
+                 `
+
+
+                })
+
+         select.innerHTML=template;
+
+             
+            }
+        });
+    
+
+
+
+
+
+
+
+
+}
 $('#nombreEvento').keyup(function() { //rtipo Evento
     const inputId = document.getElementById('idTipoEvento');
      // inputId.value="";
@@ -159,6 +206,8 @@ $('#nombreEvento').keyup(function() { //rtipo Evento
 
 });
 
+
+
 function seleccionTipoEvento(data) {
     const datalist = document.getElementById('listaEventos')
     var idEvento = document.getElementById('idTipoEvento');
@@ -176,6 +225,10 @@ function seleccionTipoEvento(data) {
     }
 
 }
+
+
+// tipo con select
+
 $('#nombreEvento').dblclick(function() { //rtipo Evento
     document.getElementById('nombreEvento').disabled = false;
     document.getElementById('nombreEvento').value = '';
@@ -854,15 +907,15 @@ function agregarBloques() {
     </div>
     </div>
     <div class="row">
-    <input class="form-control" type="range" id="horaRange${i+1}" min="1" max="12" value="8" name="horaRange${i+1}" onchange="actualizarHoraFin(this, ${i + 1})" >
+    <input hidden class="form-control" type="range" id="horaRange${i+1}" min="1" max="12" value="8" name="horaRange${i+1}" onchange="actualizarHoraFin(this, ${i + 1})" >
     </div>
     <div class="row">  
     <div class="col-12 d-flex">
-    <div class="col-6 d-flex">
-    <span>Hora Inicio</span> <input type="time" id="inicioH${i + 1}" step="3600" name="inicioH${i + 1}" value="10:00" style="width:80px" onchange="actualizarHoraFinPorCambioHora(this, ${i + 1})">
+    <div  class="col-6 d-flex">
+    <span >Hora Inicio</span> <input   type="time" id="inicioH${i + 1}" step="3600" name="inicioH${i + 1}" value="17:00" style="width:80px" onchange="actualizarHoraFinPorCambioHora(this, ${i + 1})" readonly>
     </div>
-    <div class="col-6 d-flex">
-    <span>Hora Fin</span> <input type="time" id="finH${i + 1}" step="3600" name="finH${i + 1}" value="11:00" readonly style="width:80px">
+    <div   class="col-6 d-flex">
+    <span >Hora Fin</span> <input   type="time" id="finH${i + 1}" step="3600" name="finH${i + 1}" value="11:00" readonly style="width:80px">
     </div>
 
     </div>
@@ -945,7 +998,7 @@ function actualizarHoraFinPorCambioHora(inputHoraInicio, index) {
 
 function validarCampos() {
     var bar = true;
-    var idTipoEvento=document.getElementById("idTipoEvento");
+    var idTipoEvento=document.getElementById("tipoEvento");
     var tipoEvento = document.getElementById("nombreEvento");
     var dia = document.getElementById("txtDia");
     var fecha = document.getElementById("fecha");
@@ -996,7 +1049,7 @@ $(document).ready(function() {
         // validarCampos();
         if (validarCampos()) {
         fechaInici = $("#fecha").val();
-        idTipoEvento = $('#idTipoEvento').val();
+        idTipoEvento = $('#tipoEvento').val();  
         nombreEvento = $('#nombreEvento').val();
         dias = $('#txtDia').val();
         fechaFin = $("#fechaFin").val();

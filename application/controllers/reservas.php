@@ -36,11 +36,23 @@ class Reservas extends CI_Controller {
  public function tipoEvento()//  nombre del evento
  {
     $valor=$_POST['valor'];
-    $lista=$this->reserva_model->nombreEventodb($valor);
+    $lista=$this->reserva_model->nombreEventodb();
     $listaArray = $lista->result_array();
     // $listaArray = $lista->row_array();
     echo json_encode($listaArray);
  }
+
+ public function cargarEventoControlador()//  nombre del evento
+ {
+   
+    $lista=$this->reserva_model->nombreEventodb();
+    $listaArray = $lista->result_array();
+    echo json_encode($listaArray);
+ }
+
+ 
+
+
  public function agregar()
  {
 

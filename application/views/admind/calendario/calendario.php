@@ -88,14 +88,14 @@
 
        <div class="modal-body mx-1 px-2">
         <section class="row p-0" >
-          <div class="col-sm-12 col-lg-12" >
+          <div class="col-sm-4 col-lg-4" >
            <section class="row" >
-            <!-- Sección para el nombre del evento -->
-            <div class="col-12" >
-              <div class="myBox">
+            <!-- Sección para el nombre del evento ya no se esta usanbdo -->
+            <div class="col-12" >  
+              <div class="">
                 <input type="hidden" name="" id="idTipoEvento" value="">
-                <input class="myImputField form-control form-control-sm" id="nombreEvento" list="listaEventos" type="text" placeholder="Ej.Cena Graduación Compromiso Matrimonio..." autofocus autocomplete="off" onkeypress="return soloLetrasEspacio(event)" onchange="seleccionTipoEvento(this)">
-                <label class="mylabel">Tipo del Evento</label>
+                <input class="myImputField form-control form-control-sm" id="nombreEvento" list="listaEventos" type="hidden" placeholder="Ej.Cena Graduación Compromiso Matrimonio..." autofocus autocomplete="off" onkeypress="return soloLetrasEspacio(event)" onchange="seleccionTipoEvento(this)">
+                <!-- <label class="mylabel">Tipo del Evento</label> -->
               </div>
             </div>
             <datalist id="listaEventos">
@@ -103,66 +103,52 @@
             </datalist>
             <div class ="myBox"> 
             <!-- <label class="mylabel" >Tipo del Evento</label> -->
-
-            <select hidden class=" myImputField" type="hidden" id="nombreEvento" placeholder required>
-                <option>Bautizo</option>
-
-                <option>Baby Show</option>
-                <option>Fiesta Privada</option>
-                <option>Graduacion</option>
-                <option >Promocion</option>
-                <option>Matrimonio</option>
-                <option>15 años</option>
-                <option>18 años</option>
-                <option>otros</option>
-
-
-
-
+            <label for="">Tipo de evento</label>
+            <select  class=" myImputField" id="tipoEvento" placeholder required>
+              
+              
             </select>
             </div>
             <!-- Secciódn para la capacidad y detalles del evento -->
-            <div hidden class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
-              <div hidden class=" col-8">    <label >Capacidad del salon:</label>
+            <div class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
+              <div class=" col-8">    <label >Capacidad del salon:</label>
               </div>
-              <div hidden class="col-4">
+              <div class="col-4">
                <input type="text" name="" value="400" disabled style="width: 40px; height: 25px;">
                <input type="hidden" name="" id="maxCapacidad" value="400" >
 
                <label><i class="fa-solid fa-person "></i></label> 
              </div>
 
-             <div class="row">
-              <div class="">
-                <label>
-                </label><input  type="hidden" id="nroInvitados" name="nroInvitados" onkeypress="return soloNumero(event)" maxlength="3" minlength="1"   value="20" style="width: 40px; height: 25px;" required onchange="cantidadInvitados()">
+             <div hidden class="row bg-danger">
+              <div class="col-12">
+                <label>Nro Invitados</label>
+                <input  type="text" id="nroInvitados" name="nroInvitados" onkeypress="return soloNumero(event)" maxlength="3" minlength="1"   value="20" style="width: 40px; height: 25px;" required onchange="cantidadInvitados()">
               </div>
             </div>
           </div>
-          <div hidden class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
-            <div hidden class="col-8">
+          <div  class="col-xl-12 col-lg-12  col-md-6  col-sm-12 col-12 d-flex">
+            <div  class="col-8">
               <label>  Dias del Evento:</label>
             </div>
-            <div hidden class="col-4">
+            <div  class="col-4">
               <input type="text" name="" maxlength="1" id="txtDia" onkeypress="return soloNumero(event)"  value="1" required placeholder="dias" onchange="agregarBloques() "style="width: 40px; height:25px"> 
 
               <i class="fa-solid fa-calendar-day"></i>
             </div> 
           </div>
 
-          <div hidden class="col-12 px-1 m-0 " id="contenedorBloques" style="background: rgba(255, 255, 255, .4);">
+          <div class="col-12 px-1 m-0 " id="contenedorBloques" style="background: rgba(255, 255, 255, .4);">
             <!-- muy impirta aqui se esta cargado lo ide de campos -->
 
 
           </div>
 
-          <hr class="bgt-primary " style="
-          height: 2px;
-          ">
+          <hr class="bgt-primary " style="height: 2px;">
         </section>
 
       </div>
-      <div class="col-sm-12 col-lg-12 p-1">
+      <div class="col-sm-8 col-lg-8 p-1">
         <div class="col-12 d-flex ">
 
           <div class="col-11">
@@ -184,8 +170,8 @@
           </div>
         </div>
         <div class="col-12 d-flex">
-          <div hidden class="col-4">
-            <div hidden class="myBox">
+          <div  class="col-4">
+            <div  class="myBox">
 
               <input class="myImputField" type="date" name="" id="fechaFin" readonly>
               <label class="mylabel">Fin del  Evento</label>
@@ -193,7 +179,7 @@
 
             </div>
           </div>
-          <div class="col-12">
+          <div class="col-8">
             <div class="myBox">
 
 
