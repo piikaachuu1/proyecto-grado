@@ -179,7 +179,7 @@
 
             </div>
           </div>
-          <div class="col-8">
+          <div class="col-7">
             <div class="myBox">
 
 
