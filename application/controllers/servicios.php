@@ -58,14 +58,14 @@ class Servicios extends CI_Controller {
 	$ban =false;
 
 	$this->load->library('form_validation');
-	$this->form_validation->set_rules('nombreServicio', 'Nombre del Servicio', 'required|min_length[2]');
+	$this->form_validation->set_rules('nombreServicio', 'required');
 	$this->form_validation->set_rules('precio', 'Precio', 'required');
 	$this->form_validation->set_rules('maximo', 'Máximo', 'required');
 
 
 
 	// el aggregar una imagen es opcionasl
-	if (!empty($_FILES['imagen']['name'])) {
+	if (empty($_FILES['imagen']['name'])) {
 		$ban=true;
 		echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
 	   return;
@@ -75,7 +75,7 @@ class Servicios extends CI_Controller {
     {
 
    
-	if ($this->form_validation->run() === FALSE) {
+	if ($this->form_validation->run() == FALSE) {
 		
 		echo json_encode(array('msg' => 'Verifique los campos', 'uri' => 2));
 	}

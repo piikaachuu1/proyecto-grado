@@ -75,7 +75,8 @@
                     </a>
                     <ul class="nav nav-treeview" style="margin-left:20px">
                         <li class="nav-item" id="ingresos">
-                            <a href="#" class="nav-link">
+                        <a href="<?php echo base_url();?>index.php/reportes/index" class="nav-link">
+
                                 <i class='fa fa-money' style="color:red"></i>
                                 <p class="t-primary">Ingresos</p>
                             </a>

@@ -205,7 +205,7 @@
                               </div>
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="gasto" name="gasto" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
+                                  <input class=" myImputField" type="text" id="gasto" name="gasto" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" max="100" required autofocus placeholder>
 
                                   <label class="mylabel" for="gasto" >Gasto de Servicios  en %</label>
                                   <label class="mylabel-icon" for="gasto" >100%</label>

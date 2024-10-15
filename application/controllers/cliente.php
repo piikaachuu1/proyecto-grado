@@ -50,8 +50,8 @@ public function listacliente()
 	{
 		$this->load->library('form_validation');
 
-        $this->form_validation->set_rules('nombre', 'Nombre', 'required|alpha|min_length[2]');
-        $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required|alpha|min_length[2]');
+        $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+        $this->form_validation->set_rules('primerApellido', 'Primer Apellido', 'required');
         $this->form_validation->set_rules('segundoApellido', 'Segundo Apellido');
         $this->form_validation->set_rules('ci', 'CI', 'required');
         $this->form_validation->set_rules('celular', 'Celular', 'required');
