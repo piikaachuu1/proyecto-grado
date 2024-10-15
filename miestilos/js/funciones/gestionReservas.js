@@ -754,7 +754,7 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
     var doc = new jspdf.jsPDF('p','mm','letter');
 
         var urlCompleta = window.location.href;
-     doc.addImage(urlCompleta+"../../../../img/usuario.png", "PNG", 20, 15, 30, 30);
+     doc.addImage(urlCompleta+"../../../../img/logo.png", "PNG", 20, 15, 30, 30);
 
      doc.setTextColor(217, 0, 0);  
     doc.text(170, 20, 'Nº '+agregarCeros(id))

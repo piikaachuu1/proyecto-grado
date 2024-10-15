@@ -1169,6 +1169,7 @@ totalSinDescuento,totalDescuento,totalPagar,adelandto,saldoPagar,plazoConfirmaci
 
            console.log(datos2.id+' esta una prueba '+datos2.fechaInicio);
            $(modalAddEvent).modal('hide');
+           
 
                 setTimeout(function() {
                                       generarPdf(datos2.id,datos2.fechaInicio,datos2.nombreCompleto,datos2.total,datos2.adelantoReserva,datos2.saldo,datos2.ci,3,0);

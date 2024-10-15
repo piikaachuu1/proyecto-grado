@@ -1,5 +1,6 @@
 
 
+
 $(document).ready(function() {
     $(document).on('change', '#fechaIncio', function() {
         // document.getElementById('fechaFin');
