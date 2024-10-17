@@ -55,7 +55,7 @@ class Servicios extends CI_Controller {
  public function agregarServicio()
  {
 
-	$ban =false;
+	$ban =true;
 
 	$this->load->library('form_validation');
 	$this->form_validation->set_rules('nombreServicio', 'required');
@@ -65,10 +65,10 @@ class Servicios extends CI_Controller {
 
 
 	// el aggregar una imagen es opcionasl
-	if (empty($_FILES['imagen']['name'])) {
-		$ban=true;
-		echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
-	   return;
+	if (!empty($_FILES['imagen']['name'])) {
+		$ban=false;
+	// 	echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
+	//    return;
 
    }else
    
@@ -121,7 +121,7 @@ class Servicios extends CI_Controller {
 					$uploadData = $this->upload->data();
 					$filePath = $uploadData['full_path'];
 		
-					echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
+					// echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
 				}
 
 			}

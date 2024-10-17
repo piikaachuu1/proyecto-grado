@@ -322,7 +322,15 @@ $(document).on('click','.datosServicio',function(){// modificaionde datos a nive
             
 
   
-          toastr.success('Servicio Agregado'+json.msg);
+          // toastr.success('Servicio Agregado'+json.msg);
+
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: 'Servicio'+json.msg,
+            showConfirmButton: false,
+            timer: 1500
+          });
          $("#agregarServicioModal").modal("hide");
 
           desstroyInicializaServicio();
