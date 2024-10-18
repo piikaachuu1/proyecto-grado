@@ -907,12 +907,12 @@ function agregarBloques() {
     </div>
     </div>
     <div class="row">
-    <input hidden class="form-control" type="range" id="horaRange${i+1}" min="1" max="12" value="8" name="horaRange${i+1}" onchange="actualizarHoraFin(this, ${i + 1})" >
+    <input  class="form-control" type="range" id="horaRange${i+1}" min="1" max="12" value="8" name="horaRange${i+1}" onchange="actualizarHoraFin(this, ${i + 1})" >
     </div>
     <div class="row">  
     <div class="col-12 d-flex">
     <div  class="col-6 d-flex">
-    <span >Hora Inicio</span> <input   type="time" id="inicioH${i + 1}" step="3600" name="inicioH${i + 1}" value="17:00" style="width:80px" onchange="actualizarHoraFinPorCambioHora(this, ${i + 1})" readonly>
+    <span >Hora Inicio</span> <input   type="time" id="inicioH${i + 1}" step="3600" name="inicioH${i + 1}" value="17:00" style="width:80px" onchange="actualizarHoraFinPorCambioHora(this, ${i + 1})" >
     </div>
     <div   class="col-6 d-flex">
     <span >Hora Fin</span> <input   type="time" id="finH${i + 1}" step="3600" name="finH${i + 1}" value="11:00" readonly style="width:80px">
