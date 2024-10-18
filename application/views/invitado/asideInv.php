@@ -11,7 +11,7 @@
                     <div class="col-12 d-flex justify-content-center ">
                         <a href="<?php echo base_url();?>index.php/usuario/homeAdmind">   
                             <img src="<?php echo base_url();?>img/logo.png" alt="AdminLTE Logo" class=" img-circle elevation-3 " style="opacity: .8 ;height: auto ; width: 60px;">
-                        </a>
+                         </a>
                     </div>
                     <div class="col-12 d-flex justify-content-center">
                         <span class="brand-text" style="color:#FFAB6B; font-size:25px;"><b>Reserva Eventos</b></span>
@@ -22,24 +22,39 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item" id="inicio">
-                    <a href="<?php echo base_url();?>index.php/usuario/panel" class="nav-link ">
+                    <a href="<?php echo base_url();?>index.php/usuario/homeAdmind" class="nav-link ">
                         <i class="fa-solid nav-icon fa-house  t-acent"></i>
                         <p class="t-primary" ><b>Inicio</b></p>
                     </a>
                 </li>
-
+                <li class="nav-item" id="clientes">
+                <a href="<?php echo base_url();?>index.php/usuario/calendario" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p class="t-primary">Calendario Eventos</p>
+                    </a>
+                </li>
+                <li class="nav-item" id="eventosRes">
+                <a href="<?php echo base_url();?>index.php/reservas/index" class="nav-link">
+                <i class="nav-icon far fa-calendar-check"></i>
+                        <p class="t-primary">Eventos Reservados</p>
+                    </a>
+                </li>
                
+               
+                
+              
+
+              
 
                 <li class="nav-item" id="servicios">
-                <a href="<?php echo base_url();?>index.php/servicios/index" class="nav-link">
-
+                    <a href="<?php echo base_url();?>index.php/servicios/index" class="nav-link">
+                  
                         <i class="nav-icon fas fa-clipboard-list t-acent"></i>
                         <p class="t-primary">Servicios</p>
                     </a>
-                </li> 
-
+                </li>
                 <li class="nav-item" id="clientes">
                 <a href="<?php echo base_url();?>index.php/cliente/index" class="nav-link">
 
@@ -47,14 +62,9 @@
                         <p class="t-primary">Clientes</p>
                     </a>
                 </li>
-                <li class="nav-item" id="clientes">
-                <a href="<?php echo base_url();?>index.php/usuario/calendario" class="nav-link">
-                        <i class="nav-icon fas fa-user-tie t-acent"></i>
-                        <p class="t-primary">Reservar Evento</p>
-                    </a>
-                </li>
+              
+        
 
-            
                
 
                 <li class="nav-item" id="salir">

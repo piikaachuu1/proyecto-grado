@@ -304,13 +304,15 @@ $(document).on('click','#btnNuevoUsuario',function(){// limpiar datos de
           
         if(json.uri==2)
         {
-          // toastr.warning("El ci del usuario ya existe");
+          toastr.warning("El ci del usuario ya existe");
 
         }else {
-          $("#agregarUsuario").modal("hide");
          
           toastr.success("Usuario Registrado con exit", json.msg1+ ' ' +json.msg2);
         console.log(json);
+
+        $("#agregarUsuario").modal("hide");
+
 
            limpiarFormularioAgregar();
 

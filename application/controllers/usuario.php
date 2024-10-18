@@ -196,15 +196,25 @@ public function agregarView()//metod donde agreaga usuario admini o usuario invi
 }
 
 public function verificarConexion() {
-    $url = 'https://www.google.com'; // Puedes cambiar esta URL por la que desees verificar
+  
+$url = 'https://www.google.com';
+     // Definir el tiempo de espera (en segundos)
+	 $timeout = 1;
 
-    $cabecera = @get_headers($url);
-
-    if ($cabecera && strpos($cabecera[0], '200 OK') !== false) {
-        return true; // Conexión a Internet exitosa
-    } else {
-        return false; // No se pudo conectar a Internet
-    }
+	 // Inicializar cURL
+	 $ch = curl_init($url);
+	 curl_setopt($ch, CURLOPT_NOBODY, true); // No descargar el cuerpo, solo verificar la conexión
+	 curl_setopt($ch, CURLOPT_TIMEOUT, $timeout); // Tiempo máximo de espera
+	 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout); // Tiempo máximo de conexión
+	 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // No imprimir la salida directamente
+ 
+	 // Ejecutar la solicitud
+	 $resultado = curl_exec($ch);
+	 $codigo_http = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+	 curl_close($ch);
+ 
+	 // Retornar true si el código HTTP es 200 (OK), de lo contrario false
+	 return ($codigo_http == 200);
 }
 
 public function agregarUsuario() {
