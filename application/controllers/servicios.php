@@ -64,15 +64,15 @@ class Servicios extends CI_Controller {
 
 
 
-	// el aggregar una imagen es opcionasl
-	if (!empty($_FILES['imagen']['name'])) {
-		$ban=false;
-	// 	echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
-	//    return;
+// 	// el aggregar una imagen es opcionasl
+// 	if (empty($_FILES['imagen']['name'])) {
+// 		$ban=false;
+// 		echo json_encode(array('msg' => 'Por favor selecciona una imagen.', 'uri' => 0));
+// 	   return;
 
-   }else
+//    }else
    
-    {
+	//     {}
 
    
 	if ($this->form_validation->run() == FALSE) {
@@ -110,12 +110,12 @@ class Servicios extends CI_Controller {
 
 		if ($idServicio> 0 ) {
 			
-			if($ban){
+			
 
 				if (!$this->upload->do_upload('imagen')) {
 					// Si falla la subida de la imagen, mostrar el error
 					$error = $this->upload->display_errors();
-					echo json_encode(array('msg' => $error, 'uri' => 0));
+					// echo json_encode(array('msg' => $error, 'uri' => 0));
 				} else {
 					// Subida exitosa
 					$uploadData = $this->upload->data();
@@ -124,11 +124,9 @@ class Servicios extends CI_Controller {
 					// echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
 				}
 
-			}
-			else{
 				echo json_encode(array('msg' => 'Servicio agregado correctamente', 'uri' => 1));
 
-			}
+			
 
 	
 		} 
@@ -142,7 +140,7 @@ class Servicios extends CI_Controller {
 	}
  }
 
- }
+ 
 
  
  public function eliminar()

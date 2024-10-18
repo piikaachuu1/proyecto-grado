@@ -2,8 +2,8 @@
 
   <!-- Content Wrapper. Contains page content -->
 <div class="wrapper" >
-<div class="content-wrapper " style="  background-image: url('<?php echo base_url();?>/img/fondologuin2.png'); " >
-        <div class="content-wrapper " style="background:rgba(255, 255, 255, .2);">
+<div class="content-wrapper " style="  background-image: url('<?php echo base_url();?>/img/fondologuin.png'); " >
+        <div class="content-wrapper " style="background:rgba(255, 255, 255, .0);">
 
     <!-- Content cabeera (pagima cabera) -->
    
