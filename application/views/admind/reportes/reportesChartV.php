@@ -417,7 +417,7 @@ $(document).on('click', '#btnPdfEventos', function () {
        pdf.setFont("helvetica"); 
 
         var urlCompleta = window.location.href;
-        pdf.addImage(urlCompleta + "../../../../img/usuario.png", "PNG", 20, 15, 30, 30);
+        pdf.addImage(urlCompleta + "../../../../img/logo.png", "PNG", 20, 15, 30, 30);
 
     const tableWidth = 170;
     var maxWidthColumn2 = 50;

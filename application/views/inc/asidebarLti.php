@@ -83,7 +83,7 @@
                         </li>
                   
                         <li class="nav-item" id="otros">
-                            <a href="#" class="nav-link">
+                        <a href="<?php echo base_url();?>index.php/reportes/index2" class="nav-link">
                                 <i class='fa fa-user-circle-o' style="color:red"></i>
                                 <p class="t-primary">Otros</p>
                             </a>
