@@ -298,7 +298,17 @@ $plazoCofirmar=$_POST['plazoConfirmacion'];
   {
      $id=$_POST['id'];
      $ci=$_POST['ci'];
-     $data['estado']=0;
+     $dev=$_POST['dev'];
+     $per=$_POST['per'];
+     $estado=$_POST['estado'];
+
+     $data['estado']=$estado;
+     $data['devolucion']=$dev;
+     $data['pagado']=$per;
+     $data['estado']=$estado;
+   
+
+
       
     $numeroFilas=$this->reserva_model->clienteCidb($ci);
     if($numeroFilas>0)

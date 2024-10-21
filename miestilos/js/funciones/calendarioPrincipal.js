@@ -677,7 +677,7 @@ function generarNuevaFila(nombreServicio, dias, pu, id, cant, max, ) {
     btnEliminar.className = "btn btn-sm"; // Agregar clase de Bootstrap para un botón rojo
     btnEliminar.title = "Eliminar";
     var ico = document.createElement("i");
-    ico.className = "fa-solid fa-circle-minus fa-xl text-danger m-0 ";
+    ico.className = "fa-regular fa-trash-can fa-xl text-danger m-0 ";
     btnEliminar.appendChild(ico); // <-- Corregido de btn a btnEliminar
     btnEliminar.addEventListener("click", function() {
         $(this).closest('tr').remove();

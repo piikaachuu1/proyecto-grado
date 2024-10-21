@@ -412,7 +412,7 @@
           <div class=" col-md-12 ">
             <label class="row"><div class="col-lg-6 col-md-8 col-sm-12"> Servicios reservados para el  dia <span id="dtdiaL"></span> <span id="dtdia"></span> </div>
              <div hidden  class="col-lg-6 col-md-4 col-sm-12">Horas<span id="horaInicio">10:00</span> - <span id="horaFin">14:00</span></div></label>
-            <table rules="all" width="100%"> 
+            <table class="table table-bordered " rules="" width="100%"> 
               <thead class="bgt-acent">
                 <tr class="t-secondary-n" style="text-align: center;">
                   <th>Nro</th>
@@ -455,7 +455,7 @@
   <button hidden type="button" class="btn btn-warning" id="btnRemoverEvento">Remover</button>
   <span hidden id="idReserva" ></span>
 
-  <button hidden type="button" class="btn btn-success" id="btnPagarCalendario">Pagar</button>
+  <button  type="button" class="btn btn-success" id="btnPagarCalendario">Pagar</button>
 </div>
 </div>
 </div>
@@ -628,12 +628,12 @@ function resetearEstilosDeFechas() {
         }
           else if(estado[i]==2){
             currentCell.css({
-        'background-color': '#E08402',
+        'background-color': 'green',
         'color': '#C7FFCB', 
       });
         }  else if(estado[i]==3){
             currentCell.css({
-        'background-color': '#E08402',
+        'background-color': 'skyblue',
         'color': '#F8FCFF', 
       });
         }
@@ -643,6 +643,12 @@ function resetearEstilosDeFechas() {
             'color': '#000', 
           });
          }
+        //  else if(estado[i]==9){
+        //        currentCell.css({
+        //     'background-color': 'red',
+        //     'color': '#000', 
+        //   });
+        //  }
 
          //codigo done si as mes pasado tiene pendienetes
     //       if (moment(fecha).isBefore(fechaActual, 'day')) {

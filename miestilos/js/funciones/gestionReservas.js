@@ -22,7 +22,7 @@ function listarREservas() {
                 template += `
         <tr data-id="${reservado.id}" ci="${reservado.ci}" Estado='${reservado.rEstado}' nombreCliente="${reservado.nombreCompleto}" reservaId=${reservado.id} fechaInicioEvento=${reservado.fechaInicio} total=${reservado.total} pagado=${reservado.pagado} adelanto=${reservado.adelantoReserva} saldo=${reservado.saldo}>
         <td style="text-align: center;">${reservado.fechaInicio}</td>
-
+ 
         <td>${reservado.nombreCompleto}</td>
         <td >${reservado.evento} - ${reservado.dias}</td>
         <td style="text-align: right;">${reservado.total}</td>
@@ -172,6 +172,24 @@ function desstroyInicializa() {
 
     listarREservas();
 }
+
+
+function calcularDiferencia(total, pago) {
+    // Calcular el 30% del total
+    const treintaPorCiento = total * 0.30;
+
+    // Verificar si el pago es mayor que el 30% del total
+    if (pago > treintaPorCiento) {
+        const diferencia = pago - treintaPorCiento;
+        // console.log(El pago excede el 30% del total. Devolución: ${diferencia.toFixed(2)});
+        return diferencia;
+    } else {
+        // console.log("El pago no excede el 30%, no hay devolución.");
+        return 0;
+    }
+}
+
+
 $(document).on('click', '#btnEliminar', async function() {
     let element = $(this).closest('td').parent('tr');
     let id = $(element).attr('reservaId');
@@ -213,7 +231,15 @@ $(document).on('click', '#btnEliminar', async function() {
 
          $("#servciosModificar").modal("show");
 
+
+
+
+
+
+
         $(document).on('click', '#btnConfirmarElimacionEvento', function() {
+
+
         var id =document.getElementById("idReserva").textContent;
         var ciCliente =document.getElementById("ciClienteEliminar");
         ci=ciCliente.value;
@@ -225,21 +251,31 @@ $(document).on('click', '#btnEliminar', async function() {
             if(ciCliente.value.length>5)
             {
 
+
+              
+                 let dev= calcularDiferencia(total, tpagado);
+                
+
+
+                 let por = total * 0.3;
+                    let per = por > tpagado ? tpagado : por;
+                let estado=9;
+
                  $.ajax({
                   url: '../reservas/eliminarReservarEventos',
                         type: 'POST',
                         data: {
-                            id,ci},
+                            id,ci,dev,per,estado },
                         success: function(response) {
                             let res = JSON.parse(response);
                             switch (res.uri)
                             {
                             case 1:
 
-                                  generarPdf(id,inicioEvento,nomCliente,total, adelanto,saldo,ciCliente,4,tpagado);//nuestro
+                                  generarPdf(id,inicioEvento,nomCliente,total, adelanto,saldo,ciCliente,5,tpagado);//nuestro
                                  $("#servciosModificar").modal("hide");
                                  desstroyInicializa();
-                                  toastr.success('La eiminacion de reserv exitoso','', {
+                                  toastr.success('La eiminacion de reserva exitoso','', {
                                     "closeButton": true, // Muestra el botón de cierre
                                     "positionClass": "toast-top-right", // Posición del mensaje
                                     "preventDuplicates": true, // Evita mensajes duplicados
@@ -988,7 +1024,7 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
                 ]];
                montoParaLiteral=adelanto;
 
-            } else   if(estado==4)
+            } else   if(estado==4 || estado== 5)
             {
                bodyPied= [[{ content: 'Total Bs.',  colSpan: 4,  styles: { halign: 'right' ,fillColor: [255, 255, 255]} },
                 { content: ''+sumaTotal.toFixed(2),  styles: { halign: 'right',fillColor: [255, 255, 255] } },
@@ -1082,8 +1118,21 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
                              doc.setTextColor(0, 250, 0);  
                                   doc.setFontSize(30);
                                  doc.text(22, ulend-3,'Reservado',10);
+                              
+
+
                                  
                         }
+                        else if(pTotal*0.3==pagado)
+                            {
+                                 doc.setTextColor(0, 250, 0);  
+                                      doc.setFontSize(30);
+                                     doc.text(22, ulend-3,'Cancelado',10);
+                                  
+    
+    
+                                     
+                            }
                     break;
                 case 3:
           
@@ -1094,7 +1143,21 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
                                  doc.text(22, ulend + 30,'Si no se confirma el evento dentro del plazo establecido, la fecha seguirá estando disponible.');
 
 
-                        }        doc.setFont(undefined,'normal');
+                        }  
+                        
+                        
+                      if(adelanto!=0)
+                        {
+
+
+
+
+                                 doc.setTextColor(0, 0, 0);  
+                                  doc.setFontSize(11);
+                                  doc.text(22, ulend + 30,'Si se cancela el evento por motivos personales, se cobrará el 30% del total de la reserva.');
+
+
+                        }  doc.setFont(undefined,'normal');
                                  doc.setTextColor(0, 0, 0);  
 
                                 doc.setLineDash([1, 1]);
@@ -1106,7 +1169,12 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
 
                     break;
                 case 4:
-             
+
+
+
+
+
+
                                 doc.setTextColor(200, 0, 0);  
                                 doc.setFontSize(12);
                                 doc.text(22, ulend + 9,'La cancelación de un evento conlleva costos según las condiciones establecidas.');
@@ -1122,6 +1190,37 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
                                  doc.setLineDash([]);
 
                     break;
+                    case 5:
+
+
+                    let dev= calcularDiferencia(pTotal, pagado);
+                    let per = pTotal*0.3> pagado ? pagado: pTotal*0.3;
+             
+                    doc.setTextColor(200, 0, 0);  
+                    doc.setFontSize(11);
+                    doc.text(22, ulend + 8,'devoluciones '+ dev);
+                    doc.text(22, ulend + 12,'por danos y perfuicios '+ per );
+
+                    doc.setTextColor(0, 0, 0);
+
+
+
+                    doc.setTextColor(200, 0, 0);  
+                    doc.setFontSize(12);
+                    doc.text(22, ulend + 15,'La cancelación de un evento conlleva costos 30% de los servicios del total de reserva.');
+                    doc.setTextColor(0, 0, 0);  
+                     
+                    doc.setFontSize(11);
+                   
+                    doc.setLineDash([1, 1]);
+                     doc.line(60, ulend+20, 102, ulend+20);
+                     doc.line(110, ulend+20, 152, ulend+20);
+                     doc.text(70, ulend +24,'Firma Gerente');
+                     doc.text(120, ulend+24,'Firma Cliente');
+                     doc.setLineDash([]);
+                    
+
+                  break;
                 default:
                     // Código para el caso por defecto
                     break;

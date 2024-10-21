@@ -74,8 +74,10 @@ public function reservasdb($mes,$anio,$hoy)
 	    // $this->db->where('MONTH(R.fechaInicio)', $mes);
 		$this->db->where('YEAR(R.fechaInicio)', $anio);
 		$this->db->where('R.fechaInicio >=', $hoy);
-		$this->db->where('R.estado <>', 0);
-
+		// $this->db->where('R.estado <>', 0);
+		$this->db->where('R.estado !=', 0);
+		$this->db->where('R.estado !=', 9);
+		
 
     return $this->db->get();
 }
