@@ -55,7 +55,7 @@
 
                         <div class="forget-passs">
 
-                            <!-- <p><a  class="forgetPassword" href="#">¿Has olvidado la clave?</a></p> -->
+                            <p><a  class="forgetPassword" href="#">¿Has olvidado la clave?</a></p>
                             <p style="color:black">Por seguridad, nunca revele su contraseña.</p>
 
                         </div>

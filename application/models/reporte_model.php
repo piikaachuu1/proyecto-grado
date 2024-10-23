@@ -7,13 +7,15 @@ class reporte_model extends CI_Model
 
 
 	public function listaServiciosdb($fechaIn,$fechaFn)
-	{
-		 $this->db->select('R.id, R.fechaInicio, CONCAT(C.ci, " ", C.nombre, " ", C.primerApellido, " ", IFNULL(C.segundoApellido, "")) AS nombreCompleto, R.total');
-        $this->db->from('reservas R');
-        $this->db->join('clientes C', 'C.id = R.idCliente');
-        $this->db->where('R.estado<>', 0);
-        $this->db->where('R.fechaRegistro>=', $fechaIn);
-        $this->db->where('R.fechaRegistro<=', $fechaFn);
+	{$this->db->select('R.id, R.fechaInicio AS fechaevento, R.fechaRegistro, CONCAT(C.ci, " ", C.nombre, " ", C.primerApellido, " ", IFNULL(C.segundoApellido, "")) AS nombreCompleto, R.pagado As total, TE.nombre AS Evento, U.nombreUsuario');
+    $this->db->from('reservas R');
+    $this->db->join('clientes C', 'C.id = R.idCliente');
+    $this->db->join('tipoevento TE', 'TE.id = R.idTipoEvento');
+    $this->db->join('usuario U', 'U.id = R.idUsuario');
+    $this->db->where('R.estado <>', 0);
+    $this->db->where('R.estado <>', 1);
+    $this->db->where("R.fechaRegistro BETWEEN '{$fechaIn} 00:00:00' AND '{$fechaFn} 23:59:59'");
+
 
 
         return  $this->db->get();

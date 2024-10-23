@@ -277,7 +277,7 @@ $(document).on('click', '#btnEliminar', async function() {
                             {
                             case 1:
 
-                                  generarPdf(id,inicioEvento,nomCliente,total, adelanto,saldo,ciCliente,5,tpagado);//nuestro
+                                  generarPdf(id,inicioEvento,nomCliente,total, adelanto,saldo,ci,5,tpagado);//nuestro
                                  $("#servciosModificar").modal("hide");
                                  desstroyInicializa();
                                   toastr.success('La eiminacion de reserva exitoso','', {
@@ -348,7 +348,7 @@ $(document).on('click', '#btnEliminar', async function() {
             showCancelButton: true,
             confirmButtonText: 'Aceptar',
             cancelButtonText: 'Cancelar',
-            background: 'rgb(251, 214, 169)',
+            background: 'rgb(255, 255, 255)',
             customContainerClass: 'width:200px',
             customClass: {
                 cancelButton: 'btnt-primary btn-sm', // Clase para el botón Cancelar

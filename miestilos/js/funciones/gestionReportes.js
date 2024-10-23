@@ -12,7 +12,7 @@ $(document).ready(function() {
             toastr.warning("La fecha debe ser menor ", '', {
                 "preventDuplicates": true
             });
-            document.getElementById('fechaIncio').value = document.getElementById('fechaFin').value;
+            document.getElementById('fechaIncio').value= document.getElementById('fechaFin').value;
             IngresosEnfechas(fechaInic, fechaFin);
         }
     });
@@ -32,9 +32,9 @@ $(document).ready(function() {
   fechasCargarReporte();
     function fechasCargarReporte()
     {
-         var fechaFin = document.getElementById('fechaIncio').value;
+          document.getElementById('fechaIncio').value=fechaHoyDDDD();
          document.getElementById('fechaFin').value=fechaHoyDDDD();
-        IngresosEnfechas(fechaFin,fechaHoyDDDD());
+        IngresosEnfechas(fechaHoyDDDD(),fechaHoyDDDD());
     }
     
 
@@ -70,10 +70,15 @@ $(document).ready(function() {
                 general.forEach(res => {
                     template += `
         <tr usuarioId=${res.id}>
-        <td style="text-align:center; width:25px"">${res.id}</td>
+        <td style="text-align:center; width:25px"">${i+1}</td>
+        <td style="text-align:center;">000${+res.id}</td>
 
-        <td style="text-align:center;">${res.fechaInicio}</td>
+        <td style="text-align:center;">${res.fechaevento}</td>
+        <td style="text-align:center;">${res.fechaRegistro}</td>
+
         <td >${res.nombreCompleto}</td>
+        <td >${res.nombreUsuario}</td>
+
         <td style="text-align:right; margin-right:50px">${res.total}</td>
         </tr>
         `
@@ -97,7 +102,7 @@ $(document).ready(function() {
 
 
 
-
+ 
 
 
     function generarReportePdf() {
@@ -121,7 +126,7 @@ $(document).ready(function() {
                     let body = [];
                     var i = 0;
                     general.forEach(res => {
-                        var datos = [res.id, res.fechaInicio, res.nombreCompleto, res.total];
+                        var datos = [i+1,'000'+res.id, res.fechaevento,res.fechaRegistro, res.nombreCompleto, res.nombreUsuario,res.total];
                         totalIngreso+=parseFloat( res.total);
                         body.push(datos);
                         i++;
@@ -177,7 +182,7 @@ $(document).ready(function() {
                 textColor: 0
             },
             1: {
-                cellWidth: maxWidthColumn3,
+                // cellWidth: maxWidthColumn3,
                 overflow: 'linebreak',
                 halign: 'center',
                 textColor: 0
@@ -187,6 +192,13 @@ $(document).ready(function() {
                 textColor: 0
             },
             3: {
+                halign: 'right',
+                textColor: 0
+            },
+            4: {
+                halign: 'right',
+                textColor: 0
+            },5: {
                 halign: 'right',
                 textColor: 0
             },
@@ -219,12 +231,12 @@ $(document).ready(function() {
             showHead: 'everyPage', // Mostrar el encabezado en cada página
         };
         var head = [
-            ['Nro', 'Fechas', 'Clientes', 'Total Bs.']
+            ['Nro', 'Revico','Fecha Evento','Registro', 'Clientes','Usuario', 'Total Bs.']
         ];
         var foot = [
             [{
                 content: 'INGRESOS.',
-                colSpan: 3,
+                colSpan: 5,
                 styles: {
                     halign: 'center',
                     fillColor: [255, 255, 255],
@@ -238,6 +250,7 @@ $(document).ready(function() {
                 }
             }, {
                 content: 'Bs. ' + parseFloat(totalIngreso).toFixed(2),
+                colSpan: 2,
                 styles: {
                     halign: 'right',
                     fillColor: [255, 255, 255],

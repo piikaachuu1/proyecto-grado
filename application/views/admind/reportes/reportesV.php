@@ -29,7 +29,7 @@
           <h5>Desde </h5>
           <div class="myBox">
 
-            <input id="fechaIncio" class="myImputField" type="date" value="2023-10-26" name="fechaIncio" >
+            <input id="fechaIncio" class="myImputField" type="date" value="2024-10-01" name="fechaIncio" >
           </div>
         </div>
         <div class="d-flex align-items-center">
@@ -37,7 +37,7 @@
 
           <div class="myBox">
 
-            <input id="fechaFin" class="myImputField" type="date" value="2023-10-27" name="fechaFin" >
+            <input id="fechaFin" class="myImputField" type="date" value="2024-10-27" name="fechaFin" >
           </div>
         </div>
       </div>
@@ -51,8 +51,13 @@
          <thead class="t-secondary ">
           <tr style="text-align: center;">
             <th style="width:25px">Nro </th>
-            <th>Fecha</th>
+            <th style="width:40px">Recivo</th>
+            <th>Fecha Evento</th>
+            <th>Fecha Registro</th>
+
             <th>Cliente</th>
+            <th>Usuario</th>
+
             <th>Total Bl.</th>
 
           </tr>
