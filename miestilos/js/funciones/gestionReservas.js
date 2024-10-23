@@ -1,6 +1,9 @@
 desstroyInicializa() 
 //inicio listar servicios
+ function EventosRealizadosFecha() {
 
+    alert("holas");
+}
 function listarREservas() {
    // alert('rese');
 
@@ -44,7 +47,7 @@ function listarREservas() {
 
          <td>
                <div class="d-flex justify-content-center">
-                 <button class="btn btn-sm btn-success cobrar" type="button" data-id=${reservado.id}> Cobrar</button>
+                 <button class="btn btn-sm btn-success cobrar" type="button" data-id=${reservado.id}  ${reservado.estadoNumero ==9 ? 'disabled':''}> Cobrar </button>
                </div>
 
              </td>
@@ -133,7 +136,9 @@ $(document).on('keyup', '#txtBuscarReserva', function() {
 
          <td>
                <div class="d-flex justify-content-center">
-                 <button class="btn btn-sm btn-success cobrar" type="button" data-id=${reservado.id}> Cobrar</button>
+
+                 <button class="btn btn-sm btn-success cobrar" type="button" data-id=${reservado.id}  ${reservado.estadoNumero ==9 ? 'disabled':''}> Cobrar </button>
+
                </div>
 
              </td>
@@ -1123,9 +1128,9 @@ const fechaFormateada = `${año}-${mes.toString().padStart(2, '0')}-${día.toStr
 
                                  
                         }
-                        else if(pTotal*0.3==pagado)
+                        else if(pTotal*0.3>=pagado && saldo==0)
                             {
-                                 doc.setTextColor(0, 250, 0);  
+                                doc.setTextColor(255, 102, 102);  
                                       doc.setFontSize(30);
                                      doc.text(22, ulend-3,'Cancelado',10);
                                   

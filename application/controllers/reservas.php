@@ -233,6 +233,7 @@ $plazoCofirmar=$_POST['plazoConfirmacion'];
   $data['pagado']=$_POST['pagado'];
 
 
+
   $data['estado']=$_POST['estados'];
   $data['idUsuario']=$this->session->userdata('idUsuario');
 
@@ -306,6 +307,8 @@ $plazoCofirmar=$_POST['plazoConfirmacion'];
      $data['devolucion']=$dev;
      $data['pagado']=$per;
      $data['estado']=$estado;
+     $data['saldo']=0;
+     
    
 
 

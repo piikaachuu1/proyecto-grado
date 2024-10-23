@@ -139,7 +139,7 @@ $(document).ready(function() {
                 "preventDuplicates": true
             });
         }
-    }
+    } 
 
     function generarPDF(body, totalIngreso, fechaInicio, fechafin) {
         var nombreUsuarioSeccion = document.getElementById('nombreUsuarioSeccion').textContent;

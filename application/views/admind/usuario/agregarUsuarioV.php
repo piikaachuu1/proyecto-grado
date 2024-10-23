@@ -79,7 +79,7 @@
                             <input type="hidden" id="idD" name="id">
                             <div class="myBox">
                               <input class=" myImputField" type="text" id="nombreUsuarioD" name="nombre"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required autofocus placeholder>
-                              <label class="mylabel" for="nombreUsuario" >Nombre</label>
+                              <label class="mylabel" for="nombreUsuario" >Nombre<sup class='text-danger'>*</sup></label>
                             </div>
                            
 
@@ -89,7 +89,7 @@
 
                             <div class="myBox">
                               <input class=" myImputField" type="text" id="primerApellidoD" name="primerApellido"  onkeypress="return soloLetras(event)" minlength="2" maxlength="25" required value="">
-                              <label class="mylabel" for="primerApellido" >Primer Apellido</label>
+                              <label class="mylabel" for="primerApellido" >Primer Apellido<sup class='text-danger'>*</sup></label>
                             </div>
                           </div>
                           <div  class=" col-sm-6 col-md-4  col-12  ">
@@ -110,14 +110,14 @@
 
                           <div class="myBox">
                             <input class="myImputField" type="date" id="fechaNacimientoD" name="fechaNacimiento"   max="2024-08-01" value="2000-01-01"   required placeholder>
-                            <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
+                            <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento<sup class='text-danger'>*</sup></label>
 
                           </div>
                         </div>
 
                        <div class="col-sm-12 col-12 col-md-6 t-secondary  justify-content-center align-items-center">
 
-                        <label class="form-label p-2 " for="inlineRadio3">Genero</label>
+                        <label class="form-label p-2 " for="inlineRadio3">Genero<sup class='text-danger'>*</sup></label>
 
 
                         <div class=" p-2 form-check form-check-inline">
@@ -139,7 +139,7 @@
 
                       <div class="myBox">
                         <input class="myImputField" type="text" id="ciD" name="ci" onkeypress="return LetrasNumero(event)" minlength="7" maxlength="10"  required placeholder>
-                        <label class="mylabel" for="ci" >C.I.</label>
+                        <label class="mylabel" for="ci" >C.I.<sup class='text-danger'>*</sup></label>
                     </div>
                   </div>
                     </div>
@@ -148,7 +148,7 @@
 
                        <div class="myBox">
                         <input class="myImputField" type="email" id="email" name="email"  minlength="7" maxlength="50"  required placeholder>
-                        <label class="mylabel" for="email" >Email</label>
+                        <label class="mylabel" for="email" >Email<sup class='text-danger'>*</sup></label>
                         <label class="mylabel-icon" for=""><i class="fa-solid fa-envelope"></i></label>
 
                       </div>
@@ -218,7 +218,7 @@
 
                         <div class="myBox">
                           <input class=" myImputField" type="text" id="nombre" name="nombre"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25" required placeholder>
-                          <label class="mylabel" for="nombre" >Nombre</label>
+                          <label class="mylabel" for="nombre" >Nombre<sup class='text-danger'>*</sup></label>
 
                         </div>
                       </div>
@@ -227,7 +227,7 @@
 
                         <div class="myBox">
                           <input class=" myImputField" type="text" id="primerApellido" name="primerApellido"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25" required placeholder>
-                          <label class="mylabel" for="primerApellido" >Primer Apellido</label>
+                          <label class="mylabel" for="primerApellido" >Primer Apellido<sup class='text-danger'>*</sup></label>
                         </div>
                       </div>
                       <div  class=" col-sm-6 col-md-4  col-12  ">
@@ -249,14 +249,14 @@
 
                         <div class="myBox">
                           <input class="myImputField" type="date" id="fechaNacimiento" name="fechaNacimiento"   max="2008-08-01" value="2005-01-01"   required>
-                          <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento</label>
+                          <label class="mylabel" for="fechaNacimiento"  >Fecha Nacimiento<sup class='text-danger'>*</sup></label>
 
 
                         </div>
                       </div>
                       <div class=" col-sm-6 col-md-6  col-12  ">
 
-                        <label class="form-label p-2 t-secondary" for="inlineRadio3">Genero</label>
+                        <label class="form-label p-2 t-secondary" for="inlineRadio3">Genero<sup class='text-danger'>*</sup></label>
 
 
                         <div class=" p-2 form-check form-check-inline">
@@ -284,7 +284,7 @@
 
                           <!-- <label><small></small></label> -->
 
-                          <label class="mylabel" for="ci" >C.I.</label>
+                          <label class="mylabel" for="ci" >C.I.<sup class='text-danger'>*</sup></label>
 
                         </div>
                       </div>
@@ -297,7 +297,7 @@
 
                      <div class="myBox">
                       <input class="myImputField" type="email" id="emailA" name="email"  minlength="7" maxlength="50"  required placeholder >
-                      <label class="mylabel" for="email" >Email</label>
+                      <label class="mylabel" for="email" >Email<sup class='text-danger'>*</sup></label>
                       <label class="mylabel-icon" for="email"><i class="fa-solid fa-envelope"></i></label>
 
                     </div>
@@ -310,7 +310,7 @@
                         <option   class="" value="admin" >administrador</option>
                             <option  class="" value="invitado" selected>invitado</option>
                       </select>
-                      <label class="mylabel" for="rol" >Rol Usuario</label>
+                      <label class="mylabel" for="rol" >Rol Usuario<sup class='text-danger'>*</sup></label>
                     </div>
                   </div>
 

@@ -49,7 +49,7 @@
                       <h5>Desde </h5>
                       <div class="myBox">
 
-                        <input id="servicioEventosMasInicio" class="myImputField" type="date" value="2023-10-01" name="" onchange="validarFecha()" >
+                        <input id="servicioEventosMasInicio" class="myImputField" type="date" value="2024-10-01" name="" onchange="validarFecha()" >
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
@@ -57,7 +57,7 @@
 
                   <div class="myBox">
 
-                    <input id="servicioEventosMasFin" class="myImputField" type="date" value="2023-10-27" name="" onchange="validarFecha()">
+                    <input id="servicioEventosMasFin" class="myImputField" type="date" value="2024-10-27" name="" onchange="validarFecha()">
                 </div>
             </div>
             </div>

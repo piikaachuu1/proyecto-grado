@@ -19,12 +19,12 @@
             <div class="col-sm-6">
               <h1 class="t-primary">reservas la fecha</h1>
             </div>
-            <div hidden class="col-sm-6">
+            <div  class="col-sm-6">
                <ul class="d-flex justify-content-end t-primary" style=" list-style: none; padding: 0; margin: 0;">
                  <li title="Cuando un cliente no reazlizo un monto para recervar"><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#E08402"></i>confirmar</li>
                  <li title="Cuando el cliente delanto un monto de reserva"><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#008800"></i>reservado</li>
                  <li title="Cuando el cliente completo la paga "><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#0D77B6"></i>Pagado</li>
-                 <li  title="Cuando el cliente reserva pero no completo la paga y ya es cerca al evento " hidden><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#FF0000"></i>Pendiente</li>
+                 <li  title="Cuando el cliente reserva pero no completo la paga y ya es cerca al evento " ><i class="fa-solid fa-square-full fa-xs pl-2" style="color:#FF0000"></i>Cancelado</li>
           
 
                </ul>

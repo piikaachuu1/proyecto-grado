@@ -44,7 +44,7 @@ class reporte_model extends CI_Model
                   FROM servicios S
                   LEFT JOIN detalle D ON D.idServicios =S.id
                   LEFT JOIN reservas R ON R.id =D.idReservas
-                   WHERE R.estado<>0  AND(R.fechaInicio BETWEEN '2023-10-10' AND '2023-12-11' )
+                   WHERE R.estado<>0  AND(R.fechaInicio  BETWEEN '$fechaIn' AND '$fechaFn' )
                   GROUP BY S.nombre,S.unidadMedida
                   ORDER BY 4 DESC";
 

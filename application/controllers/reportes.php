@@ -9,7 +9,7 @@ class Reportes extends CI_Controller {
 		function index()
 		{
 			
-		   
+		    
 
 		if($this->session->userdata('rolUsuario') =='admin')
 		{

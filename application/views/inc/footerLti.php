@@ -404,9 +404,9 @@ $.validator.setDefaults({
       $("#miTablaServicio").DataTable({
     "responsive": true,
     "lengthChange": false,
-    "autoWidth": false,
-    "pageLength": 8,
-    "searching": false,
+    "autoWidth": true,
+    "pageLength": 7,
+    "searching": true,
     "pagingType": "full_numbers",
     "language": {
       "decimal": "",
@@ -432,14 +432,14 @@ $.validator.setDefaults({
         "sortDescending": ": activar para ordenar la columna descendente"
       }
     },
-  // "dom": '<"top"lf>rt<"bottom"ip>', // Cambia la posición del campo de búsqueda
+  "dom": '<"top"lf>rt<"bottom"ip>', // Cambia la posición del campo de búsqueda
 
-  // "initComplete": function () {
-  //   // Reemplaza el texto "Buscar" con el icono de búsqueda de Font Awesome
-  //   $('.dataTables_filter label input[type="search"]').attr('placeholder', 'Buscar...');
-  //   $('.dataTables_filter label').addClass('input-group');
-  //   $('.dataTables_filter label').append('<span class="input-group-btn"><button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button></span>');
-  // },
+  "initComplete": function () {
+    // Reemplaza el texto "Buscar" con el icono de búsqueda de Font Awesome
+    $('.dataTables_filter label input[type="search"]').attr('placeholder', 'Buscar...');
+    $('.dataTables_filter label').addClass('input-group col-3 float-right');
+    $('.dataTables_filter label').append('<span class="input-group-btn"><button class="btn btn-secondary btn-sm" type="button"><i class="fas fa-search fas-sm"></i></button></span>');
+  },
     
   });
   

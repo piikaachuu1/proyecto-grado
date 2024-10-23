@@ -106,7 +106,7 @@
                          <div class="myBox">
 
                           <input  class="myImputField" type="text" name="nombre" id="txtNombre" onkeypress="return soloLetrasEspacio(event)" minlength="3" maxlength="25" required autofocus autocomplete="off" placeholder/>
-                          <label class="mylabel" for="">Nombre</label>
+                          <label class="mylabel" for="">Nombre<sup class='text-danger'>*</sup></label>
 
 
                         </div>
@@ -115,7 +115,7 @@
                        <div class="myBox">
 
                         <input  class="myImputField form-control-md" type="text" name="primerApellido" id="txtApellido1" onkeypress="return soloLetrasEspacio(event)" minlength="3" maxlength="25" required  autocomplete="off" onpaste="return false;" placeholder/>
-                        <label class="mylabel" for="">Primer Apellido</label>
+                        <label class="mylabel" for="">Primer Apellido<sup class='text-danger'>*</sup></label>
 
  
                       </div>
@@ -133,7 +133,7 @@
                    <div class="myBox">
 
                     <input  class="myImputField" type="text" name="ci" id="txtCi" onkeypress="return LetrasNumero(event)" minlength ="5" maxlength ="9"  required  autocomplete="off" onpaste="return false;" placeholder/>
-                    <label class="mylabel" for="">C.I.</label>
+                    <label class="mylabel" for="">C.I.<sup class='text-danger'>*</sup></label>
                     <label class="mylabel-icon" for=""><i class="fa-solid fa-id-card"></i></label>
 
                   </div>
@@ -142,7 +142,7 @@
                   <div class="myBox">
 
                     <input  class="myImputField" type="text" name="celular" id="txtCelular" onkeypress="return soloNumero(event)" minlength ="6" maxlength ="9"  required  autocomplete="off" onpaste="return false;" placeholder/>
-                    <label class="mylabel" for="">Celular</label>
+                    <label class="mylabel" for="">Celular<sup class='text-danger'>*</sup></label>
                     <label class="mylabel-icon" for=""><i class="fa-solid fa-mobile-retro"></i></label>
 
                   </div>
@@ -196,7 +196,7 @@
                        <div class="myBox">
                           <input type="hidden" name="id" id="idM">
                         <input  class="myImputField" type="text" name="nombre" id="txtNombreM" onkeypress="return soloLetrasEspacio(event)" minlength="1" maxlength="25" required autofocus autocomplete="off" onpaste="return false;"/>
-                        <label class="mylabel" for="">Nombre</label>
+                        <label class="mylabel" for="">Nombre<sup class='text-danger'>*</sup></label>
 
 
                       </div>
@@ -205,7 +205,7 @@
                      <div class="myBox">
 
                       <input  class="myImputField form-control-md" type="text" name="primerApellido" id="txtApellido1M" onkeypress="return soloLetrasEspacio(event)" minlength="1" maxlength="25" required  autocomplete="off" onpaste="return false;"/>
-                      <label class="mylabel" for="">Primer Apellido</label>
+                      <label class="mylabel" for="">Primer Apellido<sup class='text-danger'>*</sup></label>
 
 
                     </div>
@@ -223,7 +223,7 @@
                  <div class="myBox">
 
                   <input  class="myImputField" type="text" name="ci" id="txtCiM" onkeypress="return LetrasNumero(event)" minlength ="1" maxlength ="9"  required autocomplete="off" onpaste="return false;"/>
-                  <label class="mylabel" for="">C.I.</label>
+                  <label class="mylabel" for="">C.I.<sup class='text-danger'>*</sup></label>
                   <label class="mylabel-icon" for=""><i class="fa-solid fa-id-card"></i></label>
 
                 </div>
@@ -232,7 +232,7 @@
                 <div class="myBox">
 
                   <input  class="myImputField" type="text" name="celular" id="txtCelularM" onkeypress="return soloNumero(event)" minlength ="1" maxlength ="9"  required autocomplete="off" onpaste="return false;"/>
-                  <label class="mylabel" for="">Celular</label>
+                  <label class="mylabel" for="">Celular<sup class='text-danger'>*</sup></label>
                   <label class="mylabel-icon" for=""><i class="fa-solid fa-mobile-retro"></i></label>
 
                 </div>

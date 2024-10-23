@@ -28,8 +28,8 @@
                        <div class=" col-6 d-flex justify-content-end m-0 p-0" >
                       <div class="myBox">
                         
-                      <input class="myImputField form-control-sm" type="text" id="buscarServicio" name="" maxlength="18">
-                      <label class="mylabel-icon"><i class="fas fa-search"></i></label>
+                      <input hidden class="myImputField form-control-sm" type="text" id="buscarServicio" name="" maxlength="18">
+                      <label hidden class="mylabel-icon"><i class="fas fa-search"></i></label>
                       </div>
                     </div>
                     </div>
@@ -79,7 +79,7 @@
                                   <div class="myBox">
                                     <input type="hidden" id="idServicio" name="idServicio" >
                                     <input class=" myImputField" type="text" id="nombreServicioM" name="nombreServicioM"  onkeypress="return soloLetrasEspacio(event)" minlength="2" maxlength="25"  required autofocus placeholder>
-                                    <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
+                                    <label class="mylabel" for="nombreServicio" >Nombre de servicio<sup class='text-danger'>*</sup></label>
                                   </div>
                                 </div>
 
@@ -101,7 +101,7 @@
                                   <div class="myBox">
                                     <input class=" myImputField" type="text" id="precioM" name="precioM" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="50" required autofocus placeholder>
 
-                                    <label class="mylabel" for="precio" >Precio Unidad</label>
+                                    <label class="mylabel" for="precio" >Precio Unidad<sup class='text-danger'>*</sup></label>
                                     <label class="mylabel-icon" for="precio" >Bs.</label>
 
                                   </div>
@@ -110,12 +110,12 @@
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="maximoM" name="maximoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
 
-                                  <label class="mylabel" for="maximo" >Cantidad Maxima Servicio</label>
+                                  <label class="mylabel" for="maximo" >Cantidad Maxima Servicio<sup class='text-danger'>*</sup></label>
                                 </div>
                               </div>
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="gastoM" name="gastoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
+                                  <input class=" myImputField" type="text" id="gastoM" name="gastoM" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3"  autofocus placeholder>
 
                                   <label class="mylabel" for="gastoM" >Gasto de Servicios  en %</label>
                                   <label class="mylabel-icon" for="gastoM" >100%</label>
@@ -179,7 +179,7 @@
                               <div  class="col-12 ">
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="nombreServicio" name="nombreServicio"  onkeypress="return LetrasNumero(event)" minlength="2" maxlength="250"  required autofocus placeholder>
-                                  <label class="mylabel" for="nombreServicio" >Nombre de servicio</label>
+                                  <label class="mylabel" for="nombreServicio" >Nombre de servicio<sup class='text-danger'>*</sup></label>
                                 </div>
                               </div>
 
@@ -198,14 +198,14 @@
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="precio" name="precio" value="" onkeypress="return soloNumeroPunto(event)" minlength="1" maxlength="5" min="1" required autofocus placeholder>
 
-                                  <label class="mylabel" for="precio" >Precio Unidad</label>
+                                  <label class="mylabel" for="precio" >Precio Unidad<sup class='text-danger'>*</sup></label>
                                   <label class="mylabel-icon" for="precio" >Bs.</label>
 
                                 </div>
                               </div>
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="text" id="gasto" name="gasto" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" max="100" required autofocus placeholder>
+                                  <input class=" myImputField" type="text" id="gasto" name="gasto" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" max="100"  autofocus placeholder>
 
                                   <label class="mylabel" for="gasto" >Gasto de Servicios  en %</label>
                                   <label class="mylabel-icon" for="gasto" >100%</label>
@@ -216,7 +216,7 @@
                                 <div class="myBox">
                                   <input class=" myImputField" type="text" id="maximo" name="maximo" value="" onkeypress="return soloNumero(event)" minlength="1" maxlength="3" required autofocus placeholder>
 
-                                  <label class="mylabel" for="maximo" >Cantidad Maxima Servicio</label>
+                                  <label class="mylabel" for="maximo" >Cantidad Maxima Servicio<sup class='text-danger'>*</sup></label>
                                 </div>
                               </div>
 
@@ -224,7 +224,7 @@
                             <div class="row " >
                               <div  class="col-12 ">
                                 <div class="myBox">
-                                  <input class=" myImputField" type="file" id="imagen" name="imagen" placeholder riquered>
+                                  <input class=" myImputField" type="file" id="imagen" name="imagen" placeholder >
                                   <label class="mylabel" for="imagen" >Imagen</label>
                                 </div>
                               </div>

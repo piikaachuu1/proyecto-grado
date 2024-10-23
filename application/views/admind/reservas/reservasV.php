@@ -27,7 +27,7 @@
       <div>
         <a href="<?php echo base_url();?>index.php/usuario/calendario" title="Se redicccionara al calderario"><button class="btn btn-sm m-0 btn-primary p-1"><b>Agregar</b></button></a>
 
-        <button hidden class="btn btn-sm m-0  p-1 btnt-primary" title="Eventos Realizados"><b><i class="fa-solid fa-calendar-check fa-xl text-success"  ></i></b></button>
+        <button  class="btn btn-sm m-0  p-1 btnt-primary" title="Eventos Realizados" id='EventosRealizadosFecha' onclick="EventosRealizadosFecha()">eventos Anteriores</button>
 
       </div>
 
